@@ -26,6 +26,19 @@ footer{text-align:center;background:#f7e8eb;padding:58px 20px 36px;position:rela
 @media(max-width:650px){.hero{padding:35px 10px 38px}.hero .tagline{font-size:23px}.hero:after{inset:8px}.welcome{padding:66px 20px}.welcome .welcome-lace{width:230px;right:-110px;top:-95px}.photo-story{padding:0 12px 65px}.photo-story .photos{gap:8px}.photo-story figure{padding:4px}.photo-story img{height:125px}.services{padding:69px 16px}.service-grid{grid-template-columns:1fr;max-width:360px;gap:31px}.service-image img{height:270px}.service h3{font-size:28px}.lessons{padding:73px 15px}.lesson-grid{grid-template-columns:1fr;max-width:440px;gap:15px}.lesson-card img{height:215px}.class-note{padding:30px 19px}.gallery{padding:75px 13px}.gallery-grid{grid-template-columns:repeat(2,1fr);gap:9px}.contact{padding:73px 12px 75px}.contact .intro{margin-bottom:19px}.lace-invitation{width:100%;max-width:520px;aspect-ratio:auto;background:none;display:block;padding:0}.lace-invitation:before,.lace-invitation:after{content:"";display:block;background:var(--lace) center top/100% auto no-repeat;width:100%;height:140px}.lace-invitation:after{height:90px;background-position:center bottom}.contact-paper{background:#fffdfa;padding:22px 20px 25px;border:1px solid #e5cdd4;box-shadow:0 10px 25px #8059610d}.contact-form input,.contact-form select,.contact-form textarea{font-size:16px}.instagram{padding:74px 15px 83px}}
 @media(max-width:380px){.contact-paper{padding:20px 15px}.lace-invitation:before{height:110px}.lace-invitation:after{height:72px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Photographic lace finishing details, taken from the supplied reference */
+main{position:relative}
+@media(min-width:1100px){
+ main:before,main:after{content:"";position:absolute;top:0;bottom:0;width:60px;pointer-events:none;z-index:3;opacity:.28;background:url("assets/lace-side.webp") left top/60px auto repeat-y}
+ main:before{left:0}
+ main:after{right:0;transform:scaleX(-1)}
+}
+.services:before{height:85px;background:url("assets/lace-top.webp") center top/cover no-repeat;opacity:.32;pointer-events:none}
+.gallery{position:relative}
+.gallery:before{content:"";position:absolute;top:0;left:0;right:0;height:74px;background:url("assets/lace-top.webp") center top/cover no-repeat;opacity:.25;pointer-events:none}
+.gallery > *{position:relative}
+footer:before{height:60px;background:url("assets/lace-top.webp") center top/cover no-repeat;opacity:.3;pointer-events:none}
 </style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="header" aria-label="Main navigation"><a class="brand" href="#top"><img src="assets/rosemary-nav-monogram.svg" alt=""><span>ROSEMARY LANE<small>DESIGNS</small></span></a><button class="menu" id="menu" aria-controls="navlinks" aria-expanded="false">MENU +</button><div class="nav-links" id="navlinks"><a href="#services">SERVICES</a><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div></nav>
