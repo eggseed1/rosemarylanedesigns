@@ -39,6 +39,31 @@ main{position:relative}
 .gallery:before{content:"";position:absolute;top:0;left:0;right:0;height:74px;background:url("assets/lace-top.webp") center top/cover no-repeat;opacity:.25;pointer-events:none}
 .gallery > *{position:relative}
 footer:before{height:60px;background:url("assets/lace-top.webp") center top/cover no-repeat;opacity:.3;pointer-events:none}
+
+/* 1:1 user-provided photographic reference: actual image, not an approximation */
+.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.contact.contact-exact{background:#f5e6e7!important;padding:0!important;overflow:hidden!important;position:relative!important}
+.contact.contact-exact:before,.contact.contact-exact:after{display:none!important}
+.contact-exact .reference-invitation{position:relative;isolation:isolate;width:min(1024px,100%);aspect-ratio:2/3;margin:0 auto;overflow:hidden;background:#f4e0df}
+.contact-exact .reference-art{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:fill;max-width:none}
+.contact-exact .reference-form{position:absolute;inset:0;z-index:1;pointer-events:none;text-align:left}
+.contact-exact .reference-form input:not([type=hidden]),.contact-exact .reference-form textarea,.contact-exact .reference-form button{pointer-events:auto;position:absolute;display:block;box-sizing:border-box;min-width:0;margin:0;box-shadow:none}
+.contact-exact .reference-form input:not([type=hidden]),.contact-exact .reference-form textarea{border:1px solid #d4a8a7;border-radius:4px;background:rgba(248,243,235,.82);color:#515b49;font:400 clamp(13px,1.55vw,17px)/1.35 "DM Sans",sans-serif;padding:9px 12px;outline-offset:2px}
+.contact-exact .ref-name{left:24.45%;top:44.1%;width:51.05%;height:3.75%}
+.contact-exact .ref-email{left:24.45%;top:50.75%;width:51.05%;height:3.75%}
+.contact-exact .ref-message{left:24.45%;top:57.6%;width:51.05%;height:9.9%;resize:none}
+.contact-exact .reference-form .ref-submit{left:30.75%;top:69.25%;width:38.55%;height:4.3%;border:0!important;border-radius:2px;background:transparent!important;color:transparent!important;cursor:pointer;padding:0;min-height:0}
+.contact-exact .ref-submit:hover{box-shadow:inset 0 0 0 2px rgba(119,74,81,.4)!important}
+.contact-exact .reference-form input:focus-visible,.contact-exact .reference-form textarea:focus-visible,.contact-exact .ref-submit:focus-visible{outline:3px solid #9b6977;outline-offset:2px}
+@media(max-width:700px){
+ .contact-exact .reference-invitation{--ref-height:clamp(810px,220vw,1050px);height:var(--ref-height);aspect-ratio:auto;width:100%;max-width:none}
+ .contact-exact .reference-art{inset:auto;left:50%;top:0;transform:translateX(-50%);height:100%;width:auto;max-width:none;object-fit:contain}
+ .contact-exact .reference-form input:not([type=hidden]),.contact-exact .reference-form textarea{left:50%!important;transform:translateX(-50%);width:min(calc(var(--ref-height) * .341),calc(100% - 24px))!important;font-size:16px!important;padding:8px 11px;background:rgba(248,243,235,.93)}
+ .contact-exact .ref-name{top:44.1%;height:5.2%!important}
+ .contact-exact .ref-email{top:50.75%;height:5.2%!important}
+ .contact-exact .ref-message{top:57.6%;height:10.2%!important}
+ .contact-exact .reference-form .ref-submit{left:50%!important;transform:translateX(-50%);width:min(calc(var(--ref-height) * .258),calc(100% - 70px))!important;top:69.25%;height:5%!important;min-height:42px!important}
+}
 </style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="header" aria-label="Main navigation"><a class="brand" href="#top"><img src="assets/rosemary-nav-monogram.svg" alt=""><span>ROSEMARY LANE<small>DESIGNS</small></span></a><button class="menu" id="menu" aria-controls="navlinks" aria-expanded="false">MENU +</button><div class="nav-links" id="navlinks"><a href="#services">SERVICES</a><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div></nav>
@@ -50,7 +75,22 @@ footer:before{height:60px;background:url("assets/lace-top.webp") center top/cove
 <section class="lessons" id="lessons"><span class="eyebrow">YOU'RE INVITED</span><h2>Come stitch with us.</h2><p class="intro">An afternoon of creativity, conversation, and something beautiful to take home.</p><div class="lesson-grid"><article class="lesson-card"><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=950&q=85" alt="Floral needlepoint being stitched" loading="lazy"><span class="index">01.</span><h3>Private lessons</h3><p>One-on-one guidance, at your own pace.</p></article><article class="lesson-card"><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=950&q=85" alt="Floral needlepoint canvas" loading="lazy"><span class="index">02.</span><h3>Group lessons</h3><p>Bring a friend or make a new one.</p></article></div><div class="class-note"><span class="eyebrow">COASTAL NEEDLEPOINT CLASS</span><h3>Make your own bag charm.</h3><p>Learn basketweave, brick stitch and French knots. Choose initials or a coastal motif, with guided instruction and a take-home project bag.</p><a class="button" href="mailto:hello@rosemarylanedesign.com?subject=Needlepoint%20class%20inquiry">ASK ABOUT LESSONS ↗</a></div></section>
 <section class="custom" id="custom"><div class="custom-visual"><img src="assets/curated/oval-crest.webp" alt="Custom embroidered monogram" loading="lazy"></div><div class="custom-copy"><span class="eyebrow">THE PERSONAL TOUCH</span><h2>Made for you,<br><em>and only you.</em></h2><p>Hand-painted canvases, French-knot monograms, and custom needlework—little details worth keeping.</p><a class="button" href="mailto:hello@rosemarylanedesign.com?subject=Custom%20needlework%20inquiry">ASK ABOUT CUSTOM WORK ↗</a></div></section>
 <section class="gallery" id="gallery"><span class="eyebrow">FROM THE STUDIO</span><h2>Little things, lovingly made.</h2><p class="intro">Stitched inspiration and beautiful details.</p><div class="gallery-grid"><figure><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=800&q=85" alt="Needlepoint flowers" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=800&q=85" alt="Needlepoint work in progress" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1466027449668-27f96b692ba4?auto=format&fit=crop&w=800&q=85" alt="Delicate embroidered fabric" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=800&q=85" alt="Creative stitching supplies" loading="lazy"></figure></div></section>
-<section class="contact" id="contact"><span class="eyebrow">WE'D LOVE TO HEAR FROM YOU</span><h2>Do say hello.</h2><p class="intro">Ask about lessons, gatherings, or a custom piece.</p><div class="lace-invitation"><div class="contact-paper"><form class="contact-form" id="contact-form"><div class="fields"><label>YOUR NAME<input name="name" type="text" autocomplete="name" placeholder="Your name" required></label><label>EMAIL ADDRESS<input name="email" type="email" autocomplete="email" placeholder="you@example.com" required></label></div><label>YOUR INQUIRY<select name="subject"><option>General inquiry</option><option>Private lessons</option><option>Group lessons</option><option>Custom needlework</option><option>Hand-painted canvases</option></select></label><label>YOUR MESSAGE<textarea name="message" rows="4" placeholder="A little note..." required></textarea></label><button type="submit">PREPARE MESSAGE ↗</button><p class="contact-note">Opens your email app with your message ready to send.</p></form><p class="love-note">With love,<span class="rose" aria-hidden="true">🥀 🪡</span><small>ROSEMARY LANE</small></p></div></div></section>
+<section class="contact contact-exact" id="contact" aria-labelledby="contact-accessible-title">
+<h2 class="visually-hidden" id="contact-accessible-title">Do say hello. Contact Rosemary Lane Designs.</h2>
+<div class="reference-invitation">
+<img class="reference-art" src="assets/contact-exact-reference.jpg" alt="" width="1024" height="1536" loading="lazy">
+<form class="reference-form" id="contact-form">
+<label class="visually-hidden" for="ref-name">Name</label>
+<input id="ref-name" class="ref-name" name="name" type="text" autocomplete="name" required>
+<label class="visually-hidden" for="ref-email">Email address</label>
+<input id="ref-email" class="ref-email" name="email" type="email" autocomplete="email" required>
+<label class="visually-hidden" for="ref-message">Your message about lessons, gatherings, or a custom piece</label>
+<textarea id="ref-message" class="ref-message" name="message" required></textarea>
+<input type="hidden" name="subject" value="Inquiry">
+<button type="submit" class="ref-submit" aria-label="Prepare message to Rosemary Lane Designs"><span class="visually-hidden">Send message</span></button>
+</form></div>
+<p class="visually-hidden">Sending prepares an email in your email application.</p>
+</section>
 <section class="instagram" id="instagram"><span class="eyebrow">FOLLOW ALONG</span><h2>A glimpse of the lane.</h2><p class="intro">A few moments from our needlepoint world.</p><div class="instagram-grid" id="instagram-grid"></div><p class="instagram-status" id="instagram-status">See the latest posts on Instagram.</p><a class="button" href="https://www.instagram.com/rosemarylanedesign/" target="_blank" rel="noopener noreferrer">FOLLOW @ROSEMARYLANEDESIGN ↗</a></section>
 </main><footer><img src="assets/rosemary-nav-monogram.svg" alt=""><div class="name">ROSEMARY LANE DESIGNS</div><p class="signature">With love, Rosemary Lane</p><div class="links"><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div><small>© <span id="year"></span> ROSEMARY LANE DESIGNS</small></footer>
 <script>
