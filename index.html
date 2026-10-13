@@ -63,7 +63,7 @@ body{background:#fdfbfa;color:var(--ink)}.site-header{background:#fffcfa}.site-m
 .hero-under,.photo-interlude-card,.contact-card{box-shadow:none}
 .editorial-gallery img{filter:saturate(.8) brightness(1.03)}
 @media(max-width:720px){.hero-stationery{padding:10px}.intro-sprig{width:85px;height:95px}.about-content .corner-floral{width:48px;height:55px;right:8px;top:8px}.bespoke-art .bespoke-small-flower{max-width:75px}}
-.embroidery-library-link{display:inline-block;margin-top:28px;text-decoration:none;font:italic 23px "Cormorant Garamond",Georgia,serif;color:#7c666c;border-bottom:1px solid #c9aeb2;padding-bottom:4px}.embroidery-library-link:hover{color:#9b7380}.hero-stationery img{object-fit:contain;max-height:450px}.brand img,.footer-crest{object-fit:contain}.site-header .navigation{gap:clamp(12px,1.5vw,26px)}@media(max-width:1000px){.site-header .navigation a{font-size:9px}} </style>
+.embroidery-library-link{display:inline-block;margin-top:28px;text-decoration:none;font:italic 23px "Cormorant Garamond",Georgia,serif;color:#7c666c;border-bottom:1px solid #c9aeb2;padding-bottom:4px}.embroidery-library-link:hover{color:#9b7380}.hero-stationery img{object-fit:contain;max-height:450px}.brand img,.footer-crest{object-fit:contain}.site-header .navigation{gap:clamp(12px,1.5vw,26px)}@media(max-width:1000px){.site-header .navigation a{font-size:9px}} .instagram-grid{max-width:1120px;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}.instagram-post-card{width:100%;min-width:0;overflow:hidden;background:#fff;border:1px solid #efe8e5;padding:5px}.instagram-post-card .instagram-media{max-width:100%!important;min-width:0!important}.instagram-post-card iframe{max-width:100%!important}.instagram-post-card .instagram-post{border:0}.instagram-status{font-size:16px}@media(max-width:920px){.instagram-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.instagram-grid{grid-template-columns:minmax(0,1fr);max-width:470px}} </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -95,7 +95,40 @@ nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.c
 document.getElementById('year').textContent=new Date().getFullYear();
 document.getElementById('contact-form').addEventListener('submit',function(e){e.preventDefault();const d=new FormData(this),body='Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\n\n'+d.get('message');location.href='mailto:hello@rosemarylanedesign.com?subject='+encodeURIComponent('Rosemary Lane — '+d.get('subject'))+'&body='+encodeURIComponent(body)});
 document.getElementById('newsletter').addEventListener('submit',e=>{e.preventDefault();const email=document.getElementById('newsletter-email').value;document.getElementById('newsletter-note').textContent='Your email app will open with your newsletter request.';location.href='mailto:hello@rosemarylanedesign.com?subject=Newsletter%20request&body='+encodeURIComponent('Please add '+email+' to the Rosemary Lane newsletter.')});
-(async()=>{const grid=document.getElementById('instagram-grid'),status=document.getElementById('instagram-status');try{const r=await fetch('instagram-posts.json',{cache:'no-store'});if(!r.ok)return;const items=await r.json();if(!Array.isArray(items))return;const posts=items.filter(p=>p&&/^https:\/\/(www\.)?instagram\.com\/(p|reel)\//.test(p.url||'')&&typeof p.image==='string'&&p.image.trim()).slice(0,6);for(const post of posts){const a=document.createElement('a');a.className='instagram-post';a.href=post.url;a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-label',post.alt||'View Instagram post');const img=document.createElement('img');img.src=post.image;img.alt=post.alt||'Needlepoint from Rosemary Lane';img.loading='lazy';a.appendChild(img);grid.appendChild(a)}if(posts.length){status.textContent=posts.length===6?'See more from the studio on Instagram.':'See the newest creations on Instagram.'}}catch(error){status.textContent='Find our latest creations on Instagram.'}})();
+(async()=>{
+const grid=document.getElementById('instagram-grid'),status=document.getElementById('instagram-status');
+try{
+ const response=await fetch('instagram-posts.json',{cache:'no-store'});
+ if(!response.ok)throw new Error('Feed unavailable');
+ const data=await response.json();
+ if(!Array.isArray(data))throw new Error('Invalid feed');
+ const posts=data.filter(p=>p&&typeof p.url==='string'&&/^https:\/\/(www\.)?instagram\.com\/(p|reel)\/[A-Za-z0-9_-]+\/?(?:\?.*)?$/.test(p.url)).slice(0,6);
+ if(!posts.length){status.textContent='See the latest posts directly on Instagram.';return;}
+ let needsEmbed=false;
+ for(const post of posts){
+  const card=document.createElement('div');card.className='instagram-post-card';
+  if(typeof post.image==='string'&&post.image.trim()){
+   const a=document.createElement('a');a.href=post.url;a.target='_blank';a.rel='noopener noreferrer';a.className='instagram-post';
+   const img=document.createElement('img');img.src=post.image;img.loading='lazy';img.alt=post.alt||'Rosemary Lane needlepoint post';
+   a.appendChild(img);card.appendChild(a);
+  }else{
+   const quote=document.createElement('blockquote');
+   quote.className='instagram-media';
+   quote.dataset.instgrmPermalink=post.url.split('?')[0];
+   quote.dataset.instgrmVersion='14';
+   quote.style.cssText='background:#fff;border:0;margin:0 auto;min-width:0;width:100%';
+   const fallback=document.createElement('a');fallback.href=post.url;fallback.target='_blank';fallback.rel='noopener noreferrer';fallback.textContent='View this post on Instagram';
+   quote.appendChild(fallback);card.appendChild(quote);needsEmbed=true;
+  }
+  grid.appendChild(card);
+ }
+ status.textContent='View each post on Instagram for the full caption and comments.';
+ if(needsEmbed){
+  if(window.instgrm?.Embeds?.process){window.instgrm.Embeds.process();}
+  else{const script=document.createElement('script');script.async=true;script.src='https://www.instagram.com/embed.js';script.onload=()=>window.instgrm?.Embeds?.process();document.body.appendChild(script);}
+ }
+}catch(error){status.textContent='See the latest posts directly on Instagram.';}
+})();
 </script>
 </body>
 </html>
