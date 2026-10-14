@@ -257,6 +257,40 @@ main:before,main:after{display:none!important}
 .simple-contact-wrap{margin-inline:auto}
 .simple-inquiry-panel{background:#fffcf8f0;box-shadow:0 0 0 9px #fff8f58c,0 8px 22px #7c53501c}
 @media(max-width:650px){.hero.simple-textile-hero{min-height:460px!important;padding-top:99px!important;padding-bottom:94px!important}.needlepoint-stage{min-height:230px}.needlepoint-stage .single-brand-art{width:min(370px,78%)}.needle-decoration{width:72px;opacity:.58}.needle-scissors{left:-3%;top:10%}.needle-charm{right:-3%;bottom:7%}.textile-lace{height:clamp(43px,12vw,75px)!important}}
+
+/* High-density textile background: CSS pinstripes remain razor-sharp at any resolution.
+   No low-resolution bitmap is stretched to fill the section. */
+.hero.simple-textile-hero,.contact.simple-textile-contact{
+  background-color:#f8e8e9!important;
+  background-image:
+    repeating-linear-gradient(90deg,
+      rgba(255,255,255,.14) 0px,
+      rgba(255,255,255,0) 1px,
+      rgba(105,66,73,.025) 2px,
+      transparent 3px),
+    repeating-linear-gradient(0deg,
+      rgba(255,255,255,.15) 0px,
+      rgba(255,255,255,0) 1px,
+      rgba(135,91,100,.025) 2px,
+      transparent 3px),
+    repeating-linear-gradient(90deg,
+      #f9eceb 0px,
+      #f9eceb 31px,
+      #ecced4 31px,
+      #ecced4 54px,
+      #f9eceb 54px,
+      #f9eceb 85px,
+      #ecced4 85px,
+      #ecced4 108px)!important;
+  background-size:4px 4px,4px 4px,108px 100%!important;
+  background-position:center top!important;
+  background-repeat:repeat!important;
+}
+@media(max-width:650px){
+.hero.simple-textile-hero,.contact.simple-textile-contact{
+background-size:4px 4px,4px 4px,108px 100%!important;
+}
+}
 </style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="header" aria-label="Main navigation"><a class="brand" href="#top"><img src="assets/rosemary-nav-monogram.svg" alt=""><span>ROSEMARY LANE<small>DESIGNS</small></span></a><button class="menu" id="menu" aria-controls="navlinks" aria-expanded="false">MENU +</button><div class="nav-links" id="navlinks"><a href="#services">SERVICES</a><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div></nav>
