@@ -64,14 +64,93 @@ footer:before{height:60px;background:url("assets/lace-top.webp") center top/cove
  .contact-exact .ref-message{top:57.6%;height:10.2%!important}
  .contact-exact .reference-form .ref-submit{left:50%!important;transform:translateX(-50%);width:min(calc(var(--ref-height) * .258),calc(100% - 70px))!important;top:69.25%;height:5%!important;min-height:42px!important}
 }
+
+/* Bridal editorial lace direction — genuine transparent lace from supplied reference */
+:root{--cream:#fcfaf7;--linen:#fffcf9;--blush:#f7edef;--blush-deep:#edd9df;--rose:#aa7d89;--sage:#6d7568;--ink:#4d4b48;--muted:#77716d;--line:#e2d4d4}
+body{background:#fcfaf7}
+.header{background:#fffdfa;border-bottom:1px solid #e7ddda}
+.header .brand span{color:#55534d}
+.hero.hero-lace-editorial{min-height:590px;display:flex;align-items:center;justify-content:center;padding:62px 22px;background:#56514e;position:relative;isolation:isolate}
+.hero.hero-lace-editorial:before{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=1800&q=85") center 48%/cover no-repeat;filter:grayscale(1) brightness(.61) contrast(.87);z-index:-2;opacity:1}
+.hero.hero-lace-editorial:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(66,58,59,.18),rgba(96,71,82,.25));pointer-events:none;z-index:-1}
+.hero-lace-frame{width:min(790px,100%);position:relative;background:rgba(255,252,249,.98);padding:62px 85px 57px;box-shadow:0 18px 60px rgba(23,20,20,.24);border:1px solid #e4d9d6}
+.hero-invitation-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px}
+.hero-invitation-inner>.eyebrow{font-size:9px;letter-spacing:.3em;color:#8a8279}
+.hero.hero-lace-editorial .hero-label{width:min(555px,100%);max-width:100%;margin:3px auto 0;filter:none}
+.hero.hero-lace-editorial .tagline{font:400 39px/1.15 "Great Vibes",cursive;color:#7d8070;margin:0}
+.hero.hero-lace-editorial .small-sign{font-size:9px;letter-spacing:.18em;color:#867e79}
+.lace-edge{position:absolute;pointer-events:none;z-index:1;opacity:.98;filter:drop-shadow(0 1px 1px rgba(87,74,74,.12))}
+.lace-edge-left,.lace-edge-right{top:5px;bottom:5px;width:74px;height:calc(100% - 10px);object-fit:fill}
+.lace-edge-left{left:-24px}.lace-edge-right{right:-24px;transform:scaleX(-1)}
+.lace-edge-top,.lace-edge-bottom{left:15px;width:calc(100% - 30px);height:67px;object-fit:fill}
+.lace-edge-top{top:-26px}.lace-edge-bottom{bottom:-26px;transform:scaleY(-1)}
+.welcome{padding:98px 20px 92px;background:#fffdfb;position:relative}
+.welcome:before,.services:before,.lessons:before,.gallery:before,.instagram:before,footer:before{content:"";display:block;position:absolute;left:0;right:0;top:0;height:55px;background:url("assets/lace-horizontal-reference.webp") center top/auto 55px repeat-x;opacity:.42;pointer-events:none}
+.welcome h2,.services h2,.lessons h2,.custom-copy h2,.gallery h2,.instagram h2{color:#646e60}
+.welcome .signoff{font-size:40px;color:#987884}
+.photo-story{background:#fffdfb;padding-bottom:95px}
+.photo-story figure{padding:8px;border:1px solid #e6d9d8;box-shadow:0 7px 20px rgba(80,62,64,.09)}
+.services{background:#f8eff0;padding:101px 22px 99px}
+.services:before{background-color:transparent;opacity:.35}
+.service-image{border:1px solid #e6d9d6;background:#fffdfb}
+.service-image:after{inset:14px;border:1px solid #f1e8e4}
+.service h3{color:#62695e}
+.lessons{background:#fffdfb;padding-top:108px}
+.lesson-card{border-color:#e7dad8;box-shadow:0 5px 20px #6e58510b}
+.class-note{background:#f8eff0}
+.custom{background:#fffdfa}
+.custom-visual{background:linear-gradient(#f8edef9c,#f8edef9c),repeating-linear-gradient(90deg,#fffcfa 0 27px,#eedbe0 27px 29px)}
+.custom-visual:before{border-color:#e1cdd2}
+.custom-copy{background:#fffdfb}
+.gallery{background:#f8eff0;padding-top:106px}
+.gallery figure{border-color:#e6d9d8;box-shadow:0 6px 15px #6554550a}
+.instagram{background:#fffdfa;padding-top:109px}
+footer{background:#f7ecee;padding-top:89px}
+footer:before{height:62px;background-size:auto 62px;opacity:.65}
+.contact.contact-exact{background:#f6e7e8!important}
+@media(max-width:800px){
+ .hero.hero-lace-editorial{min-height:480px;padding:50px 31px}
+ .hero-lace-frame{padding:56px 55px 49px}
+ .lace-edge-left,.lace-edge-right{width:55px}
+ .lace-edge-left{left:-19px}.lace-edge-right{right:-19px}
+ .lace-edge-top,.lace-edge-bottom{height:52px}
+ .lace-edge-top{top:-19px}.lace-edge-bottom{bottom:-19px}
+ .hero.hero-lace-editorial .tagline{font-size:35px}
+}
+@media(max-width:520px){
+ .hero.hero-lace-editorial{min-height:360px;padding:37px 22px}
+ .hero-lace-frame{padding:45px 30px 40px}
+ .lace-edge-left,.lace-edge-right{width:37px}
+ .lace-edge-left{left:-15px}.lace-edge-right{right:-15px}
+ .lace-edge-top,.lace-edge-bottom{height:35px;left:10px;width:calc(100% - 20px)}
+ .lace-edge-top{top:-14px}.lace-edge-bottom{bottom:-14px}
+ .hero-invitation-inner>.eyebrow{font-size:8px;letter-spacing:.19em}
+ .hero.hero-lace-editorial .tagline{font-size:29px}
+ .hero.hero-lace-editorial .small-sign{font-size:7px;letter-spacing:.07em}
+ .welcome{padding-top:82px}
+ .welcome:before,.services:before,.lessons:before,.gallery:before,.instagram:before{height:35px;background-size:auto 35px}
+}
 </style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="header" aria-label="Main navigation"><a class="brand" href="#top"><img src="assets/rosemary-nav-monogram.svg" alt=""><span>ROSEMARY LANE<small>DESIGNS</small></span></a><button class="menu" id="menu" aria-controls="navlinks" aria-expanded="false">MENU +</button><div class="nav-links" id="navlinks"><a href="#services">SERVICES</a><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div></nav>
 <main id="main">
-<section class="hero" id="top"><img class="stitch-side" src="assets/curated/floral-bouquet.webp" alt=""><img class="stitch-side right" src="assets/curated/floral-bouquet.webp" alt=""><img class="hero-label" src="assets/rosemary-needlepoint-logo-4k.webp" alt="Rosemary Lane Designs embroidered needlepoint wordmark" width="3840" height="1440"><p class="tagline">The lovely art of needlepoint.</p><span class="small-sign">LESSONS · CUSTOM NEEDLEWORK · CANVASES</span></section>
-<section class="welcome" id="introduction"><img class="welcome-lace" src="assets/photoreal-lace-4k.jpg" alt=""><span class="eyebrow">WELCOME TO ROSEMARY LANE</span><h2>A little beauty<br>in every stitch.</h2><p class="intro">Beautiful things are even lovelier when they're made together. Come learn, create, and find a little joy in needlepoint.</p><p class="signoff">With love, Rosemary Lane</p><img class="tiny-rose" src="assets/curated/rose-medallion.webp" alt=""></section>
+<section class="hero hero-lace-editorial" id="top" aria-label="Rosemary Lane Designs">
+  <div class="hero-lace-frame">
+    <img class="lace-edge lace-edge-left" src="assets/lace-vertical-reference.webp" alt="" aria-hidden="true">
+    <img class="lace-edge lace-edge-right" src="assets/lace-vertical-reference.webp" alt="" aria-hidden="true">
+    <img class="lace-edge lace-edge-top" src="assets/lace-horizontal-reference.webp" alt="" aria-hidden="true">
+    <img class="lace-edge lace-edge-bottom" src="assets/lace-horizontal-reference.webp" alt="" aria-hidden="true">
+    <div class="hero-invitation-inner">
+      <span class="eyebrow">THE ART OF NEEDLEPOINT</span>
+      <img class="hero-label" src="assets/rosemary-needlepoint-logo-4k.webp" alt="Rosemary Lane Designs embroidered wordmark" width="3840" height="1440">
+      <p class="tagline">Stitched with love.</p>
+      <span class="small-sign">LESSONS &nbsp; · &nbsp; CUSTOM NEEDLEWORK &nbsp; · &nbsp; CANVASES</span>
+    </div>
+  </div>
+</section>
+<section class="welcome" id="introduction"><span class="eyebrow">WELCOME TO ROSEMARY LANE</span><h2>A little beauty<br>in every stitch.</h2><p class="intro">Beautiful things are even lovelier when they're made together. Come learn, create, and find a little joy in needlepoint.</p><p class="signoff">With love, Rosemary Lane</p></section>
 <div class="photo-story"><div class="photos"><figure><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=950&q=85" alt="Floral needlepoint canvas" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=950&q=85" alt="Needlepoint stitching in progress" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1466027449668-27f96b692ba4?auto=format&fit=crop&w=950&q=85" alt="Textured embroidered floral work" loading="lazy"></figure></div></div>
-<section class="services" id="services"><span class="eyebrow">WHAT WE DO</span><h2>Something lovely for everyone.</h2><div class="service-grid"><a class="service" href="#lessons"><div class="service-image"><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=950&q=85" alt="Needlepoint lesson materials" loading="lazy"></div><h3>Lessons</h3><p>Private & group</p></a><a class="service" href="#custom"><div class="service-image"><img src="assets/curated/oval-crest.webp" alt="Embroidered monogram" loading="lazy"></div><h3>Custom needlework</h3><p>Made just for you</p></a><a class="service" href="#custom"><div class="service-image"><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=950&q=85" alt="Hand-painted canvas inspiration" loading="lazy"></div><h3>Hand-painted canvases</h3><p>For your next project</p></a></div><p class="flourish">made with care</p></section>
+<section class="services" id="services"><span class="eyebrow">WHAT WE DO</span><h2>Something lovely for everyone.</h2><div class="service-grid"><a class="service" href="#lessons"><div class="service-image"><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=950&q=85" alt="Needlepoint lesson materials" loading="lazy"></div><h3>Lessons</h3><p>Private & group</p></a><a class="service" href="#custom"><div class="service-image"><img src="assets/curated/oval-crest.webp" alt="Embroidered monogram" loading="lazy"></div><h3>Custom needlework</h3><p>Made just for you</p></a><a class="service" href="#custom"><div class="service-image"><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=950&q=85" alt="Hand-painted canvas inspiration" loading="lazy"></div><h3>Hand-painted canvases</h3><p>For your next project</p></a></div></section>
 <section class="lessons" id="lessons"><span class="eyebrow">YOU'RE INVITED</span><h2>Come stitch with us.</h2><p class="intro">An afternoon of creativity, conversation, and something beautiful to take home.</p><div class="lesson-grid"><article class="lesson-card"><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=950&q=85" alt="Floral needlepoint being stitched" loading="lazy"><span class="index">01.</span><h3>Private lessons</h3><p>One-on-one guidance, at your own pace.</p></article><article class="lesson-card"><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=950&q=85" alt="Floral needlepoint canvas" loading="lazy"><span class="index">02.</span><h3>Group lessons</h3><p>Bring a friend or make a new one.</p></article></div><div class="class-note"><span class="eyebrow">COASTAL NEEDLEPOINT CLASS</span><h3>Make your own bag charm.</h3><p>Learn basketweave, brick stitch and French knots. Choose initials or a coastal motif, with guided instruction and a take-home project bag.</p><a class="button" href="mailto:hello@rosemarylanedesign.com?subject=Needlepoint%20class%20inquiry">ASK ABOUT LESSONS ↗</a></div></section>
 <section class="custom" id="custom"><div class="custom-visual"><img src="assets/curated/oval-crest.webp" alt="Custom embroidered monogram" loading="lazy"></div><div class="custom-copy"><span class="eyebrow">THE PERSONAL TOUCH</span><h2>Made for you,<br><em>and only you.</em></h2><p>Hand-painted canvases, French-knot monograms, and custom needlework—little details worth keeping.</p><a class="button" href="mailto:hello@rosemarylanedesign.com?subject=Custom%20needlework%20inquiry">ASK ABOUT CUSTOM WORK ↗</a></div></section>
 <section class="gallery" id="gallery"><span class="eyebrow">FROM THE STUDIO</span><h2>Little things, lovingly made.</h2><p class="intro">Stitched inspiration and beautiful details.</p><div class="gallery-grid"><figure><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=800&q=85" alt="Needlepoint flowers" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=800&q=85" alt="Needlepoint work in progress" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1466027449668-27f96b692ba4?auto=format&fit=crop&w=800&q=85" alt="Delicate embroidered fabric" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=800&q=85" alt="Creative stitching supplies" loading="lazy"></figure></div></section>
