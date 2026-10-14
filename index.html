@@ -1120,6 +1120,19 @@ footer .stitched-signoff svg{width:16px!important;height:12px!important;margin-l
  footer .signature{font-size:13px!important}
  .stitched-signoff img,footer .stitched-signoff img{width:17px!important;height:17px!important}
 }
+
+/* Balanced signature size: delicate but comfortably legible. */
+.welcome.refined-welcome .signoff,
+.contact.refined-inquiry .simple-contact-signoff,
+footer .signature{font-size:clamp(17px,1.75vw,21px)!important;line-height:1.5!important}
+.stitched-signoff img,footer .stitched-signoff img{width:25px!important;height:25px!important}
+.stitched-signoff svg,footer .stitched-signoff svg{width:21px!important;height:15px!important;margin-left:-6px!important}
+@media(max-width:650px){
+ .welcome.refined-welcome .signoff,
+ .contact.refined-inquiry .simple-contact-signoff,
+ footer .signature{font-size:17px!important}
+ .stitched-signoff img,footer .stitched-signoff img{width:23px!important;height:23px!important}
+}
 </style><link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
