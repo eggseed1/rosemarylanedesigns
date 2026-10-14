@@ -1078,6 +1078,27 @@ footer .stitched-signoff img{width:30px;height:30px}
  line-height:1.02!important;
  letter-spacing:-.025em!important;
 }
+
+/* Mobile Instagram embeds: centered full-width cards without clipped edges. */
+.instagram-grid{justify-items:center}
+.instagram-card{box-sizing:border-box;width:100%;min-width:0;overflow:visible!important;display:flex;align-items:flex-start;justify-content:center}
+.instagram-card .instagram-media,
+.instagram-card blockquote.instagram-media,
+.instagram-card iframe,
+.instagram-card .instagram-media iframe{
+ box-sizing:border-box!important;width:100%!important;max-width:100%!important;
+ min-width:0!important;margin-left:auto!important;margin-right:auto!important;
+}
+@media(max-width:800px){
+ .instagram{box-sizing:border-box;width:100%;padding-left:clamp(10px,3vw,20px)!important;padding-right:clamp(10px,3vw,20px)!important;overflow-x:clip}
+ .instagram-grid{width:100%;max-width:460px!important;grid-template-columns:minmax(0,1fr)!important;justify-content:center!important;justify-items:center!important;gap:24px!important;margin:0 auto 26px!important}
+ .instagram-card{width:100%;max-width:440px;margin:0 auto!important}
+ .instagram-card .instagram-media{margin:0 auto!important}
+}
+@media(max-width:360px){
+ .instagram{padding-left:8px!important;padding-right:8px!important}
+ .instagram-grid{max-width:100%!important}
+}
 </style><link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
