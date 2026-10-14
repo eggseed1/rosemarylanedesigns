@@ -472,6 +472,83 @@ opacity:1!important;
 .photographic-hero,.photographic-contact{
  background-color:#fff9f7!important;
 }
+
+/* Editorial placement: airy hero, no oversized stacked lace strips. */
+.hero.photographic-hero{min-height:620px!important;padding:115px 28px 100px!important;overflow:hidden!important}
+.photographic-hero .textile-lace-top,
+.photographic-contact .textile-lace-top{
+ height:65px!important;
+ background-image:url("lace-top.webp")!important;
+ background-size:auto 100%!important;
+ background-position:center top!important;
+ opacity:.83!important;
+ filter:brightness(1.12) saturate(.45) contrast(.90)!important;
+}
+.photographic-hero .textile-lace-bottom{display:none!important}
+.photographic-contact .textile-lace-bottom{
+ height:56px!important;
+ background-image:url("lace-bottom.webp")!important;
+ background-size:auto 100%!important;
+ opacity:.68!important;
+ filter:brightness(1.12) saturate(.45) contrast(.9)!important;
+}
+.photographic-hero .simple-hero-center{max-width:990px!important}
+.photographic-hero .needlepoint-stage{
+ position:relative!important;
+ width:100%!important;
+ max-width:970px!important;
+ min-height:305px!important;
+ display:grid!important;
+ grid-template-columns:minmax(130px,1fr) minmax(0,570px) minmax(130px,1fr)!important;
+ align-items:center!important;
+ justify-items:center!important;
+ gap:22px!important;
+}
+.photographic-hero .needlepoint-stage .photo-horse-banner{
+ grid-column:2!important;
+ width:100%!important;
+ max-width:570px!important;
+ max-height:275px!important;
+ object-fit:contain!important;
+ z-index:5!important;
+ filter:brightness(1.075) saturate(.77) contrast(.95) drop-shadow(0 3px 4px #82686c17)!important;
+}
+.photographic-hero .needlepoint-stage .needle-decoration{
+ position:absolute!important;
+ max-height:none!important;
+ width:100px!important;
+ opacity:.9!important;
+ filter:brightness(1.06) saturate(.73) contrast(.96) drop-shadow(0 3px 3px #82686c19)!important;
+}
+.photographic-hero .needlepoint-stage .photo-monogram-left{left:4%!important;top:12%!important;width:115px!important;transform:rotate(-8deg)!important}
+.photographic-hero .needlepoint-stage .photo-shell-left{left:16%!important;bottom:5%!important;width:84px!important;transform:rotate(13deg)!important}
+.photographic-hero .needlepoint-stage .photo-shell-right{right:16%!important;top:6%!important;width:83px!important;transform:rotate(-12deg)!important}
+.photographic-hero .needlepoint-stage .photo-monogram-right{right:4%!important;bottom:10%!important;width:107px!important;transform:rotate(7deg)!important}
+.photographic-hero .simple-hero-deck{margin:4px auto 22px!important}
+.photographic-contact{padding-top:108px!important;padding-bottom:105px!important}
+.photographic-contact .contact-shell-accent{left:calc(50% - 440px)!important;top:39%!important;width:104px!important;opacity:.6!important}
+.photographic-contact .contact-monogram-accent{right:calc(50% - 440px)!important;bottom:26%!important;width:105px!important;opacity:.6!important}
+@media(max-width:800px){
+.photographic-hero .needlepoint-stage{min-height:260px!important;grid-template-columns:12% 76% 12%!important;gap:0!important}
+.photographic-hero .needlepoint-stage .photo-horse-banner{width:100%!important;max-height:240px!important}
+.photographic-hero .needlepoint-stage .photo-monogram-left{left:0!important;top:11%!important;width:75px!important}
+.photographic-hero .needlepoint-stage .photo-monogram-right{right:0!important;bottom:11%!important;width:75px!important}
+.photographic-hero .needlepoint-stage .photo-shell-left{left:10%!important;bottom:4%!important;width:59px!important}
+.photographic-hero .needlepoint-stage .photo-shell-right{right:10%!important;top:4%!important;width:59px!important}
+.photographic-contact .contact-photographic-accent{display:none!important}
+}
+@media(max-width:520px){
+.hero.photographic-hero{min-height:460px!important;padding:87px 15px 70px!important}
+.photographic-hero .textile-lace-top,.photographic-contact .textile-lace-top{height:43px!important}
+.photographic-hero .needlepoint-stage{min-height:190px!important;grid-template-columns:10% 80% 10%!important}
+.photographic-hero .needlepoint-stage .photo-horse-banner{max-height:190px!important}
+.photographic-hero .needlepoint-stage .photo-monogram-left{left:-3%!important;top:13%!important;width:52px!important}
+.photographic-hero .needlepoint-stage .photo-monogram-right{right:-3%!important;bottom:13%!important;width:52px!important}
+.photographic-hero .needlepoint-stage .photo-shell-left{left:8%!important;bottom:1%!important;width:43px!important}
+.photographic-hero .needlepoint-stage .photo-shell-right{right:8%!important;top:1%!important;width:43px!important}
+.photographic-hero .simple-hero-deck{font-size:25px!important}
+.photographic-contact{padding-top:85px!important}
+}
 </style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="header" aria-label="Main navigation"><a class="brand" href="#top"><img src="assets/rosemary-nav-monogram.svg" alt=""><span>ROSEMARY LANE<small>DESIGNS</small></span></a><button class="menu" id="menu" aria-controls="navlinks" aria-expanded="false">MENU +</button><div class="nav-links" id="navlinks"><a href="#services">SERVICES</a><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div></nav>
