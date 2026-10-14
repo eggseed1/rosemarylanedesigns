@@ -208,30 +208,46 @@ main:before,main:after{display:none!important}
 @media(max-width:700px){.hero.layered-hero{min-height:570px!important;padding:93px 17px 105px!important}.hero-banner{min-height:215px}.hero-embroidery-left{width:130px;left:-48px;top:17%}.hero-embroidery-right{width:150px;right:-62px;top:24%}.hero-embroidery-bottom-left{left:-30px;bottom:14%;width:113px}.hero-embroidery-bottom-right{right:-35px;bottom:13%;width:130px}.hero-real-subhead{max-width:290px}.contact.layered-contact{padding:90px 15px 100px!important}.inquiry-lace-shell{padding:12px;background-size:auto 35px}.inquiry-lace-oval{min-height:0;padding:49px 29px 45px;border-radius:44% 44% 20% 20% / 9% 9% 7% 7%;box-shadow:0 0 0 5px #fffaf698,0 8px 20px #9e7f8529}.contact-rose-left{left:-65px;top:13%;width:140px}.contact-rose-right{right:-72px;top:19%;width:155px}}
 @media(max-width:420px){.hero.layered-hero{padding:80px 12px 91px!important;min-height:520px!important}.hero-banner{min-height:190px}.banner-words{padding:25px 14px}.layered-hero h1{font-size:53px!important}.hero-pretitle{font-size:8px}.hero-designs{font-size:10px}.hero-script-caption{font-size:24px}.hero-embroidery-bottom-left,.hero-embroidery-bottom-right{opacity:.65}.inquiry-lace-shell{padding:6px}.inquiry-lace-oval{padding:43px 23px 37px}.inquiry-heading{font-size:25px}.contact-deck{max-width:270px}.contact-signoff{font-size:29px}}
 
+
+/* Quiet textile direction: no flowers, no overlapping wordmark, no flattened full-section image. */
+.hero.simple-textile-hero,.contact.simple-textile-contact{position:relative!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;isolation:isolate;overflow:hidden!important;text-align:center;background-color:#faeff0!important;background-image:repeating-linear-gradient(90deg,#f9e8e9 0 32px,#f1dadd 32px 35px,#f9e8e9 35px 67px)!important}
+.hero.simple-textile-hero:before,.hero.simple-textile-hero:after,.contact.simple-textile-contact:before,.contact.simple-textile-contact:after{content:none!important;display:none!important}
+.textile-lace{position:absolute;left:0;right:0;height:clamp(50px,8vw,112px);background:url("assets/lace-top.webp") center top/auto 100% repeat-x;pointer-events:none;z-index:2}
+.textile-lace-top{top:0}.textile-lace-bottom{bottom:0;transform:scaleY(-1)}
+.hero.simple-textile-hero{min-height:580px!important;padding:125px 24px 115px!important}
+.simple-hero-center{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;width:100%;max-width:680px}
+.single-brand-art{display:block;width:min(550px,90%);height:auto;max-height:265px;object-fit:contain;filter:drop-shadow(0 6px 8px rgba(92,70,69,.13))}
+.simple-hero-deck{font:italic 400 clamp(24px,3.2vw,37px)/1.2 "Cormorant Garamond",serif;color:#6b7363;margin:15px 0 23px}
+.simple-hero-link{display:inline-block;text-decoration:none;background:#bc8c99;color:#fffefa;border:1px solid #d1acb5;padding:14px 28px;font:600 10px/1.4 "DM Sans",sans-serif;letter-spacing:.17em}
+.simple-hero-link:hover{background:#a87584}
+.contact.simple-textile-contact{padding:120px 20px 115px!important}
+.simple-contact-wrap{position:relative;z-index:3;width:min(710px,100%)}
+.simple-textile-contact h2{font:400 clamp(58px,7vw,88px)/1.15 "Great Vibes",cursive!important;color:#9f7884;margin:9px 0}
+.simple-contact-deck{font:italic clamp(18px,2vw,25px)/1.45 "Cormorant Garamond",serif;color:#626e60;margin:0 0 35px}
+.simple-inquiry-panel{position:relative;width:min(570px,100%);margin:auto;padding:27px;background:#fffaf5ee;border:1px solid #d6b7c0;box-shadow:0 0 0 8px #fff7f48a,0 9px 30px #936e7520}
+.simple-inquiry-panel:before{content:"";position:absolute;inset:9px;pointer-events:none;border:1px dashed #d8bdc6}
+.simple-inquiry-inner{position:relative;max-width:410px;margin:auto;padding:27px 0}
+.simple-inquiry-form{display:grid;gap:15px;text-align:left}
+.simple-inquiry-form label{display:block;font:600 10px/1.5 "DM Sans",sans-serif;letter-spacing:.13em;color:#85727a}
+.simple-inquiry-form input:not([type=hidden]),.simple-inquiry-form textarea{box-sizing:border-box;display:block;width:100%;min-width:0;margin-top:6px;border:1px solid #ddc6cb;border-radius:0;padding:11px 12px;background:#fffefd;color:#514c49;font:400 16px/1.5 "DM Sans",sans-serif;letter-spacing:normal}
+.simple-inquiry-form textarea{min-height:100px;resize:vertical}
+.simple-inquiry-form button{min-height:47px;border:1px solid #ab7987;background:#b98996;color:white;letter-spacing:.15em;font-size:11px;font-weight:600;cursor:pointer}
+.simple-inquiry-form button:hover{background:#a77783}
+.simple-contact-signoff{font:400 34px/1.3 "Great Vibes",cursive;color:#9c7882;margin-top:28px}
+@media(max-width:650px){.hero.simple-textile-hero{min-height:440px!important;padding:88px 17px 90px!important}.single-brand-art{width:min(470px,96%);max-height:240px}.simple-hero-deck{font-size:26px}.contact.simple-textile-contact{padding:95px 17px 97px!important}.simple-inquiry-panel{padding:18px}.simple-inquiry-inner{padding:19px 0}.simple-contact-deck{max-width:290px;margin:0 auto 27px}.simple-contact-signoff{font-size:30px}}
+
 </style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="header" aria-label="Main navigation"><a class="brand" href="#top"><img src="assets/rosemary-nav-monogram.svg" alt=""><span>ROSEMARY LANE<small>DESIGNS</small></span></a><button class="menu" id="menu" aria-controls="navlinks" aria-expanded="false">MENU +</button><div class="nav-links" id="navlinks"><a href="#services">SERVICES</a><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div></nav>
 <main id="main">
-<section class="hero layered-hero" id="top" aria-labelledby="hero-title">
-  <div class="needle-lace-top" aria-hidden="true"></div>
-  <img class="hero-embroidery hero-embroidery-left" src="assets/curated/rose-patch.webp" alt="" aria-hidden="true">
-  <img class="hero-embroidery hero-embroidery-right" src="assets/curated/floral-bouquet.webp" alt="" aria-hidden="true">
-  <img class="hero-embroidery hero-embroidery-bottom-left" src="assets/curated/rose-medallion.webp" alt="" aria-hidden="true">
-  <img class="hero-embroidery hero-embroidery-bottom-right" src="assets/curated/rose-garland.webp" alt="" aria-hidden="true">
-  <div class="hero-content-layer">
-    <div class="hero-banner">
-      <img src="assets/curated/stationery-label.webp" class="banner-art" alt="" aria-hidden="true">
-      <div class="banner-words">
-        <span class="hero-pretitle">WELCOME TO</span>
-        <h1 id="hero-title">Rosemary Lane</h1>
-        <span class="hero-designs">D E S I G N S</span>
-      </div>
-    </div>
-    <p class="hero-script-caption">A place to stitch, create &amp; gather</p>
-    <p class="hero-real-subhead">Needlepoint lessons · Hand-painted canvases · Custom treasures</p>
-    <a class="layered-hero-cta" href="#lessons">EXPLORE LESSONS <span aria-hidden="true">↗</span></a>
-  </div>
-  <div class="needle-lace-bottom" aria-hidden="true"></div>
+<section class="hero simple-textile-hero" id="top" aria-label="Rosemary Lane Designs">
+<div class="textile-lace textile-lace-top" aria-hidden="true"></div>
+<div class="simple-hero-center">
+<img class="single-brand-art" src="assets/curated/embroidered-wordmark.webp" alt="Rosemary Lane Designs" width="900" height="360" fetchpriority="high">
+<p class="simple-hero-deck">A place to stitch, create &amp; gather</p>
+<a class="simple-hero-link" href="#lessons">EXPLORE LESSONS ↗</a>
+</div>
+<div class="textile-lace textile-lace-bottom" aria-hidden="true"></div>
 </section>
 <section class="welcome" id="introduction"><span class="eyebrow">WELCOME TO ROSEMARY LANE</span><h2>A little beauty<br>in every stitch.</h2><p class="intro">Beautiful things are even lovelier when they're made together. Come learn, create, and find a little joy in needlepoint.</p><p class="signoff">With love, Rosemary Lane</p></section>
 <div class="photo-story"><div class="photos"><figure><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=950&q=85" alt="Floral needlepoint canvas" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=950&q=85" alt="Needlepoint stitching in progress" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1466027449668-27f96b692ba4?auto=format&fit=crop&w=950&q=85" alt="Textured embroidered floral work" loading="lazy"></figure></div></div>
@@ -239,32 +255,22 @@ main:before,main:after{display:none!important}
 <section class="lessons" id="lessons"><span class="eyebrow">YOU'RE INVITED</span><h2>Come stitch with us.</h2><p class="intro">An afternoon of creativity, conversation, and something beautiful to take home.</p><div class="lesson-grid"><article class="lesson-card"><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=950&q=85" alt="Floral needlepoint being stitched" loading="lazy"><span class="index">01.</span><h3>Private lessons</h3><p>One-on-one guidance, at your own pace.</p></article><article class="lesson-card"><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=950&q=85" alt="Floral needlepoint canvas" loading="lazy"><span class="index">02.</span><h3>Group lessons</h3><p>Bring a friend or make a new one.</p></article></div><div class="class-note"><span class="eyebrow">COASTAL NEEDLEPOINT CLASS</span><h3>Make your own bag charm.</h3><p>Learn basketweave, brick stitch and French knots. Choose initials or a coastal motif, with guided instruction and a take-home project bag.</p><a class="button" href="mailto:hello@rosemarylanedesign.com?subject=Needlepoint%20class%20inquiry">ASK ABOUT LESSONS ↗</a></div></section>
 <section class="custom" id="custom"><div class="custom-visual"><img src="assets/curated/oval-crest.webp" alt="Custom embroidered monogram" loading="lazy"></div><div class="custom-copy"><span class="eyebrow">THE PERSONAL TOUCH</span><h2>Made for you,<br><em>and only you.</em></h2><p>Hand-painted canvases, French-knot monograms, and custom needlework—little details worth keeping.</p><a class="button" href="mailto:hello@rosemarylanedesign.com?subject=Custom%20needlework%20inquiry">ASK ABOUT CUSTOM WORK ↗</a></div></section>
 <section class="gallery" id="gallery"><span class="eyebrow">FROM THE STUDIO</span><h2>Little things, lovingly made.</h2><p class="intro">Stitched inspiration and beautiful details.</p><div class="gallery-grid"><figure><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=800&q=85" alt="Needlepoint flowers" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=800&q=85" alt="Needlepoint work in progress" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1466027449668-27f96b692ba4?auto=format&fit=crop&w=800&q=85" alt="Delicate embroidered fabric" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=800&q=85" alt="Creative stitching supplies" loading="lazy"></figure></div></section>
-<section class="contact layered-contact" id="contact" aria-labelledby="contact-title">
-  <div class="needle-lace-top" aria-hidden="true"></div>
-  <img class="contact-embroidered contact-rose-left" src="assets/curated/rose-patch.webp" alt="" aria-hidden="true" loading="lazy">
-  <img class="contact-embroidered contact-rose-right" src="assets/curated/floral-bouquet.webp" alt="" aria-hidden="true" loading="lazy">
-  <div class="contact-content-layer">
-    <p class="eyebrow">WE'D LOVE TO HEAR FROM YOU</p>
-    <h2 id="contact-title">Do say hello.</h2>
-    <p class="contact-deck">Ask about lessons, gatherings, or a piece made just for you.</p>
-    <div class="inquiry-lace-shell">
-      <div class="inquiry-lace-oval">
-        <div class="inquiry-card">
-          <p class="inquiry-heading">A little note to Rosemary Lane</p>
-          <form class="inquiry-form" id="contact-form">
-            <label for="ref-name">YOUR NAME<input id="ref-name" name="name" type="text" autocomplete="name" placeholder="Your name" required></label>
-            <label for="ref-email">EMAIL ADDRESS<input id="ref-email" name="email" type="email" autocomplete="email" placeholder="Your email" required></label>
-            <label for="ref-message">YOUR MESSAGE<textarea id="ref-message" name="message" placeholder="Tell us what you have in mind…" rows="4" required></textarea></label>
-            <input type="hidden" name="subject" value="Inquiry">
-            <button type="submit">SEND YOUR NOTE <span aria-hidden="true">↗</span></button>
-          </form>
-          <p class="contact-note">Opens a message in your email app.</p>
-        </div>
-      </div>
-    </div>
-    <p class="contact-signoff">With love, Rosemary Lane <span aria-hidden="true">🥀</span></p>
-  </div>
-  <div class="needle-lace-bottom" aria-hidden="true"></div>
+<section class="contact simple-textile-contact" id="contact" aria-labelledby="simple-contact-title">
+<div class="textile-lace textile-lace-top" aria-hidden="true"></div>
+<div class="simple-contact-wrap">
+<p class="eyebrow">WE'D LOVE TO HEAR FROM YOU</p>
+<h2 id="simple-contact-title">Do say hello.</h2>
+<p class="simple-contact-deck">Ask about lessons, gatherings, or a custom piece.</p>
+<div class="simple-inquiry-panel">
+<div class="simple-inquiry-inner">
+<form id="contact-form" class="simple-inquiry-form">
+<label for="ref-name">YOUR NAME<input id="ref-name" name="name" autocomplete="name" required placeholder="Your name"></label>
+<label for="ref-email">EMAIL ADDRESS<input id="ref-email" name="email" type="email" autocomplete="email" required placeholder="Your email"></label>
+<label for="ref-message">YOUR MESSAGE<textarea id="ref-message" name="message" rows="4" required placeholder="Tell us what you have in mind…"></textarea></label>
+<input type="hidden" name="subject" value="Inquiry"><button type="submit">SEND YOUR NOTE ↗</button>
+</form>
+</div></div><p class="simple-contact-signoff">With love, Rosemary Lane</p></div>
+<div class="textile-lace textile-lace-bottom" aria-hidden="true"></div>
 </section>
 <section class="instagram" id="instagram"><span class="eyebrow">FOLLOW ALONG</span><h2>A glimpse of the lane.</h2><p class="intro">A few moments from our needlepoint world.</p><div class="instagram-grid" id="instagram-grid"></div><p class="instagram-status" id="instagram-status">See the latest posts on Instagram.</p><a class="button" href="https://www.instagram.com/rosemarylanedesign/" target="_blank" rel="noopener noreferrer">FOLLOW @ROSEMARYLANEDESIGN ↗</a></section>
 </main><footer><img src="assets/rosemary-nav-monogram.svg" alt=""><div class="name">ROSEMARY LANE DESIGNS</div><p class="signature">With love, Rosemary Lane</p><div class="links"><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div><small>© <span id="year"></span> ROSEMARY LANE DESIGNS</small></footer>
