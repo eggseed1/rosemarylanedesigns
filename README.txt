@@ -1,0 +1,1 @@
+Transparent isolated needlepoint logo and lace strips. Upload PNG/WebP assets to repository root or /assets, then reference individually in HTML/CSS. These are photograph-derived cutouts; review hem edges at full resolution before production. No full-section flattened background.
