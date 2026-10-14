@@ -343,6 +343,39 @@ opacity:1!important;
 .needlepoint-stage .single-brand-art{filter:sepia(.14) saturate(.72) brightness(1.055) drop-shadow(0 5px 5px rgba(112,88,88,.14))!important}
 .needlepoint-stage .needle-decoration{filter:sepia(.1) saturate(.6) brightness(1.045) drop-shadow(0 2px 3px #76615a26)!important}
 .simple-inquiry-panel{background:#fffcf9f5!important;border-color:#dbc7c7!important}
+
+/* Make photographic ivory lace readable on pale blush and keep embellishments away from text. */
+.hero.simple-textile-hero .textile-lace,.contact.simple-textile-contact .textile-lace{
+  background-image:url("assets/lace-horizontal-reference.webp")!important;
+  background-repeat:repeat-x!important;
+  background-position:center top!important;
+  background-size:auto 100%!important;
+  height:clamp(68px,8.7vw,125px)!important;
+  opacity:1!important;
+  filter:brightness(1.015) contrast(1.18) drop-shadow(0 3px 2px rgba(108,75,81,.22))!important;
+}
+.hero.simple-textile-hero,.contact.simple-textile-contact{
+ background-color:#fdf7f5!important;
+ background-image:repeating-linear-gradient(90deg,
+ #fffaf8 0,#fffaf8 38px,
+ #f6ecec 38px,#f6ecec 64px,
+ #fffaf8 64px,#fffaf8 102px,
+ #f6ecec 102px,#f6ecec 128px)!important;
+ background-size:128px 100%!important;
+}
+.needlepoint-stage{min-height:310px;max-width:800px;margin:auto}
+.needlepoint-stage .single-brand-art{width:min(555px,69%);filter:saturate(.68) sepia(.07) brightness(1.05) drop-shadow(0 5px 7px #85666929)!important}
+.needle-decoration{width:clamp(90px,12vw,150px);max-height:170px;object-fit:contain;filter:saturate(.65) sepia(.08) drop-shadow(0 5px 5px #81616525)!important}
+.needle-monogram-left{left:2%;top:17%;transform:rotate(-9deg)}
+.needle-shell-right{right:2%;bottom:14%;transform:rotate(9deg)}
+@media(max-width:650px){
+ .hero.simple-textile-hero .textile-lace,.contact.simple-textile-contact .textile-lace{height:clamp(55px,13vw,80px)!important}
+ .needlepoint-stage{min-height:220px}
+ .needlepoint-stage .single-brand-art{width:77%}
+ .needle-decoration{width:clamp(65px,15vw,88px)}
+ .needle-monogram-left{left:0;top:21%}
+ .needle-shell-right{right:0;bottom:19%}
+}
 </style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="header" aria-label="Main navigation"><a class="brand" href="#top"><img src="assets/rosemary-nav-monogram.svg" alt=""><span>ROSEMARY LANE<small>DESIGNS</small></span></a><button class="menu" id="menu" aria-controls="navlinks" aria-expanded="false">MENU +</button><div class="nav-links" id="navlinks"><a href="#services">SERVICES</a><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div></nav>
@@ -351,9 +384,9 @@ opacity:1!important;
 <div class="textile-lace textile-lace-top" aria-hidden="true"></div>
 <div class="simple-hero-center">
 <div class="needlepoint-stage" aria-label="Rosemary Lane Designs needlepoint banner">
-<img class="needle-decoration needle-monogram-left" src="assets/embroidered-monogram.svg" alt="" aria-hidden="true">
+<img class="needle-decoration needle-monogram-left" src="assets/curated/oval-crest.webp" alt="" aria-hidden="true">
 <img class="single-brand-art" src="assets/curated/embroidered-wordmark.webp" alt="Rosemary Lane Designs" width="900" height="360" fetchpriority="high">
-<img class="needle-decoration needle-shell-right" src="assets/embroidered-shell.svg" alt="" aria-hidden="true">
+<img class="needle-decoration needle-shell-right" src="assets/curated/rose-medallion.webp" alt="" aria-hidden="true">
 </div>
 <p class="simple-hero-deck">A place to stitch, create &amp; gather</p>
 <a class="simple-hero-link" href="#lessons">EXPLORE LESSONS ↗</a>
