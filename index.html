@@ -549,25 +549,56 @@ opacity:1!important;
 .photographic-hero .simple-hero-deck{font-size:25px!important}
 .photographic-contact{padding-top:85px!important}
 }
+
+/* Minimal hero: the full embroidered wordmark is the ONLY motif.
+   Full-width lace bands sit at exact section edges, never sliced decorative pieces. */
+.hero.minimal-hero{
+ min-height:560px!important;
+ display:flex!important;
+ align-items:center!important;
+ justify-content:center!important;
+ padding:105px 26px 100px!important;
+ overflow:hidden!important;
+ background-image:repeating-linear-gradient(90deg,#fffbf9 0 40px,#f8eeef 40px 64px,#fffbf9 64px 104px,#f8eeef 104px 128px)!important;
+ background-size:128px 100%!important;
+}
+.minimal-hero .simple-hero-center{width:min(790px,100%)!important;max-width:790px!important;z-index:4!important;margin:0 auto!important}
+.minimal-hero .minimal-hero-logo{display:block!important;width:min(670px,100%)!important;height:auto!important;max-height:290px!important;object-fit:contain!important;margin:0 auto 12px!important;filter:brightness(1.06) saturate(.76) contrast(.96) drop-shadow(0 3px 5px #76636421)!important}
+.minimal-hero .textile-lace{
+ display:block!important;position:absolute!important;
+ left:0!important;right:0!important;width:100%!important;
+ height:clamp(62px,7.4vw,105px)!important;
+ pointer-events:none!important;opacity:1!important;z-index:3!important;
+ background-repeat:repeat-x!important;background-size:auto 100%!important;
+ filter:brightness(1.05) saturate(.68) contrast(1.06) drop-shadow(0 2px 2px #86706e20)!important
+}
+.minimal-hero .textile-lace-top{top:0!important;background-image:url("lace-top.webp")!important;background-position:center top!important;transform:none!important}
+.minimal-hero .textile-lace-bottom{bottom:0!important;background-image:url("lace-bottom.webp")!important;background-position:center bottom!important;transform:none!important}
+.minimal-hero .simple-hero-deck{font-size:clamp(24px,2.9vw,34px)!important;margin:0 auto 24px!important}
+.photographic-contact .textile-lace-top,.photographic-contact .textile-lace-bottom{
+ width:100%!important;left:0!important;right:0!important;
+ background-repeat:repeat-x!important;background-size:auto 100%!important;
+ height:clamp(60px,6vw,93px)!important;opacity:.95!important
+}
+@media(max-width:650px){
+.hero.minimal-hero{min-height:410px!important;padding:74px 17px 75px!important}
+.minimal-hero .textile-lace{height:clamp(42px,9vw,65px)!important}
+.minimal-hero .minimal-hero-logo{width:100%!important;max-height:205px!important}
+.minimal-hero .simple-hero-deck{font-size:25px!important}
+}
 </style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="header" aria-label="Main navigation"><a class="brand" href="#top"><img src="assets/rosemary-nav-monogram.svg" alt=""><span>ROSEMARY LANE<small>DESIGNS</small></span></a><button class="menu" id="menu" aria-controls="navlinks" aria-expanded="false">MENU +</button><div class="nav-links" id="navlinks"><a href="#services">SERVICES</a><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div></nav>
 <main id="main">
-<section class="hero simple-textile-hero photographic-hero" id="top" aria-labelledby="hero-brand-title">
-<div class="textile-lace textile-lace-top" aria-hidden="true"></div>
-<div class="simple-hero-center">
-<div class="needlepoint-stage">
-<img class="needle-decoration photo-monogram-left" src="monogram-left.webp" alt="" aria-hidden="true">
-<img class="needle-decoration photo-shell-left" src="shell-left.webp" alt="" aria-hidden="true">
-<img class="single-brand-art photo-horse-banner" src="assets/curated/embroidered-wordmark.webp" alt="Rosemary Lane Designs embroidered logo" width="900" height="360" fetchpriority="high">
-<img class="needle-decoration photo-shell-right" src="shell-right.webp" alt="" aria-hidden="true">
-<img class="needle-decoration photo-monogram-right" src="monogram-right.webp" alt="" aria-hidden="true">
-</div>
-<h1 class="visually-hidden" id="hero-brand-title">Rosemary Lane Designs</h1>
-<p class="simple-hero-deck">A place to stitch, create &amp; gather</p>
-<a class="simple-hero-link" href="#lessons">EXPLORE LESSONS ↗</a>
-</div>
-<div class="textile-lace textile-lace-bottom" aria-hidden="true"></div>
+<section class="hero simple-textile-hero photographic-hero minimal-hero" id="top" aria-labelledby="hero-brand-title">
+  <div class="textile-lace textile-lace-top" aria-hidden="true"></div>
+  <div class="simple-hero-center">
+    <h1 class="visually-hidden" id="hero-brand-title">Rosemary Lane Designs</h1>
+    <img class="minimal-hero-logo" src="assets/curated/embroidered-wordmark.webp" alt="Rosemary Lane Designs embroidered wordmark" width="900" height="360" fetchpriority="high">
+    <p class="simple-hero-deck">A place to stitch, create &amp; gather</p>
+    <a class="simple-hero-link" href="#lessons">EXPLORE LESSONS ↗</a>
+  </div>
+  <div class="textile-lace textile-lace-bottom" aria-hidden="true"></div>
 </section>
 <section class="welcome" id="introduction"><span class="eyebrow">WELCOME TO ROSEMARY LANE</span><h2>A little beauty<br>in every stitch.</h2><p class="intro">Beautiful things are even lovelier when they're made together. Come learn, create, and find a little joy in needlepoint.</p><p class="signoff">With love, Rosemary Lane</p></section>
 <div class="photo-story"><div class="photos"><figure><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=950&q=85" alt="Floral needlepoint canvas" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=950&q=85" alt="Needlepoint stitching in progress" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1466027449668-27f96b692ba4?auto=format&fit=crop&w=950&q=85" alt="Textured embroidered floral work" loading="lazy"></figure></div></div>
