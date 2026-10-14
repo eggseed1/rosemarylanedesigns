@@ -1175,6 +1175,13 @@ footer .signature{font-size:clamp(17px,1.75vw,21px)!important;line-height:1.5!im
 .popups-products strong{color:#8c6974;font-weight:600}
 @media(max-width:800px){.popups-section .popups-inner{grid-template-columns:1fr!important}.popups-section .popups-photo-pair{max-width:520px;width:100%;margin:auto}.popups-section .popups-photo-pair img{height:220px!important}.popups-section .popups-photo-pair figure:nth-child(2) img{height:190px!important}}
 @media(max-width:430px){.popups-section .popups-photo-pair{gap:7px}.popups-section .popups-photo-pair img{height:178px!important;border-width:4px}.popups-section .popups-photo-pair figure:nth-child(2) img{height:158px!important}.popups-section .popups-photo-pair figcaption{font-size:15px}}
+
+/* True photo proportions for pop-up and DIY kit, no product cropping. */
+.popups-section .popups-photo-pair{grid-template-columns:minmax(0,1.2fr) minmax(0,.85fr)!important;align-items:center!important}
+.popups-section .popups-photo-pair figure img{width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:4/3!important;object-fit:contain!important;background:#fffaf8!important;filter:none!important}
+.popups-section .popups-photo-pair figure:nth-child(2) img{height:auto!important;aspect-ratio:3/4!important;object-fit:contain!important}
+@media(max-width:800px){.popups-section .popups-photo-pair figure img,.popups-section .popups-photo-pair figure:nth-child(2) img{height:auto!important}}
+@media(max-width:430px){.popups-section .popups-photo-pair figure img,.popups-section .popups-photo-pair figure:nth-child(2) img{height:auto!important}}
 </style><link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
