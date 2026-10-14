@@ -759,6 +759,31 @@ opacity:1!important;
 .hero.minimal-hero img.textile-lace-top,.contact.photographic-contact img.textile-lace-top{top:0!important;bottom:auto!important}
 .hero.minimal-hero img.textile-lace-bottom,.contact.photographic-contact img.textile-lace-bottom{bottom:0!important;top:auto!important}
 .hero.minimal-hero .simple-hero-center,.contact.photographic-contact .simple-contact-wrap{z-index:4!important}
+
+/* Hide damaged lace raster edges with a clean, scalloped cut path.
+   The alpha mask in the uploaded source has central jagged islands; resizing can't cure them. */
+.hero.minimal-hero img.natural-lace,.contact.photographic-contact img.natural-lace{
+ overflow:hidden!important;
+ filter:none!important;
+}
+.hero.minimal-hero img.textile-lace-top,.contact.photographic-contact img.textile-lace-top{
+ clip-path:polygon(
+ 0 0,100% 0,100% 54%,
+ 97% 58%,94% 64%,91% 62%,88% 60%,85% 72%,82% 78%,79% 69%,76% 61%,
+ 73% 57%,70% 64%,67% 74%,64% 69%,61% 59%,58% 54%,55% 64%,52% 77%,
+ 49% 73%,46% 62%,43% 57%,40% 67%,37% 76%,34% 69%,31% 59%,28% 55%,
+ 25% 67%,22% 78%,19% 73%,16% 61%,13% 56%,10% 63%,7% 72%,4% 64%,0 54%
+ )!important;
+}
+.hero.minimal-hero img.textile-lace-bottom,.contact.photographic-contact img.textile-lace-bottom{
+ clip-path:polygon(
+ 0 46%,4% 36%,7% 28%,10% 37%,13% 44%,16% 39%,19% 27%,
+ 22% 22%,25% 33%,28% 45%,31% 41%,34% 31%,37% 24%,40% 33%,
+ 43% 43%,46% 38%,49% 27%,52% 23%,55% 36%,58% 46%,61% 41%,
+ 64% 31%,67% 26%,70% 36%,73% 43%,76% 39%,79% 31%,82% 22%,
+ 85% 28%,88% 40%,91% 38%,94% 36%,97% 42%,100% 46%,100% 100%,0 100%
+ )!important;
+}
 </style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="header" aria-label="Main navigation"><a class="brand" href="#top"><img src="assets/rosemary-nav-monogram.svg" alt=""><span>ROSEMARY LANE<small>DESIGNS</small></span></a><button class="menu" id="menu" aria-controls="navlinks" aria-expanded="false">MENU +</button><div class="nav-links" id="navlinks"><a href="#services">SERVICES</a><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div></nav>
