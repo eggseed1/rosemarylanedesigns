@@ -142,17 +142,37 @@ footer:before{height:62px;background-size:auto 62px;opacity:.65}
 .clean-hero-link:hover{color:#6d4e5a}
 @media(max-width:800px){.hero.clean-hero{padding:0 18px 66px!important}.clean-hero .hero-lace-top{height:105px;flex-basis:105px;background-size:auto 105px;width:calc(100% + 36px);margin-inline:-18px}.clean-hero .clean-hero-content{margin-top:2px}.hero.clean-hero .hero-label{width:min(610px,93vw)!important}}
 @media(max-width:520px){.hero.clean-hero{padding:0 13px 56px!important}.clean-hero .hero-lace-top{height:77px;flex-basis:77px;background-size:auto 77px;width:calc(100% + 26px);margin-inline:-13px}.clean-hero .clean-hero-content{margin-top:8px}.hero.clean-hero .hero-label{width:100%!important}.clean-hero-tagline{font-size:29px;margin:16px 0 16px}.clean-hero-link{font-size:9px}}
+
+/* Approved reference hero: photographic needlepoint artwork at 3840 px */
+main:before,main:after{display:none!important}
+.hero.reference-hero{position:relative!important;isolation:isolate;display:block!important;min-height:0!important;margin:0!important;padding:0!important;overflow:hidden!important;background:#f7e9e7!important;line-height:0}
+.hero.reference-hero:before,.hero.reference-hero:after{display:none!important;content:none!important}
+.reference-hero picture{display:block;width:100%;line-height:0}
+.reference-hero-image{display:block;width:100%;height:auto;max-width:none;object-fit:contain}
+.reference-hero-cta{position:absolute;z-index:3;top:76.4%;left:39.4%;width:21.2%;height:9.2%;display:flex;align-items:center;justify-content:center;background:#bc8994;color:#fffaf7;border:1px solid #d9b5b8;text-decoration:none;font:600 clamp(9px,1vw,13px)/1.2 "DM Sans",sans-serif;letter-spacing:.19em;text-align:center;white-space:nowrap;box-shadow:0 2px 4px rgba(105,65,69,.12);transition:background .2s}
+.reference-hero-cta:hover{background:#a77684}
+.reference-hero-cta:focus-visible{outline:3px solid #7e5964;outline-offset:3px}
+.welcome:before{display:none!important}
+.welcome{padding-top:76px!important;background:#fffaf7}
+.services{background:#f8eeed!important}
+.lessons{background:#fffbf8!important}
+.gallery{background:#fbf5f2!important}
+@media(max-width:650px){
+ .reference-hero-cta{left:31.6%;width:36.8%;top:76.4%;height:9.2%;font-size:clamp(8px,2.4vw,11px);letter-spacing:.08em}
+ .reference-hero-cta:before{content:"";position:absolute;inset:-7px 0}
+ .welcome{padding-top:55px!important}
+}
 </style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="header" aria-label="Main navigation"><a class="brand" href="#top"><img src="assets/rosemary-nav-monogram.svg" alt=""><span>ROSEMARY LANE<small>DESIGNS</small></span></a><button class="menu" id="menu" aria-controls="navlinks" aria-expanded="false">MENU +</button><div class="nav-links" id="navlinks"><a href="#services">SERVICES</a><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div></nav>
 <main id="main">
-<section class="hero clean-hero" id="top" aria-label="Rosemary Lane Designs">
-  <div class="hero-lace-top" aria-hidden="true"></div>
-  <div class="clean-hero-content">
-    <img class="hero-label" src="assets/rosemary-needlepoint-logo-4k.webp" alt="Rosemary Lane Designs embroidered needlepoint wordmark" width="3840" height="1440" fetchpriority="high">
-    <p class="clean-hero-tagline">A place to stitch, create &amp; gather.</p>
-    <a class="clean-hero-link" href="#lessons">Discover our lessons <span aria-hidden="true">↗</span></a>
-  </div>
+<section class="hero reference-hero" id="top" aria-label="Rosemary Lane Designs">
+  <h1 class="visually-hidden">Rosemary Lane Designs — Needlepoint lessons, gatherings and custom pieces</h1>
+  <picture>
+    <source media="(max-width: 650px)" srcset="assets/rosemary-reference-hero-mobile.webp">
+    <img class="reference-hero-image" src="assets/rosemary-reference-hero-4k.webp" alt="Rosemary Lane Designs embroidered logo on blush striped linen, framed with delicate lace, needlepoint cushions, flowers, stitching accessories and keepsakes. A place to stitch, create and gather." width="3840" height="1758" fetchpriority="high">
+  </picture>
+  <a class="reference-hero-cta" href="#lessons" aria-label="Explore needlepoint lessons">EXPLORE LESSONS</a>
 </section>
 <section class="welcome" id="introduction"><span class="eyebrow">WELCOME TO ROSEMARY LANE</span><h2>A little beauty<br>in every stitch.</h2><p class="intro">Beautiful things are even lovelier when they're made together. Come learn, create, and find a little joy in needlepoint.</p><p class="signoff">With love, Rosemary Lane</p></section>
 <div class="photo-story"><div class="photos"><figure><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=950&q=85" alt="Floral needlepoint canvas" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=950&q=85" alt="Needlepoint stitching in progress" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1466027449668-27f96b692ba4?auto=format&fit=crop&w=950&q=85" alt="Textured embroidered floral work" loading="lazy"></figure></div></div>
