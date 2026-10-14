@@ -695,6 +695,44 @@ opacity:1!important;
  filter:none!important;
  opacity:1!important;
 }
+
+/* Editorial polish — keep embroidered wordmark and framed photographic lace.
+   The uploaded hero image is a visual reference, not a flattened site background. */
+.hero.minimal-hero{min-height:590px!important;padding:146px 24px 137px!important;background-image:repeating-linear-gradient(90deg,#fff9f7 0 41px,#f4e6e7 41px 63px,#fff9f7 63px 104px,#f4e6e7 104px 126px)!important;background-size:126px 100%!important}
+.hero.minimal-hero .simple-hero-center{position:relative;max-width:960px!important}
+.hero.minimal-hero .minimal-hero-logo{width:min(850px,100%)!important;max-height:none!important;margin:0 auto 12px!important}
+.hero.minimal-hero .simple-hero-deck{font:italic 400 clamp(25px,3vw,39px)/1.25 "Cormorant Garamond",Georgia,serif!important;letter-spacing:.008em!important;color:#8d6c75!important;margin:0 auto 20px!important;text-shadow:0 1px #fff9f9}
+.hero.minimal-hero .simple-hero-link{background:transparent!important;color:#8c7177!important;border:0!important;border-bottom:1px solid #bf9fa6!important;padding:8px 2px!important;box-shadow:none!important;letter-spacing:.19em!important}
+.hero.minimal-hero .simple-hero-link:hover{color:#654f57!important}
+.hero.minimal-hero .textile-lace-top,.hero.minimal-hero .textile-lace-bottom{height:clamp(94px,11vw,172px)!important;background-size:100% 100%!important;filter:none!important}
+.refined-welcome{position:relative!important;padding:100px 130px 105px!important;isolation:isolate;overflow:hidden}
+.refined-welcome .welcome-seashell,.refined-welcome .welcome-thread{position:absolute;pointer-events:none;z-index:0;object-fit:contain;filter:brightness(1.09) saturate(.66) contrast(.96) drop-shadow(0 4px 5px #8877791b)!important}
+.refined-welcome .welcome-seashell{width:clamp(85px,14vw,175px);left:max(3%,calc(50% - 585px));top:25%;transform:rotate(-13deg)}
+.refined-welcome .welcome-thread{width:clamp(83px,13vw,157px);right:max(3%,calc(50% - 585px));bottom:19%;transform:rotate(13deg)}
+.refined-welcome > :not(.welcome-seashell):not(.welcome-thread){position:relative;z-index:1}
+.refined-welcome h2{font-size:clamp(46px,5vw,75px)!important;line-height:1.06!important;margin:18px auto 23px!important}
+.refined-welcome .intro{font-size:15px;max-width:525px}
+.refined-welcome .signoff{margin-top:26px!important}
+.refined-inquiry{padding:128px 20px 129px!important}
+.refined-inquiry .contact-photographic-accent,.refined-inquiry .simple-contact-wrap:before,.refined-inquiry .simple-contact-wrap:after{display:none!important}
+.refined-inquiry .simple-contact-wrap{max-width:690px}
+.refined-inquiry h2{color:#a17b84!important;font-size:clamp(60px,6.6vw,85px)!important;margin:12px auto 5px!important}
+.refined-inquiry .simple-contact-deck{font:italic 400 clamp(21px,2.1vw,27px)/1.5 "Cormorant Garamond",Georgia,serif!important;color:#87737a!important;margin:0 auto 34px!important}
+.refined-inquiry .simple-inquiry-panel{width:min(530px,100%)!important;background:rgba(255,252,249,.96)!important;border:1px solid #ddc9ca!important;outline:1px solid rgba(255,255,255,.8);outline-offset:7px;box-shadow:0 10px 35px #91767919!important;padding:29px!important}
+.refined-inquiry .simple-inquiry-panel:before{border:1px solid #e8dcd7!important;inset:8px!important}
+.refined-inquiry .simple-inquiry-inner{padding:19px 7px!important}
+.refined-inquiry .simple-inquiry-form button{background:#b98d97!important;border-color:#b98d97!important}
+@media(max-width:750px){
+.hero.minimal-hero{min-height:450px!important;padding:104px 16px 105px!important}
+.hero.minimal-hero .textile-lace-top,.hero.minimal-hero .textile-lace-bottom{height:clamp(61px,13vw,95px)!important}
+.refined-welcome{padding:83px 25px 100px!important}
+.refined-welcome .welcome-seashell{left:-45px;top:13%;width:110px;opacity:.55}
+.refined-welcome .welcome-thread{right:-48px;bottom:10%;width:105px;opacity:.55}
+.refined-welcome .intro{max-width:390px}
+.refined-inquiry{padding:100px 17px 100px!important}
+.refined-inquiry .simple-inquiry-panel{padding:17px!important}
+}
+@media(max-width:420px){.hero.minimal-hero{padding:79px 12px 85px!important;min-height:370px!important}.hero.minimal-hero .simple-hero-deck{font-size:25px!important}.refined-welcome .welcome-seashell,.refined-welcome .welcome-thread{opacity:.35}}
 </style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="header" aria-label="Main navigation"><a class="brand" href="#top"><img src="assets/rosemary-nav-monogram.svg" alt=""><span>ROSEMARY LANE<small>DESIGNS</small></span></a><button class="menu" id="menu" aria-controls="navlinks" aria-expanded="false">MENU +</button><div class="nav-links" id="navlinks"><a href="#services">SERVICES</a><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div></nav>
@@ -709,16 +747,15 @@ opacity:1!important;
   </div>
   <div class="textile-lace textile-lace-bottom" aria-hidden="true"></div>
 </section>
-<section class="welcome" id="introduction"><span class="eyebrow">WELCOME TO ROSEMARY LANE</span><h2>A little beauty<br>in every stitch.</h2><p class="intro">Beautiful things are even lovelier when they're made together. Come learn, create, and find a little joy in needlepoint.</p><p class="signoff">With love, Rosemary Lane</p></section>
+<section class="welcome refined-welcome" id="introduction"><img class="welcome-seashell" src="shell-left.webp" alt="" aria-hidden="true" loading="lazy"><img class="welcome-thread" src="thread-spool.webp" alt="" aria-hidden="true" loading="lazy"><span class="eyebrow">WELCOME TO ROSEMARY LANE</span><h2>A little beauty<br>in every stitch.</h2><p class="intro">Beautiful things are even lovelier when they're made together. Come learn, create, and find a little joy in needlepoint.</p><p class="signoff">With love, Rosemary Lane</p></section>
 <div class="photo-story"><div class="photos"><figure><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=950&q=85" alt="Floral needlepoint canvas" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=950&q=85" alt="Needlepoint stitching in progress" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1466027449668-27f96b692ba4?auto=format&fit=crop&w=950&q=85" alt="Textured embroidered floral work" loading="lazy"></figure></div></div>
 <section class="services" id="services"><span class="eyebrow">WHAT WE DO</span><h2>Something lovely for everyone.</h2><div class="service-grid"><a class="service" href="#lessons"><div class="service-image"><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=950&q=85" alt="Needlepoint lesson materials" loading="lazy"></div><h3>Lessons</h3><p>Private & group</p></a><a class="service" href="#custom"><div class="service-image"><img src="assets/curated/oval-crest.webp" alt="Embroidered monogram" loading="lazy"></div><h3>Custom needlework</h3><p>Made just for you</p></a><a class="service" href="#custom"><div class="service-image"><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=950&q=85" alt="Hand-painted canvas inspiration" loading="lazy"></div><h3>Hand-painted canvases</h3><p>For your next project</p></a></div></section>
 <section class="lessons" id="lessons"><span class="eyebrow">YOU'RE INVITED</span><h2>Come stitch with us.</h2><p class="intro">An afternoon of creativity, conversation, and something beautiful to take home.</p><div class="lesson-grid"><article class="lesson-card"><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=950&q=85" alt="Floral needlepoint being stitched" loading="lazy"><span class="index">01.</span><h3>Private lessons</h3><p>One-on-one guidance, at your own pace.</p></article><article class="lesson-card"><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=950&q=85" alt="Floral needlepoint canvas" loading="lazy"><span class="index">02.</span><h3>Group lessons</h3><p>Bring a friend or make a new one.</p></article></div><div class="class-note"><span class="eyebrow">COASTAL NEEDLEPOINT CLASS</span><h3>Make your own bag charm.</h3><p>Learn basketweave, brick stitch and French knots. Choose initials or a coastal motif, with guided instruction and a take-home project bag.</p><a class="button" href="mailto:hello@rosemarylanedesign.com?subject=Needlepoint%20class%20inquiry">ASK ABOUT LESSONS ↗</a></div></section>
 <section class="custom" id="custom"><div class="custom-visual"><img src="assets/curated/oval-crest.webp" alt="Custom embroidered monogram" loading="lazy"></div><div class="custom-copy"><span class="eyebrow">THE PERSONAL TOUCH</span><h2>Made for you,<br><em>and only you.</em></h2><p>Hand-painted canvases, French-knot monograms, and custom needlework—little details worth keeping.</p><a class="button" href="mailto:hello@rosemarylanedesign.com?subject=Custom%20needlework%20inquiry">ASK ABOUT CUSTOM WORK ↗</a></div></section>
 <section class="gallery" id="gallery"><span class="eyebrow">FROM THE STUDIO</span><h2>Little things, lovingly made.</h2><p class="intro">Stitched inspiration and beautiful details.</p><div class="gallery-grid"><figure><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=800&q=85" alt="Needlepoint flowers" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=800&q=85" alt="Needlepoint work in progress" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1466027449668-27f96b692ba4?auto=format&fit=crop&w=800&q=85" alt="Delicate embroidered fabric" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=800&q=85" alt="Creative stitching supplies" loading="lazy"></figure></div></section>
-<section class="contact simple-textile-contact photographic-contact" id="contact" aria-labelledby="simple-contact-title">
+<section class="contact simple-textile-contact photographic-contact refined-inquiry" id="contact" aria-labelledby="simple-contact-title">
 <div class="textile-lace textile-lace-top" aria-hidden="true"></div>
-<img class="contact-photographic-accent contact-shell-accent" src="shell-left.webp" alt="" aria-hidden="true" loading="lazy">
-<img class="contact-photographic-accent contact-monogram-accent" src="monogram-right.webp" alt="" aria-hidden="true" loading="lazy">
+
 <div class="simple-contact-wrap">
 <p class="eyebrow">WE'D LOVE TO HEAR FROM YOU</p>
 <h2 id="simple-contact-title">Do say hello.</h2>
