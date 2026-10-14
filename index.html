@@ -919,6 +919,49 @@ opacity:1!important;
  text-shadow:none!important;
 }
 @media(max-width:650px){.hero.minimal-hero .simple-hero-deck{font-size:21px!important;letter-spacing:.01em!important}}
+
+/* Reference-inspired small stitched invitation cards, not a second hero or lace image. */
+.needlepoint-services{padding:92px 22px 105px!important;background:#faf0ef!important}
+.needlepoint-services .service-grid{max-width:1150px!important;gap:20px!important}
+.needlepoint-services .service{
+ position:relative;display:grid!important;grid-template-columns:38% 62%!important;
+ align-items:center!important;min-height:210px!important;overflow:visible!important;
+ padding:21px 19px!important;
+ background:repeating-linear-gradient(90deg,#fffaf6 0 18px,#f9edef 18px 28px)!important;
+ border:2px solid #e7c6ca!important;border-radius:16px!important;
+ box-shadow:0 7px 18px #9e777619!important;
+ text-decoration:none!important;transition:transform .2s,box-shadow .2s!important;
+}
+.needlepoint-services .service:before{content:"";position:absolute;inset:6px;border:1px dashed #cba0a8;border-radius:10px;pointer-events:none}
+.needlepoint-services .service:hover,.needlepoint-services .service:focus-visible{transform:translateY(-4px);box-shadow:0 12px 22px #98737d35!important}
+.needlepoint-services .service-image{display:flex!important;align-items:center;justify-content:center;border:0!important;background:none!important;padding:0!important;min-width:0!important;overflow:visible!important}
+.needlepoint-services .service-image:after{display:none!important}
+.needlepoint-services .service-image img{
+ display:block;width:100%!important;height:142px!important;max-width:155px;object-fit:contain!important;
+ padding:5px!important;background:none!important;filter:brightness(1.08) saturate(.77)!important
+}
+.needlepoint-services .service-copy{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;text-align:left!important;padding:4px 0 4px 10px!important;min-width:0}
+.needlepoint-services .service-title{font:500 clamp(25px,2.6vw,34px)/.96 "Cormorant Garamond",serif;color:#805d60;letter-spacing:-.025em}
+.needlepoint-services .service-description{font:italic 500 20px/1.2 "Cormorant Garamond",serif;color:#a47c81;margin:12px 0 13px}
+.needlepoint-services .service-action{margin-top:0!important;padding:0!important;display:inline-flex!important;width:auto!important;gap:8px!important;align-items:center;justify-content:flex-start!important;border-bottom:1px solid #b88993;background:none!important;color:#946d77!important;font:600 9px/1.65 "DM Sans",sans-serif;letter-spacing:.09em;text-align:left!important}
+.needlepoint-services .service:hover .service-action{background:none!important;color:#704a57!important}
+/* Reserve vertical space for full natural-aspect lace so text never crosses it. */
+.hero.minimal-hero{padding-top:clamp(115px,15vw,205px)!important;padding-bottom:clamp(118px,15vw,205px)!important}
+.hero.minimal-hero .simple-hero-center{position:relative!important;z-index:4!important}
+.hero.minimal-hero .minimal-hero-logo{max-width:min(790px,90vw)!important}
+.contact.photographic-contact{padding-top:clamp(135px,16vw,225px)!important;padding-bottom:clamp(135px,16vw,225px)!important}
+.contact.photographic-contact .simple-contact-wrap{position:relative!important;z-index:4!important}
+@media(max-width:900px){.needlepoint-services .service-grid{grid-template-columns:1fr!important;max-width:520px!important}.needlepoint-services .service{min-height:180px!important;grid-template-columns:38% 62%!important}.needlepoint-services .service-image img{height:125px!important}}
+@media(max-width:550px){
+.needlepoint-services{padding:77px 15px 86px!important}
+.needlepoint-services .service{min-height:165px!important;padding:15px 14px!important}
+.needlepoint-services .service-title{font-size:28px}
+.needlepoint-services .service-description{font-size:18px;margin:8px 0 10px}
+.needlepoint-services .service-action{font-size:8px}
+.needlepoint-services .service-image img{height:117px!important}
+.hero.minimal-hero{padding-top:clamp(75px,18vw,115px)!important;padding-bottom:clamp(78px,18vw,115px)!important}
+.contact.photographic-contact{padding-top:clamp(100px,19vw,140px)!important;padding-bottom:clamp(102px,19vw,140px)!important}
+}
 </style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="header" aria-label="Main navigation"><a class="brand" href="#top"><img src="assets/rosemary-nav-monogram.svg" alt=""><span>ROSEMARY LANE<small>DESIGNS</small></span></a><button class="menu" id="menu" aria-controls="navlinks" aria-expanded="false">MENU +</button><div class="nav-links" id="navlinks"><a href="#services">SERVICES</a><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div></nav>
@@ -934,12 +977,12 @@ opacity:1!important;
 </section>
 <section class="welcome refined-welcome" id="introduction"><img class="welcome-seashell" src="assets/curated/rose-patch.webp" alt="" aria-hidden="true" loading="lazy"><img class="welcome-thread" src="assets/curated/rose-garland.webp" alt="" aria-hidden="true" loading="lazy"><span class="eyebrow">WELCOME TO ROSEMARY LANE</span><h2>A little beauty<br>in every stitch.</h2><p class="intro">Beautiful things are even lovelier when they're made together. Come learn, create, and find a little joy in needlepoint.</p><p class="signoff">With love, Rosemary Lane <span class="stitched-signoff" aria-label="rose and needle">🪡🥀</span></p></section>
 <div class="photo-story"><div class="photos"><figure><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=950&q=85" alt="Floral needlepoint canvas" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=950&q=85" alt="Needlepoint stitching in progress" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1466027449668-27f96b692ba4?auto=format&fit=crop&w=950&q=85" alt="Textured embroidered floral work" loading="lazy"></figure></div></div>
-<section class="services refreshed-services" id="services">
+<section class="services refreshed-services needlepoint-services" id="services">
 <span class="eyebrow">WHAT WE DO</span><h2>Something lovely for everyone.</h2>
 <div class="service-grid">
-<a class="service" href="#lessons" aria-label="Explore private and group needlepoint lessons"><div class="service-image"><img src="assets/curated/stationery-label.webp" alt="Needlepoint stitched stationery" loading="lazy"></div><div class="service-copy"><h3>Lessons</h3><p>Private &amp; group</p><span class="service-action">EXPLORE LESSONS <span aria-hidden="true">↗</span></span></div></a>
-<a class="service" href="#custom" aria-label="Explore custom needlework"><div class="service-image"><img src="assets/curated/oval-crest.webp" alt="Stitched monogram crest" loading="lazy"></div><div class="service-copy"><h3>Custom needlework</h3><p>Made just for you</p><span class="service-action">EXPLORE CUSTOM WORK <span aria-hidden="true">↗</span></span></div></a>
-<a class="service" href="#custom" aria-label="Explore hand-painted canvases"><div class="service-image"><img src="shell-left.webp" alt="Hand-stitched shell motif" loading="lazy"></div><div class="service-copy"><h3>Hand-painted canvases</h3><p>For your next project</p><span class="service-action">EXPLORE CANVASES <span aria-hidden="true">↗</span></span></div></a>
+<a class="service" href="#lessons" aria-label="Explore private and group lessons"><span class="service-image"><img src="assets/curated/rose-patch.webp" alt="" loading="lazy"></span><span class="service-copy"><span class="service-title">Needlepoint<br>lessons</span><span class="service-description">Private &amp; group</span><span class="service-action">DISCOVER LESSONS <span aria-hidden="true">↗</span></span></span></a>
+<a class="service" href="#custom" aria-label="Explore custom needlework"><span class="service-image"><img src="assets/curated/oval-crest.webp" alt="" loading="lazy"></span><span class="service-copy"><span class="service-title">Custom<br>needlework</span><span class="service-description">Made just for you</span><span class="service-action">EXPLORE CUSTOM WORK <span aria-hidden="true">↗</span></span></span></a>
+<a class="service" href="#custom" aria-label="Explore hand-painted canvases"><span class="service-image"><img src="shell-left.webp" alt="" loading="lazy"></span><span class="service-copy"><span class="service-title">Hand-painted<br>canvases</span><span class="service-description">For your next project</span><span class="service-action">VIEW CANVASES <span aria-hidden="true">↗</span></span></span></a>
 </div></section>
 <section class="lessons" id="lessons"><span class="eyebrow">YOU'RE INVITED</span><h2>Come stitch with us.</h2><p class="intro">An afternoon of creativity, conversation, and something beautiful to take home.</p><div class="lesson-grid"><article class="lesson-card"><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=950&q=85" alt="Floral needlepoint being stitched" loading="lazy"><span class="index">01.</span><h3>Private lessons</h3><p>One-on-one guidance, at your own pace.</p></article><article class="lesson-card"><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=950&q=85" alt="Floral needlepoint canvas" loading="lazy"><span class="index">02.</span><h3>Group lessons</h3><p>Bring a friend or make a new one.</p></article></div><div class="class-note"><span class="eyebrow">COASTAL NEEDLEPOINT CLASS</span><h3>Make your own bag charm.</h3><p>Learn basketweave, brick stitch and French knots. Choose initials or a coastal motif, with guided instruction and a take-home project bag.</p><a class="button" href="mailto:hello@rosemarylanedesign.com?subject=Needlepoint%20class%20inquiry">ASK ABOUT LESSONS ↗</a></div></section>
 <section class="custom" id="custom"><div class="custom-visual"><img src="assets/curated/oval-crest.webp" alt="Custom embroidered monogram" loading="lazy"></div><div class="custom-copy"><span class="eyebrow">THE PERSONAL TOUCH</span><h2>Made for you,<br><em>and only you.</em></h2><p>Hand-painted canvases, French-knot monograms, and custom needlework—little details worth keeping.</p><a class="button" href="mailto:hello@rosemarylanedesign.com?subject=Custom%20needlework%20inquiry">ASK ABOUT CUSTOM WORK ↗</a></div></section>
