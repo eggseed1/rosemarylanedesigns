@@ -130,22 +130,28 @@ footer:before{height:62px;background-size:auto 62px;opacity:.65}
  .welcome{padding-top:82px}
  .welcome:before,.services:before,.lessons:before,.gallery:before,.instagram:before{height:35px;background-size:auto 35px}
 }
+
+/* Clean, airy needlepoint hero: lace is part of the textile edge, not a floating frame */
+.hero.clean-hero{min-height:0!important;padding:0 20px 78px!important;background:linear-gradient(180deg,#f6e7e8 0%,#fffaf7 37%,#fffcfa 100%)!important;display:flex!important;flex-direction:column;align-items:center;justify-content:flex-start;position:relative;isolation:isolate;overflow:hidden;text-align:center}
+.hero.clean-hero:before,.hero.clean-hero:after{content:none!important;display:none!important}
+.clean-hero .hero-lace-top{display:block;width:calc(100% + 40px);height:150px;flex:0 0 150px;margin:0 -20px 0;background:url("assets/lace-top.webp") center top/auto 150px repeat-x;opacity:.95;pointer-events:none}
+.clean-hero .clean-hero-content{width:100%;max-width:780px;margin:-10px auto 0;display:flex;flex-direction:column;align-items:center;position:relative;z-index:1}
+.hero.clean-hero .hero-label{width:min(670px,88vw)!important;max-width:100%;height:auto;margin:0 auto!important;filter:drop-shadow(0 5px 11px rgba(122,88,97,.08))!important}
+.clean-hero-tagline{font:italic 400 clamp(28px,3.7vw,44px)/1.15 "Cormorant Garamond",Georgia,serif;color:#726b63;letter-spacing:-.015em;margin:19px 0 17px}
+.clean-hero-link{display:inline-block;text-decoration:none;font:600 10px/1.5 "DM Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#967580;border-bottom:1px solid #cba9b2;padding-bottom:6px;transition:color .2s}
+.clean-hero-link:hover{color:#6d4e5a}
+@media(max-width:800px){.hero.clean-hero{padding:0 18px 66px!important}.clean-hero .hero-lace-top{height:105px;flex-basis:105px;background-size:auto 105px;width:calc(100% + 36px);margin-inline:-18px}.clean-hero .clean-hero-content{margin-top:2px}.hero.clean-hero .hero-label{width:min(610px,93vw)!important}}
+@media(max-width:520px){.hero.clean-hero{padding:0 13px 56px!important}.clean-hero .hero-lace-top{height:77px;flex-basis:77px;background-size:auto 77px;width:calc(100% + 26px);margin-inline:-13px}.clean-hero .clean-hero-content{margin-top:8px}.hero.clean-hero .hero-label{width:100%!important}.clean-hero-tagline{font-size:29px;margin:16px 0 16px}.clean-hero-link{font-size:9px}}
 </style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="header" aria-label="Main navigation"><a class="brand" href="#top"><img src="assets/rosemary-nav-monogram.svg" alt=""><span>ROSEMARY LANE<small>DESIGNS</small></span></a><button class="menu" id="menu" aria-controls="navlinks" aria-expanded="false">MENU +</button><div class="nav-links" id="navlinks"><a href="#services">SERVICES</a><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div></nav>
 <main id="main">
-<section class="hero hero-lace-editorial" id="top" aria-label="Rosemary Lane Designs">
-  <div class="hero-lace-frame">
-    <img class="lace-edge lace-edge-left" src="assets/lace-vertical-reference.webp" alt="" aria-hidden="true">
-    <img class="lace-edge lace-edge-right" src="assets/lace-vertical-reference.webp" alt="" aria-hidden="true">
-    <img class="lace-edge lace-edge-top" src="assets/lace-horizontal-reference.webp" alt="" aria-hidden="true">
-    <img class="lace-edge lace-edge-bottom" src="assets/lace-horizontal-reference.webp" alt="" aria-hidden="true">
-    <div class="hero-invitation-inner">
-      <span class="eyebrow">THE ART OF NEEDLEPOINT</span>
-      <img class="hero-label" src="assets/rosemary-needlepoint-logo-4k.webp" alt="Rosemary Lane Designs embroidered wordmark" width="3840" height="1440">
-      <p class="tagline">Stitched with love.</p>
-      <span class="small-sign">LESSONS &nbsp; · &nbsp; CUSTOM NEEDLEWORK &nbsp; · &nbsp; CANVASES</span>
-    </div>
+<section class="hero clean-hero" id="top" aria-label="Rosemary Lane Designs">
+  <div class="hero-lace-top" aria-hidden="true"></div>
+  <div class="clean-hero-content">
+    <img class="hero-label" src="assets/rosemary-needlepoint-logo-4k.webp" alt="Rosemary Lane Designs embroidered needlepoint wordmark" width="3840" height="1440" fetchpriority="high">
+    <p class="clean-hero-tagline">A place to stitch, create &amp; gather.</p>
+    <a class="clean-hero-link" href="#lessons">Discover our lessons <span aria-hidden="true">↗</span></a>
   </div>
 </section>
 <section class="welcome" id="introduction"><span class="eyebrow">WELCOME TO ROSEMARY LANE</span><h2>A little beauty<br>in every stitch.</h2><p class="intro">Beautiful things are even lovelier when they're made together. Come learn, create, and find a little joy in needlepoint.</p><p class="signoff">With love, Rosemary Lane</p></section>
