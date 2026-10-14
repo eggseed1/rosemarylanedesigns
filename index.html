@@ -291,6 +291,34 @@ main:before,main:after{display:none!important}
 background-size:4px 4px,4px 4px,108px 100%!important;
 }
 }
+
+/* Transparent vector lace and crisp needlepoint patches: no raster blur or clipped edges. */
+.hero.simple-textile-hero .textile-lace,.contact.simple-textile-contact .textile-lace{
+background-image:url("assets/coastal-lace.svg")!important;
+background-repeat:repeat-x!important;
+background-position:center top!important;
+background-size:auto 100%!important;
+height:clamp(55px,7.2vw,104px)!important;
+opacity:1!important;
+}
+.hero.simple-textile-hero,.contact.simple-textile-contact{overflow:hidden!important}
+.needlepoint-stage{width:min(850px,100%);min-height:290px}
+.needlepoint-stage .single-brand-art{width:min(535px,68%);z-index:2}
+.needle-decoration{width:clamp(86px,12vw,145px);max-height:180px;opacity:.94;z-index:1;filter:drop-shadow(0 4px 4px #815f6622)}
+.needle-monogram-left{left:4%;top:21%;transform:rotate(-12deg)}
+.needle-shell-right{right:4%;bottom:18%;transform:rotate(12deg)}
+.simple-contact-wrap:before,.simple-contact-wrap:after{content:"";position:absolute;z-index:-1;pointer-events:none;width:clamp(80px,13vw,142px);aspect-ratio:1;background-size:contain;background-position:center;background-repeat:no-repeat;opacity:.8}
+.simple-contact-wrap:before{background-image:url("assets/embroidered-shell.svg");left:-8%;top:23%;transform:rotate(-12deg)}
+.simple-contact-wrap:after{background-image:url("assets/embroidered-monogram.svg");right:-8%;bottom:12%;transform:rotate(13deg)}
+@media(max-width:650px){
+.needlepoint-stage{min-height:230px}
+.needlepoint-stage .single-brand-art{width:78%}
+.needle-decoration{width:clamp(61px,15vw,90px)}
+.needle-monogram-left{left:0;top:25%}
+.needle-shell-right{right:0;bottom:20%}
+.simple-contact-wrap:before,.simple-contact-wrap:after{opacity:.25;width:75px}
+.simple-contact-wrap:before{left:-32px;top:12%}.simple-contact-wrap:after{right:-32px;bottom:9%}
+}
 </style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="header" aria-label="Main navigation"><a class="brand" href="#top"><img src="assets/rosemary-nav-monogram.svg" alt=""><span>ROSEMARY LANE<small>DESIGNS</small></span></a><button class="menu" id="menu" aria-controls="navlinks" aria-expanded="false">MENU +</button><div class="nav-links" id="navlinks"><a href="#services">SERVICES</a><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div></nav>
@@ -299,9 +327,9 @@ background-size:4px 4px,4px 4px,108px 100%!important;
 <div class="textile-lace textile-lace-top" aria-hidden="true"></div>
 <div class="simple-hero-center">
 <div class="needlepoint-stage" aria-label="Rosemary Lane Designs needlepoint banner">
-<img class="needle-decoration needle-scissors" src="assets/curated/stationery-label.webp" alt="" aria-hidden="true">
+<img class="needle-decoration needle-monogram-left" src="assets/embroidered-monogram.svg" alt="" aria-hidden="true">
 <img class="single-brand-art" src="assets/curated/embroidered-wordmark.webp" alt="Rosemary Lane Designs" width="900" height="360" fetchpriority="high">
-<img class="needle-decoration needle-charm" src="assets/curated/oval-crest.webp" alt="" aria-hidden="true">
+<img class="needle-decoration needle-shell-right" src="assets/embroidered-shell.svg" alt="" aria-hidden="true">
 </div>
 <p class="simple-hero-deck">A place to stitch, create &amp; gather</p>
 <a class="simple-hero-link" href="#lessons">EXPLORE LESSONS ↗</a>
