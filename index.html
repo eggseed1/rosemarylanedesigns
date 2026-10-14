@@ -733,19 +733,45 @@ opacity:1!important;
 .refined-inquiry .simple-inquiry-panel{padding:17px!important}
 }
 @media(max-width:420px){.hero.minimal-hero{padding:79px 12px 85px!important;min-height:370px!important}.hero.minimal-hero .simple-hero-deck{font-size:25px!important}.refined-welcome .welcome-seashell,.refined-welcome .welcome-thread{opacity:.35}}
+
+/* Natural-aspect photographic lace: image pixels are never cropped or distorted by fixed-height CSS strips. */
+.hero.minimal-hero img.natural-lace,.contact.photographic-contact img.natural-lace{
+ display:block!important;
+ position:absolute!important;
+ width:100%!important;
+ max-width:none!important;
+ height:auto!important;
+ max-height:none!important;
+ min-height:0!important;
+ aspect-ratio:auto!important;
+ object-fit:contain!important;
+ object-position:center!important;
+ background:none!important;
+ background-image:none!important;
+ filter:none!important;
+ opacity:1!important;
+ padding:0!important;
+ margin:0!important;
+ transform:none!important;
+ pointer-events:none!important;
+ z-index:3!important;
+}
+.hero.minimal-hero img.textile-lace-top,.contact.photographic-contact img.textile-lace-top{top:0!important;bottom:auto!important}
+.hero.minimal-hero img.textile-lace-bottom,.contact.photographic-contact img.textile-lace-bottom{bottom:0!important;top:auto!important}
+.hero.minimal-hero .simple-hero-center,.contact.photographic-contact .simple-contact-wrap{z-index:4!important}
 </style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="header" aria-label="Main navigation"><a class="brand" href="#top"><img src="assets/rosemary-nav-monogram.svg" alt=""><span>ROSEMARY LANE<small>DESIGNS</small></span></a><button class="menu" id="menu" aria-controls="navlinks" aria-expanded="false">MENU +</button><div class="nav-links" id="navlinks"><a href="#services">SERVICES</a><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div></nav>
 <main id="main">
 <section class="hero simple-textile-hero photographic-hero minimal-hero" id="top" aria-labelledby="hero-brand-title">
-  <div class="textile-lace textile-lace-top" aria-hidden="true"></div>
+  <img class="textile-lace textile-lace-top natural-lace" src="lace-top-openwork.webp" alt="" aria-hidden="true">
   <div class="simple-hero-center">
     <h1 class="visually-hidden" id="hero-brand-title">Rosemary Lane Designs</h1>
     <img class="minimal-hero-logo" src="rosemary-lane-logo-transparent.webp" alt="Rosemary Lane Designs full embroidered wordmark on a striped needlepoint patch" width="900" height="360" fetchpriority="high">
     <p class="simple-hero-deck">A place to stitch, create &amp; gather</p>
     <a class="simple-hero-link" href="#lessons">EXPLORE LESSONS ↗</a>
   </div>
-  <div class="textile-lace textile-lace-bottom" aria-hidden="true"></div>
+  <img class="textile-lace textile-lace-bottom natural-lace" src="lace-bottom-openwork.webp" alt="" aria-hidden="true">
 </section>
 <section class="welcome refined-welcome" id="introduction"><img class="welcome-seashell" src="shell-left.webp" alt="" aria-hidden="true" loading="lazy"><img class="welcome-thread" src="thread-spool.webp" alt="" aria-hidden="true" loading="lazy"><span class="eyebrow">WELCOME TO ROSEMARY LANE</span><h2>A little beauty<br>in every stitch.</h2><p class="intro">Beautiful things are even lovelier when they're made together. Come learn, create, and find a little joy in needlepoint.</p><p class="signoff">With love, Rosemary Lane</p></section>
 <div class="photo-story"><div class="photos"><figure><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=950&q=85" alt="Floral needlepoint canvas" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=950&q=85" alt="Needlepoint stitching in progress" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1466027449668-27f96b692ba4?auto=format&fit=crop&w=950&q=85" alt="Textured embroidered floral work" loading="lazy"></figure></div></div>
@@ -754,7 +780,7 @@ opacity:1!important;
 <section class="custom" id="custom"><div class="custom-visual"><img src="assets/curated/oval-crest.webp" alt="Custom embroidered monogram" loading="lazy"></div><div class="custom-copy"><span class="eyebrow">THE PERSONAL TOUCH</span><h2>Made for you,<br><em>and only you.</em></h2><p>Hand-painted canvases, French-knot monograms, and custom needlework—little details worth keeping.</p><a class="button" href="mailto:hello@rosemarylanedesign.com?subject=Custom%20needlework%20inquiry">ASK ABOUT CUSTOM WORK ↗</a></div></section>
 <section class="gallery" id="gallery"><span class="eyebrow">FROM THE STUDIO</span><h2>Little things, lovingly made.</h2><p class="intro">Stitched inspiration and beautiful details.</p><div class="gallery-grid"><figure><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=800&q=85" alt="Needlepoint flowers" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=800&q=85" alt="Needlepoint work in progress" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1466027449668-27f96b692ba4?auto=format&fit=crop&w=800&q=85" alt="Delicate embroidered fabric" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=800&q=85" alt="Creative stitching supplies" loading="lazy"></figure></div></section>
 <section class="contact simple-textile-contact photographic-contact refined-inquiry" id="contact" aria-labelledby="simple-contact-title">
-<div class="textile-lace textile-lace-top" aria-hidden="true"></div>
+<img class="textile-lace textile-lace-top natural-lace" src="lace-top-openwork.webp" alt="" aria-hidden="true">
 
 <div class="simple-contact-wrap">
 <p class="eyebrow">WE'D LOVE TO HEAR FROM YOU</p>
@@ -768,7 +794,7 @@ opacity:1!important;
 <input type="hidden" name="subject" value="Inquiry"><button type="submit">SEND YOUR NOTE ↗</button>
 </form></div></div>
 <p class="simple-contact-signoff">With love, Rosemary Lane</p></div>
-<div class="textile-lace textile-lace-bottom" aria-hidden="true"></div>
+<img class="textile-lace textile-lace-bottom natural-lace" src="lace-bottom-openwork.webp" alt="" aria-hidden="true">
 </section>
 <section class="instagram" id="instagram"><span class="eyebrow">FOLLOW ALONG</span><h2>A glimpse of the lane.</h2><p class="intro">A few moments from our needlepoint world.</p><div class="instagram-grid" id="instagram-grid"></div><p class="instagram-status" id="instagram-status">See the latest posts on Instagram.</p><a class="button" href="https://www.instagram.com/rosemarylanedesign/" target="_blank" rel="noopener noreferrer">FOLLOW @ROSEMARYLANEDESIGN ↗</a></section>
 </main><footer><img src="assets/rosemary-nav-monogram.svg" alt=""><div class="name">ROSEMARY LANE DESIGNS</div><p class="signature">With love, Rosemary Lane</p><div class="links"><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div><small>© <span id="year"></span> ROSEMARY LANE DESIGNS</small></footer>
