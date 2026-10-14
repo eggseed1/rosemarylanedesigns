@@ -831,6 +831,40 @@ opacity:1!important;
  width:min(850px,96%)!important;height:auto!important;max-height:none!important;
  object-fit:contain!important;filter:none!important;
 }
+
+/* October polish: softer linen blush and elegant editorial hero signature. */
+.hero.minimal-hero{
+  background-color:#fffafa!important;
+  background-image:repeating-linear-gradient(90deg,
+  #fffbfa 0 42px,#f9f0f1 42px 65px,
+  #fffbfa 65px 107px,#f9f0f1 107px 130px)!important;
+  background-size:130px 100%!important;
+  padding-top:clamp(112px,12vw,155px)!important;
+  padding-bottom:clamp(116px,12vw,148px)!important;
+}
+.hero.minimal-hero .simple-hero-deck{
+  font-family:"Cormorant Garamond",Georgia,serif!important;
+  font-size:clamp(28px,3.2vw,42px)!important;
+  font-style:italic!important;
+  font-weight:400!important;
+  line-height:1.25!important;
+  letter-spacing:.005em!important;
+  color:#907a7e!important;
+  text-shadow:none!important;
+  margin:6px auto 0!important;
+  padding:0 10px!important;
+}
+.hero.minimal-hero .minimal-hero-logo{
+  filter:brightness(1.045) saturate(.79) contrast(.97)!important;
+  margin-bottom:2px!important;
+}
+.hero.minimal-hero img.natural-lace{
+  filter:brightness(1.065) saturate(.72) contrast(.965)!important;
+}
+@media(max-width:650px){
+ .hero.minimal-hero{padding:92px 14px 96px!important}
+ .hero.minimal-hero .simple-hero-deck{font-size:clamp(25px,7vw,32px)!important;max-width:330px!important}
+}
 </style></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="header" aria-label="Main navigation"><a class="brand" href="#top"><img src="assets/rosemary-nav-monogram.svg" alt=""><span>ROSEMARY LANE<small>DESIGNS</small></span></a><button class="menu" id="menu" aria-controls="navlinks" aria-expanded="false">MENU +</button><div class="nav-links" id="navlinks"><a href="#services">SERVICES</a><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div></nav>
@@ -841,7 +875,6 @@ opacity:1!important;
     <h1 class="visually-hidden" id="hero-brand-title">Rosemary Lane Designs</h1>
     <img class="minimal-hero-logo" src="rosemary-lane-logo.svg" alt="Rosemary Lane Designs full embroidered wordmark on a striped needlepoint patch" width="900" height="360" fetchpriority="high">
     <p class="simple-hero-deck">A place to stitch, create &amp; gather</p>
-    <a class="simple-hero-link" href="#lessons">EXPLORE LESSONS ↗</a>
   </div>
   <img class="textile-lace textile-lace-bottom natural-lace" src="lace-bottom.svg" alt="" aria-hidden="true">
 </section>
