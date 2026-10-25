@@ -52,8 +52,8 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
 .compact-heading h2{font-size:33px}
 .compact-heading{margin-bottom:22px}
 .service-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
-.service{position:relative;display:flex;flex-direction:column;min-height:132px;padding:16px 14px 18px;border:0;background:#f3e8e4;text-decoration:none;min-width:0;transition:background .18s}
-.service:hover{background:#eadfd8}
+.service{position:relative;display:flex;flex-direction:column;min-height:132px;padding:16px 14px 18px;border:0;text-decoration:none;min-width:0;background-color:#fffaf6;background-image:linear-gradient(45deg,#f0ddd6 25%,transparent 25%),linear-gradient(-45deg,#f0ddd6 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#f0ddd6 75%),linear-gradient(-45deg,transparent 75%,#f0ddd6 75%);background-size:16px 16px;background-position:0 0,0 8px,8px -8px,-8px 0;transition:background-color .18s}
+.service:hover{background-color:#f6efe9}
 .service-index{display:block;font-size:9px;letter-spacing:.16em;color:var(--rose);margin-bottom:12px}
 .service h3{font-size:22px;line-height:1.08;min-height:0;max-width:none}
 .service p{margin-top:auto;padding-top:14px;padding-right:18px;font:italic 16px/1.3 "Cormorant Garamond",Georgia,serif;color:var(--rose)}
