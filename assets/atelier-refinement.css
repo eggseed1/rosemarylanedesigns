@@ -190,7 +190,7 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
  .instagram-card{max-width:420px}
 }
 @media(max-width:540px){
- body{font-size:14px}
+ body{font-size:15px;line-height:1.7}
  .services-paper{padding:0}
  .services .compact-heading h2{font-size:30px}
  .service-grid{padding:12px;gap:10px}
@@ -301,7 +301,7 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
  .hero.minimal-hero.needlepoint-asset-hero .simple-hero-deck{font-size:21px;letter-spacing:.01em}
  .offering-heading{display:block;margin-bottom:22px}
  .offering-title h2{font-size:36px}
- .offering-description{margin-top:16px;font-size:13px}
+ .offering-description{margin-top:16px;font-size:15px;line-height:1.7}
  .offering-heading>.button{margin-top:18px}
  .offering-gallery{gap:11px}
  .offering-popups .offering-shell{padding:19px}
