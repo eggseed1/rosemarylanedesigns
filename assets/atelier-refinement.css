@@ -49,12 +49,6 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
 .hero-deck em{color:var(--rose);font-weight:400}
 .hero-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
 .lace-trim{height:18px;max-width:1160px;margin:20px auto 0;opacity:.4;background:url("hero-needlepoint/dusty-lace-1920.webp") center top/auto 18px repeat-x}
-.welcome{display:grid;grid-template-columns:1.1fr 1.4fr 160px;align-items:center;gap:38px;padding-block:46px}
-.welcome h2{font-size:38px}
-.welcome-body{max-width:450px}
-.welcome-body p:not(.signature){font-size:14px;line-height:1.8;color:var(--muted)}
-.welcome .signature{margin-top:15px}
-.welcome-detail img{height:155px;aspect-ratio:1}
 .services{padding-block:30px 38px;border-top:1px solid var(--line)}
 .compact-heading h2{font-size:33px}
 .compact-heading{margin-bottom:22px}
@@ -145,8 +139,6 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
  .hero-copy{padding:30px}
  .hero h1{font-size:54px}
  .hero-deck{font-size:29px}
- .welcome{grid-template-columns:1fr 1.2fr 125px;gap:25px}
- .welcome-detail img{height:130px}
  .service{padding-inline:17px}
  .service h3{font-size:24px}
  .class-note{grid-template-columns:1fr 1.3fr}
@@ -177,10 +169,6 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
  .hero-deck{font-size:28px;margin:20px 0}
  .hero-actions{gap:15px}
  .lace-trim{height:15px;background-size:auto 15px;margin-top:16px}
- .welcome{grid-template-columns:1fr 140px;gap:20px;padding-block:34px}
- .welcome>div:first-child{grid-column:1/-1}
- .welcome h2{font-size:35px}
- .welcome-detail img{height:140px}
  .services{padding-block:24px 30px}
  .compact-heading h2{font-size:31px}
  .service-grid{grid-template-columns:repeat(2,minmax(0,1fr));border-bottom:0}
@@ -229,10 +217,6 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
 }
 @media(max-width:540px){
  body{font-size:14px}
- .welcome{grid-template-columns:1fr 112px;gap:19px}
- .welcome-detail img{height:125px}
- .welcome-body p:not(.signature){font-size:13px;line-height:1.75}
- .welcome .signature{font-size:19px}
  .service{padding:17px 12px}
  .service h3{font-size:23px;min-height:51px}
  .service p{font-size:16px;min-height:43px}
@@ -467,4 +451,37 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
  .event-row>.text-link{grid-column:auto}
  .offering-heading .upcoming-shortcut{display:table;margin-top:10px}
  .faq summary{font-size:22px}
+}
+
+/* A single welcome note with a larger framed textile detail. */
+.welcome{display:block;padding:12px;margin-block:28px 36px;background:var(--stripes)}
+.welcome-paper{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);align-items:center;gap:44px;padding:30px 38px;background:var(--paper);border:1px solid var(--line)}
+.welcome-copy{min-width:0;padding-block:2px}
+.welcome .eyebrow{font-size:9px;letter-spacing:.15em}
+.welcome h2{font-size:clamp(36px,3.8vw,48px);line-height:1.06;margin:13px 0 18px}
+.welcome-message{max-width:45ch;font-size:14px;line-height:1.85;color:var(--muted)}
+.welcome .signature{margin-top:19px;font-size:22px}
+.welcome-detail{position:relative;isolation:isolate;min-width:0;padding:9px;margin:0 7px 7px 0;background:var(--paper);border:1px solid #d7c5c0}
+.welcome-detail::before{content:"";position:absolute;z-index:-1;inset:9px -9px -9px 9px;background:#e9d9d7;border:1px solid #dfceca}
+.welcome-detail img{width:100%;height:250px;aspect-ratio:auto;object-fit:cover;object-position:center}
+@media(max-width:1000px){
+ .welcome-paper{gap:30px;padding:28px}
+ .welcome-detail img{height:240px}
+}
+@media(max-width:760px){
+ .welcome{padding:10px;margin-block:24px 28px}
+ .welcome-paper{grid-template-columns:minmax(0,1.25fr) minmax(0,.85fr);gap:22px;padding:24px}
+ .welcome h2{font-size:36px}
+ .welcome-message{font-size:13px;line-height:1.8}
+ .welcome-detail img{height:225px}
+}
+@media(max-width:600px){
+ .welcome{padding:8px}
+ .welcome-paper{grid-template-columns:minmax(0,1fr);gap:24px;padding:23px 21px}
+ .welcome h2{font-size:clamp(32px,8.5vw,39px);margin-block:13px 16px}
+ .welcome-message{max-width:none;font-size:14px;line-height:1.8}
+ .welcome .signature{font-size:21px;margin-top:17px}
+ .welcome-detail{padding:7px;margin-right:6px;margin-bottom:6px}
+ .welcome-detail::before{inset:7px -7px -7px 7px}
+ .welcome-detail img{height:155px;object-position:center 45%}
 }
