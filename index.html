@@ -1208,7 +1208,7 @@ footer .signature{font-size:clamp(17px,1.75vw,21px)!important;line-height:1.5!im
 .hero.minimal-hero.needlepoint-asset-hero .minimal-hero-logo{
  width:min(760px,100%)!important;max-width:100%!important;
  height:auto!important;max-height:none!important;
- margin:0 auto 15px!important;filter:none!important;opacity:1!important;
+ margin:0 auto 15px!important;filter:saturate(.52) contrast(.94) brightness(1.035)!important;opacity:1!important;
 }
 .hero.minimal-hero.needlepoint-asset-hero .hero-design-line{
  margin:0 auto 12px;line-height:1.35;
@@ -1218,8 +1218,10 @@ footer .signature{font-size:clamp(17px,1.75vw,21px)!important;line-height:1.5!im
 }
 .hero.minimal-hero.needlepoint-asset-hero .hero-needlepoint-lace{
  position:absolute;display:block;left:0;width:100%;height:auto;
- max-width:none;max-height:none;object-fit:contain;pointer-events:none;
- filter:none;opacity:1;z-index:1;
+ /* 524.25px is 75% of the original 699px lace height at 3840px wide. */
+ aspect-ratio:3840 / 524.25;
+ max-width:none;max-height:none;object-fit:fill;pointer-events:none;
+ filter:saturate(.52) contrast(.94) brightness(1.035);opacity:1;z-index:1;
 }
 .hero.minimal-hero.needlepoint-asset-hero .hero-needlepoint-lace-top{top:0}
 .hero.minimal-hero.needlepoint-asset-hero .hero-needlepoint-lace-bottom{
