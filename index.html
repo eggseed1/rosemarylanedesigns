@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/atelier-refinement.css?v=studio-photos-1">
+<link rel="stylesheet" href="assets/atelier-refinement.css?v=welcome-video-1">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -42,7 +42,7 @@
    <p class="welcome-message">Beautiful things are even lovelier when they're made together. Come learn, create, and find a little joy in needlepoint.</p>
    <p class="signature">With love, Rosemary Lane</p>
   </div>
-  <figure class="welcome-detail"><img data-photo-slot="welcome-detail" src="photos/key-fob.jpg" alt="Finished floral needlepoint key fob with a Rosemary Lane Design card" width="1080" height="1920" loading="lazy" decoding="async" style="object-position:center 62%"></figure>
+  <figure class="welcome-detail"><video data-photo-slot="welcome-detail" src="photos/welcome-stitching.mp4" poster="photos/welcome-stitching.jpg" width="540" height="960" autoplay muted loop playsinline style="object-position:center 40%" aria-label="Stitching a basket and French-knot hydrangeas on a needlepoint canvas"></video></figure>
  </div>
 </section>
 <section class="about content-width" id="about" aria-labelledby="about-title">
@@ -204,6 +204,8 @@ document.addEventListener('keydown',event=>{if(event.key==='Escape'&&links.class
 document.addEventListener('click',event=>{if(links.classList.contains('open')&&!header.contains(event.target))closeMenu()});
 window.matchMedia('(min-width: 1121px)').addEventListener('change',event=>{if(event.matches)closeMenu()});
 document.getElementById('year').textContent=new Date().getFullYear();
+const welcomeVideo=document.querySelector('.welcome-detail video');
+if(welcomeVideo&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){welcomeVideo.removeAttribute('autoplay');welcomeVideo.pause();}
 document.getElementById('contact-form').addEventListener('submit',function(event){event.preventDefault();const f=new FormData(this);const body='Name: '+f.get('name')+'\nEmail: '+f.get('email')+'\n\n'+f.get('message');location.href='mailto:Shoshana@rosemarylanedesigns.com?subject='+encodeURIComponent('Rosemary Lane — '+f.get('subject'))+'&body='+encodeURIComponent(body)});
 (async()=>{const target=document.getElementById('instagram-grid'),status=document.getElementById('instagram-status');try{const r=await fetch('instagram-posts.json',{cache:'no-store'});if(!r.ok)throw new Error('feed unavailable');const data=await r.json();const posts=(Array.isArray(data)?data:[]).filter(p=>p&&typeof p.url==='string'&&/^https:\/\/(www\.)?instagram\.com\/(p|reel)\/[A-Za-z0-9_-]+\/?/.test(p.url)).slice(0,3);for(const post of posts){const card=document.createElement('div');card.className='instagram-card';const block=document.createElement('blockquote');block.className='instagram-media';block.dataset.instgrmPermalink=post.url;block.dataset.instgrmVersion='14';const a=document.createElement('a');a.href=post.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent='View on Instagram';block.appendChild(a);card.appendChild(block);target.appendChild(card)}if(posts.length){status.textContent='More from the studio on Instagram.';const script=document.createElement('script');script.async=true;script.src='https://www.instagram.com/embed.js';script.onload=()=>window.instgrm?.Embeds?.process();document.body.appendChild(script)}}catch(e){status.textContent='See the latest posts directly on Instagram.'}})();
 </script></body></html>

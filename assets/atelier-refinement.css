@@ -434,17 +434,17 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
 .welcome .signature{margin-top:19px;font-size:22px}
 .welcome-detail{position:relative;isolation:isolate;min-width:0;padding:9px;margin:0 7px 7px 0;background:var(--paper);border:1px solid #d7c5c0}
 .welcome-detail::before{content:"";position:absolute;z-index:-1;inset:9px -9px -9px 9px;background:#e9d9d7;border:1px solid #dfceca}
-.welcome-detail img{width:100%;height:250px;aspect-ratio:auto;object-fit:cover;object-position:center}
+.welcome-detail img,.welcome-detail video{display:block;width:100%;height:250px;aspect-ratio:auto;object-fit:cover;object-position:center}
 @media(max-width:1000px){
  .welcome-paper{gap:30px;padding:28px}
- .welcome-detail img{height:240px}
+ .welcome-detail img,.welcome-detail video{height:240px}
 }
 @media(max-width:760px){
  .welcome{padding:10px;margin-block:24px 28px}
  .welcome-paper{grid-template-columns:minmax(0,1.25fr) minmax(0,.85fr);gap:22px;padding:24px}
  .welcome h2{font-size:36px}
  .welcome-message{font-size:13px;line-height:1.8}
- .welcome-detail img{height:225px}
+ .welcome-detail img,.welcome-detail video{height:225px}
 }
 @media(max-width:600px){
  .welcome{padding:8px}
@@ -454,7 +454,7 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
  .welcome .signature{font-size:21px;margin-top:17px}
  .welcome-detail{padding:7px;margin-right:6px;margin-bottom:6px}
  .welcome-detail::before{inset:7px -7px -7px 7px}
- .welcome-detail img{height:155px;object-position:center 45%}
+ .welcome-detail img,.welcome-detail video{height:155px;object-position:center 45%}
 }
 
 /* A sticky cream header and an organized, quiet footer. */
