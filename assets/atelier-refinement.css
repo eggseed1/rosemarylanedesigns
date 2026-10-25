@@ -278,14 +278,15 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
 .offering-custom{background:var(--paper)}
 .offering-section .class-note{margin-top:25px;padding-bottom:0;border-bottom:0}
 @media(max-width:1000px){
- .offering-heading{grid-template-columns:1fr 1.35fr;gap:18px 28px}
- .offering-heading>.button{grid-column:2;justify-self:start}
+ .offering-heading{grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);align-items:start;column-gap:28px;row-gap:14px}
+ .offering-title{grid-row:1 / span 2}
+ .offering-heading>.button{grid-column:2;grid-row:2;justify-self:start;align-self:start}
  .offering-gallery{gap:15px}
 }
 @media(max-width:760px){
  .hero.minimal-hero.needlepoint-asset-hero{padding-inline:16px}
  .offering-section{padding-block:32px 36px}
- .offering-heading{gap:15px 24px}
+ .offering-heading{column-gap:24px;row-gap:12px}
  .offering-title h2{font-size:35px}
  .offering-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
  .offering-popups .offering-shell{padding:23px}
