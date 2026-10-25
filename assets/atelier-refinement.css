@@ -97,7 +97,7 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
 .gallery-heading>p{font-size:13px;color:var(--muted);max-width:230px}
 .gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
 .gallery-grid>figure{min-width:0}
-.gallery-grid img{height:auto;object-fit:contain}
+.gallery-grid img{height:auto;object-fit:cover}
 .gallery-grid figcaption{font-size:15px}
 .contact{padding:44px 24px}
 .contact-paper{width:100%;max-width:550px;margin:auto;padding:28px 40px 22px;text-align:center;background:var(--cream);border:1px solid #e0d3c5}
@@ -265,9 +265,9 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
 .offering-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}
 .offering-gallery.two{grid-template-columns:repeat(2,minmax(0,1fr))}
 .offering-gallery figure{position:relative;min-width:0;aspect-ratio:3/4;background:var(--paper)}
-.offering-gallery img,.offering-gallery video{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;background:var(--paper)}
+.offering-gallery img,.offering-gallery video{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;background:var(--paper)}
 .offering-gallery .flipbook{height:auto;aspect-ratio:3/4}
-.offering-gallery .flipbook-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:var(--paper);opacity:0;transition:opacity .55s ease}
+.offering-gallery .flipbook-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--paper);opacity:0;transition:opacity .55s ease}
 .offering-gallery .flipbook-slide.is-on{opacity:1;z-index:1}
 .offering-gallery figure:nth-child(5) img{object-position:35% center}
 .offering-gallery figure:nth-child(6) img{object-position:65% center}
@@ -319,7 +319,7 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
 .group-details{grid-template-columns:repeat(2,minmax(0,1fr))}
 .offering-kits{background:#f6f0e8}
 .kit-feature{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);align-items:start;gap:36px}
-.kit-feature>figure img{width:100%;height:auto;object-fit:contain}
+.kit-feature>figure img{width:100%;height:auto;object-fit:cover}
 .kit-project-copy>h3{font-size:30px;margin-bottom:13px}
 .diy-projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px 23px;margin:0}
 .diy-projects>div{padding-bottom:15px;border-bottom:1px solid var(--line);min-width:0}
@@ -329,7 +329,7 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
 .kit-inquiry-note h3{font-size:25px;margin-bottom:9px}
 .kit-inquiry-note p{font-size:13px;line-height:1.8;color:var(--muted)}
 .kit-photo-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:27px}
-.kit-photo-row img{width:100%;height:auto;object-fit:contain}
+.kit-photo-row img{width:100%;height:auto;object-fit:cover}
 @media(max-width:1000px){
  .about{grid-template-columns:250px minmax(0,1fr);gap:32px}
  .about-photo img{height:auto}
