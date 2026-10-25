@@ -1,305 +1,272 @@
-/* One component language outside the approved hero. */
-body.atelier-cohesive{
- --atelier-paper:#faf7f2;--atelier-ivory:#f5eee8;--atelier-blush:#eee4df;
- --atelier-rose:#7f5e65;--atelier-sage:#68715e;--atelier-ink:#514d46;
- --atelier-muted:#655e57;--atelier-border:#d8c5c0;--atelier-content:1120px;
+:root{
+ --paper:#faf7ef;--cream:#fbf5e9;--ink:#514b44;--muted:#70655e;--rose:#816268;--sage:#646d5b;--line:#ddd0c6;
+ --stripes:repeating-linear-gradient(90deg,#f6efea 0 32px,#eee4e0 32px 50px);
 }
-body.atelier-cohesive .header{
- background:#faf7f2!important;border-bottom:1px solid #d8c5c0!important;
- box-shadow:none!important;padding:15px max(24px,calc((100vw - 1200px)/2))!important;
+*,:before,:after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:20px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 15px/1.75 "DM Sans",sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,figure{margin:0}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500}
+h2{font-size:clamp(35px,4.2vw,48px);line-height:1.06;letter-spacing:-.025em;color:var(--sage)}
+h2 em,h3 em{font-weight:400;color:var(--rose)}
+h3{font-size:29px;line-height:1.12;color:var(--sage)}
+a{color:inherit}
+img{display:block;width:100%;max-width:100%;object-fit:cover}
+button,input,textarea{font:inherit}
+button,a,input,textarea{-webkit-tap-highlight-color:transparent}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--rose);outline-offset:4px}
+button{cursor:pointer}
+.skip{position:absolute;top:10px;left:-9999px;z-index:50;background:var(--paper);padding:10px 16px}
+.skip:focus{left:10px}
+.content-width{width:calc(100% - 48px);max-width:1120px;margin-inline:auto}
+.eyebrow{display:block;font:500 10px/1.6 "DM Sans",sans-serif;letter-spacing:.17em;color:var(--rose)}
+.eyebrow+h2{margin-top:12px}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:43px;max-width:100%;padding:11px 21px;border:1px solid #a88c8e;border-radius:2px;background:transparent;color:var(--rose);text-decoration:none;font:500 10px/1.5 "DM Sans",sans-serif;letter-spacing:.12em;text-transform:uppercase;transition:background .18s,border-color .18s}
+.button:hover{background:#eee1da;border-color:var(--rose)}
+.text-link{display:inline-flex;align-items:center;gap:12px;min-height:35px;border-bottom:1px solid #bca3a1;color:var(--rose);text-decoration:none;font:500 10px/1.5 "DM Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.text-link:hover{border-color:var(--rose)}
+figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:var(--rose);margin-top:9px}
+.signature{font:italic 22px/1.35 "Cormorant Garamond",Georgia,serif;color:var(--rose)}
+.site-header{position:relative;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:78px;padding:13px max(24px,calc((100vw - 1160px)/2));border-bottom:1px solid var(--line);background:var(--paper)}
+.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.brand>img{width:38px;height:38px;object-fit:contain}
+.brand>span{font:500 25px/.95 "Cormorant Garamond",Georgia,serif;letter-spacing:.015em;color:var(--rose)}
+.brand small{display:block;text-align:center;font:500 8px/1.2 "DM Sans",sans-serif;letter-spacing:.28em;margin-top:6px}
+.nav-links{display:flex;align-items:center;gap:27px}
+.nav-links a{display:flex;align-items:center;min-height:42px;text-decoration:none;font:500 10px/1.4 "DM Sans",sans-serif;letter-spacing:.1em;text-transform:uppercase}
+.nav-links a:hover{color:var(--rose)}
+.menu{display:none;padding:9px 12px;border:1px solid var(--line);background:transparent;color:var(--rose);font-size:10px;letter-spacing:.1em}
+.hero{padding:30px 24px 0;background:var(--stripes)}
+.hero-paper{display:grid;grid-template-columns:1.02fr 1fr;max-width:1160px;margin:auto;background:var(--paper);border:1px solid #e3d8cf}
+.hero-photo{position:relative;min-height:355px;overflow:hidden}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-photo figcaption{position:absolute;left:17px;bottom:15px;padding:5px 10px;background:#faf7efeb;margin:0;font-size:17px}
+.hero-copy{padding:38px 42px;align-self:center}
+.hero-copy .eyebrow{margin-bottom:20px}
+.hero h1{font-size:clamp(44px,5vw,67px);line-height:.92;letter-spacing:-.04em;color:var(--rose)}
+.hero h1 span{display:block;font:500 9px/1.4 "DM Sans",sans-serif;letter-spacing:.4em;margin:15px 0 0 3px}
+.hero-deck{font:400 31px/1.16 "Cormorant Garamond",Georgia,serif;color:var(--sage);margin:25px 0 24px}
+.hero-deck em{color:var(--rose);font-weight:400}
+.hero-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.lace-trim{height:18px;max-width:1160px;margin:20px auto 0;opacity:.4;background:url("hero-needlepoint/dusty-lace-1920.webp") center top/auto 18px repeat-x}
+.welcome{display:grid;grid-template-columns:1.1fr 1.4fr 160px;align-items:center;gap:38px;padding-block:46px}
+.welcome h2{font-size:38px}
+.welcome-body{max-width:450px}
+.welcome-body p:not(.signature){font-size:14px;line-height:1.8;color:var(--muted)}
+.welcome .signature{margin-top:15px}
+.welcome-detail img{height:155px;aspect-ratio:1}
+.services{padding-block:30px 38px;border-top:1px solid var(--line)}
+.compact-heading h2{font-size:33px}
+.compact-heading{margin-bottom:22px}
+.service-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-block:1px solid var(--line)}
+.service{position:relative;display:block;padding:20px 22px 19px;border-right:1px solid var(--line);text-decoration:none;min-width:0;transition:background .18s}
+.service:last-child{border-right:0}
+.service:hover{background:#f2e9e3}
+.service-index{display:block;font-size:9px;letter-spacing:.13em;color:var(--rose);margin-bottom:13px}
+.service h3{font-size:26px;min-height:58px;max-width:190px}
+.service p{font:italic 17px/1.4 "Cormorant Garamond",Georgia,serif;color:var(--rose);margin-top:7px;padding-right:13px}
+.service-arrow{position:absolute;right:17px;bottom:19px;color:var(--rose);font-size:17px}
+.lessons{padding-block:36px 54px}
+.section-heading{margin-bottom:28px}
+.split-heading{display:flex;justify-content:space-between;align-items:end;gap:40px}
+.split-heading>p{max-width:380px;color:var(--muted);font-size:14px;line-height:1.8}
+.lesson-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:48px;align-items:start}
+.lesson-card{min-width:0}
+.lesson-card:nth-child(2){margin-top:36px}
+.lesson-card img{height:258px;aspect-ratio:4/3}
+.lesson-card:nth-child(2) img{height:222px}
+.lesson-card figcaption{font-size:15px}
+.lesson-card h3{font-size:31px;margin:16px 0 9px}
+.lesson-card>p{max-width:460px;color:var(--muted);font-size:14px;line-height:1.8}
+.lesson-card>.text-link{margin-top:12px}
+.class-note{display:grid;grid-template-columns:1fr 1.4fr auto;align-items:center;gap:26px;padding:24px 0;margin-top:32px;border-block:1px solid var(--line)}
+.class-note h3{font-size:28px;margin-top:8px}
+.class-note>p{font-size:13px;line-height:1.8;color:var(--muted)}
+.class-note .text-link{white-space:nowrap}
+.stripe-surface{background:var(--stripes)}
+.popups{padding:44px 24px}
+.popups-paper{width:100%;display:grid;grid-template-columns:1fr 1.08fr;gap:40px;align-items:center;padding:34px 38px;background:var(--paper);border:1px solid #e3d8cf}
+.popups-copy h2{font-size:43px;margin:12px 0 18px}
+.popups-copy>p{font-size:14px;line-height:1.85;color:var(--muted);max-width:430px}
+.kit-list{display:flex;flex-wrap:wrap;gap:7px;list-style:none;padding:0;margin:20px 0}
+.kit-list li{padding:4px 9px;border:1px solid var(--line);font:italic 16px/1.3 "Cormorant Garamond",Georgia,serif;color:var(--rose)}
+.photo-pair{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;align-items:center}
+.photo-pair>figure{min-width:0}
+.photo-pair>figure:first-child img{height:285px;aspect-ratio:3/4}
+.photo-pair>figure:last-child{margin-top:100px}
+.photo-pair>figure:last-child img{height:185px;aspect-ratio:1}
+.photo-pair figcaption{font-size:15px}
+.custom{display:grid;grid-template-columns:minmax(0,350px) minmax(0,1fr);max-width:980px;align-items:center;gap:58px;padding-block:62px}
+.custom-photo img{height:290px;aspect-ratio:6/5}
+.custom-copy{min-width:0}
+.custom h2{margin:12px 0 18px}
+.custom-copy>p{font-size:14px;color:var(--muted);line-height:1.85;max-width:460px;margin-bottom:23px}
+.gallery{padding-block:20px 52px}
+.gallery-heading{display:flex;justify-content:space-between;align-items:end;gap:30px}
+.gallery-heading h2{font-size:39px}
+.gallery-heading>p{font-size:13px;color:var(--muted);max-width:230px}
+.gallery-grid{display:grid;grid-template-columns:1.2fr .9fr .9fr 1.1fr;gap:18px;align-items:start}
+.gallery-grid>figure{min-width:0}
+.gallery-grid img{height:238px}
+.gallery-grid>figure:nth-child(2){margin-top:28px}
+.gallery-grid>figure:nth-child(2) img{height:216px}
+.gallery-grid>figure:nth-child(3) img{height:194px}
+.gallery-grid>figure:nth-child(4){margin-top:42px}
+.gallery-grid>figure:nth-child(4) img{height:202px}
+.gallery-grid figcaption{font-size:15px}
+.contact{padding:44px 24px}
+.contact-paper{width:100%;max-width:550px;margin:auto;padding:28px 40px 22px;text-align:center;background:var(--cream);border:1px solid #e0d3c5}
+.contact h2{font-size:40px;font-style:italic;color:var(--ink);margin:0 0 12px}
+.contact-paper>p:not(.contact-email){font-size:13px;line-height:1.7;color:var(--muted);max-width:400px;margin:auto}
+.contact-form{display:grid;gap:12px;margin-top:22px;text-align:left}
+.contact-form label{font-size:11px;line-height:1.3;letter-spacing:.025em;color:var(--muted)}
+.contact-form input:not([type=hidden]),.contact-form textarea{display:block;width:100%;min-width:0;border:0;border-bottom:1px solid #baa79b;border-radius:0;background:transparent;padding:6px 2px 4px;color:var(--ink);font-size:16px;line-height:1.35}
+.contact-form textarea{height:66px;min-height:66px;resize:vertical}
+.contact-form .button{justify-self:center;min-height:39px;margin-top:6px;padding:9px 20px;text-transform:none;font-size:12px;letter-spacing:.03em;border-color:#927679;color:var(--ink)}
+.contact-email{margin-top:18px;font-size:11px;color:var(--rose);overflow-wrap:anywhere}
+.contact-email a{text-decoration:none}
+.contact-email a:hover{text-decoration:underline}
+.instagram{padding-block:42px 38px}
+.instagram-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:24px}
+.instagram h2{font-size:35px}
+.instagram-grid{display:flex;align-items:start;justify-content:center;flex-wrap:wrap;gap:22px}
+.instagram-card{flex:1 1 280px;min-width:0;max-width:350px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.instagram-card .instagram-media,.instagram-card iframe{box-sizing:border-box!important;width:100%!important;max-width:100%!important;min-width:0!important;margin:0!important}
+.instagram-status{font-size:12px;line-height:1.6;color:var(--muted);margin-top:16px;text-align:center}
+.site-footer{padding:26px 24px 18px;border-top:1px solid var(--line);background:#f3ece4}
+.footer-inner{display:grid;grid-template-columns:1.2fr 1fr 1fr;align-items:center;gap:18px;max-width:1120px;margin:auto}
+.footer-inner>.brand{justify-self:start}
+.footer-inner .signature{font-size:21px;text-align:center}
+.footer-inner nav{display:flex;justify-content:end;gap:22px}
+.footer-inner nav a{display:flex;align-items:center;min-height:40px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+.footer-inner>small{grid-column:1/-1;text-align:center;border-top:1px solid var(--line);padding-top:13px;font-size:9px;letter-spacing:.1em;color:var(--muted)}
+@media(max-width:1000px){
+ .nav-links{gap:19px}
+ .hero-copy{padding:30px}
+ .hero h1{font-size:54px}
+ .hero-deck{font-size:29px}
+ .welcome{grid-template-columns:1fr 1.2fr 125px;gap:25px}
+ .welcome-detail img{height:130px}
+ .service{padding-inline:17px}
+ .service h3{font-size:24px}
+ .class-note{grid-template-columns:1fr 1.3fr}
+ .class-note>.text-link{grid-column:2;justify-self:start;margin-top:-12px}
+ .popups-paper{gap:28px;padding:30px}
+ .popups-copy h2{font-size:39px}
+ .photo-pair{gap:12px}
+ .photo-pair>figure:first-child img{height:255px}
+ .photo-pair>figure:last-child img{height:160px}
+ .custom{gap:38px;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}
 }
-body.atelier-cohesive .header .brand{gap:12px!important}
-body.atelier-cohesive .header .brand img{width:54px!important;height:45px!important;filter:none!important}
-body.atelier-cohesive .header .brand span{font:500 19px/.95 "Cormorant Garamond",Georgia,serif!important;color:#68715e!important}
-body.atelier-cohesive .header .brand small{font:500 9px/1.2 "DM Sans",sans-serif!important;letter-spacing:.24em!important;margin-top:6px!important}
-body.atelier-cohesive .nav-links a{font-size:10px!important;letter-spacing:.13em!important;color:#514d46!important;padding-block:9px}
-body.atelier-cohesive .nav-links a:hover{color:#7f5e65!important}
-body.atelier-cohesive .menu{border:1px solid #d8c5c0!important;padding:10px 12px!important;color:#68715e!important}
-body.atelier-cohesive main>section:not(#top){scroll-margin-top:24px;position:relative;z-index:4}
-body.atelier-cohesive main>section:not(#top) h2{
- font:500 clamp(39px,4.9vw,62px)/1.06 "Cormorant Garamond",Georgia,serif!important;
- letter-spacing:-.025em!important;color:var(--atelier-sage)!important;
- margin:14px auto 20px!important;max-width:780px;
+@media(max-width:760px){
+ .content-width{width:calc(100% - 40px)}
+ .site-header{min-height:68px;padding:11px 20px}
+ .brand>span{font-size:23px}
+ .brand>img{width:34px;height:34px}
+ .menu{display:block}
+ .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:14px 20px;gap:0}
+ .nav-links.open{display:flex;flex-direction:column;align-items:stretch}
+ .nav-links a{min-height:43px}
+ .hero{padding:20px 16px 0}
+ .hero-paper{grid-template-columns:1fr}
+ .hero-photo{min-height:225px}
+ .hero-copy{padding:27px 28px}
+ .hero-copy .eyebrow{margin-bottom:15px}
+ .hero h1{font-size:clamp(40px,8vw,56px)}
+ .hero h1 span{margin-top:11px;font-size:8px}
+ .hero-deck{font-size:28px;margin:20px 0}
+ .hero-actions{gap:15px}
+ .lace-trim{height:15px;background-size:auto 15px;margin-top:16px}
+ .welcome{grid-template-columns:1fr 140px;gap:20px;padding-block:34px}
+ .welcome>div:first-child{grid-column:1/-1}
+ .welcome h2{font-size:35px}
+ .welcome-detail img{height:140px}
+ .services{padding-block:24px 30px}
+ .compact-heading h2{font-size:31px}
+ .service-grid{grid-template-columns:repeat(2,minmax(0,1fr));border-bottom:0}
+ .service{padding:18px 17px;border-bottom:1px solid var(--line)}
+ .service:nth-child(2){border-right:0}
+ .service h3{min-height:53px;font-size:25px}
+ .lessons{padding-block:26px 40px}
+ .split-heading{gap:24px}
+ .split-heading h2{font-size:39px}
+ .split-heading>p{max-width:300px;font-size:13px}
+ .lesson-grid{gap:26px}
+ .lesson-card img{height:210px}
+ .lesson-card:nth-child(2) img{height:180px}
+ .lesson-card:nth-child(2){margin-top:30px}
+ .lesson-card h3{font-size:28px}
+ .class-note{gap:18px;padding-block:22px;margin-top:25px}
+ .class-note h3{font-size:27px}
+ .popups{padding:32px 20px}
+ .popups-paper{grid-template-columns:1fr;padding:26px;gap:26px}
+ .popups-copy h2{font-size:39px}
+ .photo-pair{grid-template-columns:1fr 1fr;gap:16px}
+ .photo-pair>figure:first-child img{height:215px}
+ .photo-pair>figure:last-child{margin-top:38px}
+ .photo-pair>figure:last-child img{height:177px}
+ .custom{padding-block:42px;gap:28px}
+ .custom h2{font-size:37px}
+ .custom-photo img{height:260px}
+ .gallery{padding-block:12px 38px}
+ .gallery-heading h2{font-size:35px}
+ .gallery-heading>p{max-width:200px;font-size:12px}
+ .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 15px}
+ .gallery-grid img,.gallery-grid>figure:nth-child(2) img{height:220px}
+ .gallery-grid>figure:nth-child(3) img,.gallery-grid>figure:nth-child(4) img{height:185px}
+ .gallery-grid>figure:nth-child(2){margin-top:22px}
+ .gallery-grid>figure:nth-child(4){margin-top:22px}
+ .contact{padding:36px 20px}
+ .contact-paper{padding:30px 34px 24px}
+ .instagram{padding-block:32px}
+ .instagram-heading{align-items:start}
+ .instagram h2{font-size:32px}
+ .instagram-grid{gap:18px}
+ .instagram-card{max-width:420px}
+ .footer-inner{grid-template-columns:1fr 1fr}
+ .footer-inner .signature{grid-column:1/-1;grid-row:2;text-align:left}
+ .footer-inner nav{gap:16px}
 }
-body.atelier-cohesive main>section:not(#top) h2 em{font-weight:400!important;color:var(--atelier-rose)!important}
-body.atelier-cohesive main>section:not(#top) .eyebrow{
- font:500 10px/1.6 "DM Sans",sans-serif!important;
- letter-spacing:.19em!important;color:var(--atelier-rose)!important;text-transform:uppercase;
+@media(max-width:540px){
+ body{font-size:14px}
+ .welcome{grid-template-columns:1fr 112px;gap:19px}
+ .welcome-detail img{height:125px}
+ .welcome-body p:not(.signature){font-size:13px;line-height:1.75}
+ .welcome .signature{font-size:19px}
+ .service{padding:17px 12px}
+ .service h3{font-size:23px;min-height:51px}
+ .service p{font-size:16px;min-height:43px}
+ .service-arrow{right:11px;bottom:16px}
+ .split-heading{display:block}
+ .split-heading>p{max-width:100%;margin-top:17px}
+ .lesson-grid{grid-template-columns:1fr;gap:28px}
+ .lesson-card:nth-child(2){margin-top:0}
+ .lesson-card img{height:230px}
+ .lesson-card:nth-child(2) img{height:205px}
+ .lesson-card>p{font-size:13px}
+ .class-note{grid-template-columns:1fr;gap:12px}
+ .class-note>.text-link{grid-column:auto;margin-top:0}
+ .photo-pair{gap:12px}
+ .photo-pair>figure:first-child img{height:180px}
+ .photo-pair>figure:last-child img{height:145px}
+ .photo-pair>figure:last-child{margin-top:35px}
+ .photo-pair figcaption{font-size:14px}
+ .custom{grid-template-columns:1fr;gap:23px}
+ .custom-photo img{height:230px}
+ .custom h2{font-size:39px}
+ .custom-copy>p{font-size:13px}
+ .gallery-heading{display:block}
+ .gallery-heading>p{margin-top:13px;max-width:100%}
+ .gallery-grid img,.gallery-grid>figure:nth-child(2) img{height:185px}
+ .gallery-grid>figure:nth-child(3) img,.gallery-grid>figure:nth-child(4) img{height:160px}
+ .gallery-grid figcaption{font-size:14px}
+ .contact-paper{padding:28px 24px 22px}
+ .contact h2{font-size:39px}
+ .instagram-heading{display:block}
+ .instagram-heading>.text-link{margin-top:14px}
+ .footer-inner{gap:14px;grid-template-columns:1fr}
+ .footer-inner .brand>span{font-size:21px}
+ .footer-inner nav{gap:18px;justify-content:start}
+ .footer-inner nav a{font-size:9px}
 }
-body.atelier-cohesive main>section:not(#top) .intro,
-body.atelier-cohesive main>section:not(#top) .simple-contact-deck{
- max-width:570px!important;margin:0 auto!important;
- font:400 15px/1.85 "DM Sans",sans-serif!important;color:var(--atelier-muted)!important;
-}
-body.atelier-cohesive main>section:not(#top) .button,
-body.atelier-cohesive main>section:not(#top) .simple-inquiry-form button{
- display:inline-flex!important;align-items:center;justify-content:center;
- max-width:100%;min-height:46px;padding:13px 22px!important;
- border:1px solid #b39999!important;border-radius:2px!important;
- background:#faf7f2!important;color:#806369!important;
- font:500 10px/1.5 "DM Sans",sans-serif!important;letter-spacing:.14em!important;
- text-decoration:none!important;box-shadow:none!important;transition:background .18s,border-color .18s;
-}
-body.atelier-cohesive main>section:not(#top) .button:hover,
-body.atelier-cohesive main>section:not(#top) .simple-inquiry-form button:hover{
- background:#e5d4d0!important;border-color:#7f5e65!important;
-}
-body.atelier-cohesive .welcome.refined-welcome{
- background:#faf7f2!important;padding:76px 24px 52px!important;overflow:hidden!important;
-}
-body.atelier-cohesive .welcome.refined-welcome:before,
-body.atelier-cohesive .welcome.refined-welcome:after,
-body.atelier-cohesive .services.needlepoint-services:before,
-body.atelier-cohesive .services.needlepoint-services:after,
-body.atelier-cohesive .gallery:before,
-body.atelier-cohesive footer:before{content:none!important;display:none!important}
-body.atelier-cohesive .welcome-flourish{
- position:static!important;display:block;width:190px;max-width:45%;height:auto;
- margin:0 auto 27px;opacity:1;filter:none;
-}
-body.atelier-cohesive .welcome.refined-welcome .signoff,
-body.atelier-cohesive .contact.refined-inquiry .simple-contact-signoff,
-body.atelier-cohesive footer .signature{
- font:italic 400 21px/1.5 "Cormorant Garamond",Georgia,serif!important;
- letter-spacing:0!important;color:#7f5e65!important;margin:23px auto 0!important;
-}
-body.atelier-cohesive .stitched-signoff{display:inline-flex!important;align-items:center!important;vertical-align:middle;gap:0!important;margin-left:4px!important}
-body.atelier-cohesive .stitched-signoff img,
-body.atelier-cohesive footer .stitched-signoff img{width:22px!important;height:22px!important;object-fit:contain;filter:none!important}
-body.atelier-cohesive .stitched-signoff svg,
-body.atelier-cohesive footer .stitched-signoff svg{width:19px!important;height:14px!important;margin-left:-4px!important}
-body.atelier-cohesive .photo-story{position:relative;z-index:4;background:#faf7f2!important;padding:0 24px 80px!important}
-body.atelier-cohesive .photo-story .photos{max-width:1120px!important;gap:20px!important}
-body.atelier-cohesive .photo-story figure{
- padding:8px!important;border:1px solid #d8c5c0!important;border-radius:2px!important;
- background:#f5eee8!important;box-shadow:none!important;transform:none!important;
-}
-body.atelier-cohesive .photo-story img{height:auto!important;aspect-ratio:4/3;object-fit:cover;filter:saturate(.88)!important;border-radius:0!important}
-body.atelier-cohesive .services.needlepoint-services{background:#eee4df!important;padding:76px 24px 80px!important}
-body.atelier-cohesive .services.needlepoint-services h2{margin-bottom:36px!important}
-body.atelier-cohesive .services.needlepoint-services .service-grid{
- max-width:1120px!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:16px!important;
-}
-body.atelier-cohesive .services.needlepoint-services .service{
- position:relative!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;
- text-align:left!important;gap:0!important;justify-content:flex-start!important;min-height:220px!important;padding:24px 22px!important;
- background:#faf7f2!important;border:1px solid #d8c5c0!important;border-radius:2px!important;
- box-shadow:none!important;transform:none!important;overflow:hidden!important;
- transition:border-color .18s,background .18s;
-}
-body.atelier-cohesive .services.needlepoint-services .service:before,
-body.atelier-cohesive .services.needlepoint-services .service:after{content:none!important}
-body.atelier-cohesive .services.needlepoint-services .service:hover{border-color:#b39999!important;background:#fcf5f2!important}
-body.atelier-cohesive .service-index{display:block;font:italic 22px/1 "Cormorant Garamond",Georgia,serif;color:#7f5e65;margin-bottom:21px}
-body.atelier-cohesive .services.needlepoint-services .service-copy{display:block!important;padding:0 12px 22px 0!important;width:100%!important}
-body.atelier-cohesive .services.needlepoint-services .service-title{
- display:block!important;font:500 29px/1.08 "Cormorant Garamond",Georgia,serif!important;
- letter-spacing:-.015em!important;color:#68715e!important;
-}
-body.atelier-cohesive .services.needlepoint-services .service .service-description{
- display:block!important;font:italic 17px/1.4 "Cormorant Garamond",Georgia,serif!important;
- letter-spacing:0!important;color:#7f5e65!important;margin:10px 0 0!important;
-}
-body.atelier-cohesive .service-arrow{position:absolute;bottom:18px;right:21px;font:20px/1 Georgia,serif;color:#7f5e65}
-body.atelier-cohesive .lessons{background:#faf7f2!important;padding:80px 24px!important}
-body.atelier-cohesive .lessons .lesson-grid{max-width:1000px!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:24px!important;margin:36px auto 0!important}
-body.atelier-cohesive .lessons .lesson-card{
- display:flex;flex-direction:column;min-width:0;background:#f5eee8!important;border:1px solid #d8c5c0!important;
- border-radius:2px!important;padding:8px 8px 30px!important;box-shadow:none!important;
-}
-body.atelier-cohesive .lessons .lesson-card img{width:100%!important;height:auto!important;aspect-ratio:4/3;object-fit:cover!important;filter:saturate(.88)!important;border-radius:0!important}
-body.atelier-cohesive .lessons .lesson-card .index{font:italic 21px/1.2 "Cormorant Garamond",Georgia,serif!important;color:#7f5e65!important;margin:24px 0 8px!important}
-body.atelier-cohesive .lessons .lesson-card h3{font:500 31px/1.15 "Cormorant Garamond",Georgia,serif!important;letter-spacing:-.015em!important;color:#68715e!important;margin:0 12px 12px!important;text-transform:none!important}
-body.atelier-cohesive .lessons .lesson-card p{font:400 14px/1.85 "DM Sans",sans-serif!important;color:#655e57!important;max-width:380px!important;margin:0 auto!important;padding:0 21px!important}
-body.atelier-cohesive .lessons .coastal-invitation{
- display:grid!important;grid-template-columns:180px minmax(0,1fr)!important;gap:34px!important;align-items:center!important;
- max-width:1000px!important;padding:32px!important;margin:28px auto 0!important;
- border:1px solid #d8c5c0!important;border-radius:2px!important;background:#eee4df!important;box-shadow:none!important;text-align:left!important;
-}
-body.atelier-cohesive .lessons .coastal-invitation:before,
-body.atelier-cohesive .lessons .coastal-invitation:after{content:none!important}
-body.atelier-cohesive .coastal-invitation-art{display:grid!important;place-items:center!important;background:#f5eee8!important;border:1px solid #d8c5c0!important;padding:20px!important;min-height:184px!important}
-body.atelier-cohesive .coastal-invitation-art img{width:125px!important;max-width:100%!important;height:145px!important;object-fit:contain!important;filter:none!important}
-body.atelier-cohesive .coastal-invitation-copy{padding:0!important;text-align:inherit!important}
-body.atelier-cohesive .coastal-invitation-copy h3{font:500 34px/1.12 "Cormorant Garamond",Georgia,serif!important;color:#68715e!important;margin:12px 0 14px!important}
-body.atelier-cohesive .coastal-invitation-copy p{font:400 14px/1.85 "DM Sans",sans-serif!important;max-width:590px!important;color:#655e57!important;margin:0 0 17px!important}
-body.atelier-cohesive .coastal-class-link,
-body.atelier-cohesive .popups-link{font:500 10px/1.6 "DM Sans",sans-serif!important;letter-spacing:.13em!important;color:#806369!important;text-decoration:none!important;padding:7px 0!important;border-bottom:1px solid #b39999!important;display:inline-block!important}
-body.atelier-cohesive .popups-section{background:#eee4df!important;padding:80px 24px!important}
-body.atelier-cohesive .popups-section .popups-inner{max-width:1120px!important;display:grid!important;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)!important;gap:clamp(32px,5vw,72px)!important;align-items:center!important}
-body.atelier-cohesive .popups-kit-board{
- position:relative;min-width:0;padding:34px 36px;background:#faf7f2;border:1px solid #d8c5c0;border-radius:2px;
-}
-body.atelier-cohesive .popups-kit-board h3{font:500 35px/1.08 "Cormorant Garamond",Georgia,serif;color:#68715e;margin:14px 0 25px;letter-spacing:-.02em}
-body.atelier-cohesive .kit-collection{list-style:none;margin:0;padding:0;border-top:1px solid #d8c5c0}
-body.atelier-cohesive .kit-collection li{font:italic 23px/1.3 "Cormorant Garamond",Georgia,serif;color:#7f5e65;padding:12px 90px 12px 0;border-bottom:1px solid #d8c5c0}
-body.atelier-cohesive .popups-kit-board img{position:absolute;bottom:38px;right:27px;width:76px;height:92px;object-fit:contain;filter:none}
-body.atelier-cohesive .popups-copy h2{margin-top:14px!important}
-body.atelier-cohesive .popups-copy p{font:400 15px/1.85 "DM Sans",sans-serif!important;color:#655e57!important;max-width:570px!important}
-body.atelier-cohesive .popups-copy .popups-note{font:italic 22px/1.45 "Cormorant Garamond",Georgia,serif!important;color:#7f5e65!important;margin-top:20px!important}
-body.atelier-cohesive .custom{display:grid!important;grid-template-columns:1fr 1fr!important;min-height:0!important;background:#faf7f2!important}
-body.atelier-cohesive .custom .custom-visual{padding:64px clamp(24px,4.5vw,72px)!important;display:grid!important;place-items:center!important;background:#f5eee8!important}
-body.atelier-cohesive .custom .custom-visual:before,
-body.atelier-cohesive .custom .custom-visual:after{content:none!important}
-body.atelier-cohesive .custom-sampler{width:min(390px,100%);padding:35px 28px 24px;background:#faf7f2;border:1px solid #d8c5c0;border-radius:2px;text-align:center}
-body.atelier-cohesive .custom .custom-visual img{width:min(290px,100%)!important;height:auto!important;max-height:none!important;filter:none!important;margin:auto!important}
-body.atelier-cohesive .custom-sampler figcaption{margin-top:20px;font:italic 21px/1.3 "Cormorant Garamond",Georgia,serif;color:#7f5e65}
-body.atelier-cohesive .custom .custom-copy{padding:72px clamp(26px,5vw,80px)!important;background:#faf7f2!important;align-items:flex-start!important;text-align:left!important}
-body.atelier-cohesive .custom .custom-copy h2{margin-left:0!important}
-body.atelier-cohesive .custom .custom-copy p{font:400 15px/1.85 "DM Sans",sans-serif!important;color:#655e57!important;max-width:450px!important;margin-bottom:26px!important}
-body.atelier-cohesive .gallery{background:#faf7f2!important;padding:80px 24px!important;border-top:1px solid #d8c5c0}
-body.atelier-cohesive .gallery .gallery-grid{max-width:1120px!important;gap:18px!important;margin:36px auto 0!important}
-body.atelier-cohesive .gallery figure{padding:8px!important;background:#f5eee8!important;border:1px solid #d8c5c0!important;border-radius:2px!important;box-shadow:none!important;transform:none!important}
-body.atelier-cohesive .gallery img{aspect-ratio:4/5!important;filter:saturate(.88)!important;border-radius:0!important}
-body.atelier-cohesive .contact.refined-inquiry{background:#eee4df!important;padding:80px 24px!important;overflow:hidden!important}
-body.atelier-cohesive .contact.refined-inquiry:before,
-body.atelier-cohesive .contact.refined-inquiry:after,
-body.atelier-cohesive .contact.refined-inquiry .simple-inquiry-panel:before,
-body.atelier-cohesive .contact.refined-inquiry .simple-inquiry-panel:after{content:none!important;display:none!important}
-body.atelier-cohesive .contact.refined-inquiry .simple-contact-wrap{max-width:1120px!important;margin:auto!important;padding:0!important}
-body.atelier-cohesive .contact.refined-inquiry .simple-inquiry-panel{
- width:100%!important;max-width:680px!important;margin:34px auto 0!important;padding:34px!important;
- border:1px solid #d8c5c0!important;border-radius:2px!important;background:#faf7f2!important;box-shadow:none!important;outline:0!important;
-}
-body.atelier-cohesive .contact.refined-inquiry .simple-inquiry-inner{padding:0!important;border:0!important;background:none!important}
-body.atelier-cohesive .contact.refined-inquiry .simple-inquiry-form{display:grid!important;grid-template-columns:1fr!important;gap:20px!important;text-align:left!important;margin:0!important}
-body.atelier-cohesive .contact.refined-inquiry .simple-inquiry-form label{font:500 10px/1.5 "DM Sans",sans-serif!important;letter-spacing:.13em!important;color:#655e57!important;margin:0!important}
-body.atelier-cohesive .contact.refined-inquiry .simple-inquiry-form input:not([type=hidden]),
-body.atelier-cohesive .contact.refined-inquiry .simple-inquiry-form textarea{
- width:100%!important;min-width:0!important;display:block!important;padding:12px 13px!important;margin-top:8px!important;
- border:1px solid #d9c9c2!important;border-radius:2px!important;background:#fffdfa!important;
- color:#514d46!important;font:400 16px/1.5 "DM Sans",sans-serif!important;box-shadow:none!important;letter-spacing:0!important;
-}
-body.atelier-cohesive .contact.refined-inquiry .simple-inquiry-form textarea{min-height:138px!important;resize:vertical!important}
-body.atelier-cohesive .contact.refined-inquiry .simple-inquiry-form button{width:100%!important;cursor:pointer}
-body.atelier-cohesive .contact.refined-inquiry .simple-inquiry-form input:focus-visible,
-body.atelier-cohesive .contact.refined-inquiry .simple-inquiry-form textarea:focus-visible{outline:2px solid #7f5e65;outline-offset:3px}
-body.atelier-cohesive .instagram{background:#faf7f2!important;padding:80px 24px!important}
-body.atelier-cohesive .instagram-grid{
- display:flex!important;flex-wrap:wrap!important;justify-content:center!important;align-items:flex-start!important;
- max-width:1120px!important;width:100%!important;gap:24px!important;margin:36px auto 24px!important;
-}
-body.atelier-cohesive .instagram-card{
- flex:1 1 320px;max-width:360px!important;min-width:0!important;margin:0!important;
- padding:7px!important;border:1px solid #d8c5c0!important;border-radius:2px!important;background:#f5eee8!important;overflow:hidden!important;
-}
-body.atelier-cohesive .instagram-status{font:400 12px/1.7 "DM Sans",sans-serif!important;color:#655e57!important;margin-bottom:22px!important}
-body.atelier-cohesive footer{background:#f5eee8!important;border-top:1px solid #d8c5c0!important;padding:48px 24px 30px!important}
-body.atelier-cohesive footer>img{width:82px!important;height:68px!important;margin:0 auto 16px!important;filter:none!important}
-body.atelier-cohesive footer .name{font:500 24px/1.2 "Cormorant Garamond",Georgia,serif!important;letter-spacing:.1em!important;color:#68715e!important}
-body.atelier-cohesive footer .links{gap:8px 24px!important;margin:22px auto 12px!important}
-body.atelier-cohesive footer .links a{display:inline-flex;align-items:center;min-height:44px;font:500 10px/1.5 "DM Sans",sans-serif!important;letter-spacing:.12em!important;color:#655e57!important}
-body.atelier-cohesive footer small{font:400 10px/1.6 "DM Sans",sans-serif!important;letter-spacing:.12em!important;color:#655e57!important}
-@media(max-width:1100px){
- body.atelier-cohesive .services.needlepoint-services .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;max-width:760px!important}
- body.atelier-cohesive .services.needlepoint-services .service{min-height:200px!important}
-}
-@media(max-width:800px){
- body.atelier-cohesive .header{padding:12px 20px!important}
- body.atelier-cohesive .nav-links{padding:18px 20px!important;border-bottom:1px solid #d8c5c0!important;background:#faf7f2!important;box-shadow:none!important;gap:8px!important}
- body.atelier-cohesive .nav-links a{min-height:40px;display:flex;align-items:center}
- body.atelier-cohesive .welcome.refined-welcome{padding:58px 20px 42px!important}
- body.atelier-cohesive .photo-story{padding:0 20px 60px!important}
- body.atelier-cohesive .photo-story .photos{gap:12px!important}
- body.atelier-cohesive .services.needlepoint-services,
- body.atelier-cohesive .lessons,
- body.atelier-cohesive .popups-section,
- body.atelier-cohesive .gallery,
- body.atelier-cohesive .contact.refined-inquiry,
- body.atelier-cohesive .instagram{padding:60px 20px!important}
- body.atelier-cohesive .lessons .lesson-grid{grid-template-columns:1fr!important;max-width:520px!important;gap:22px!important}
- body.atelier-cohesive .lessons .coastal-invitation{max-width:520px!important;grid-template-columns:120px minmax(0,1fr)!important;gap:22px!important;padding:24px!important}
- body.atelier-cohesive .coastal-invitation-art{padding:12px!important;min-height:144px!important}
- body.atelier-cohesive .coastal-invitation-art img{height:115px!important}
- body.atelier-cohesive .popups-section .popups-inner{grid-template-columns:1fr!important;max-width:580px!important;gap:32px!important}
- body.atelier-cohesive .popups-copy{text-align:center!important}
- body.atelier-cohesive .custom{grid-template-columns:1fr!important}
- body.atelier-cohesive .custom .custom-visual{padding:48px 24px!important}
- body.atelier-cohesive .custom .custom-copy{padding:52px 24px 60px!important;align-items:center!important;text-align:center!important}
- body.atelier-cohesive .custom .custom-copy h2{margin-left:auto!important}
- body.atelier-cohesive .gallery .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}
- body.atelier-cohesive .instagram-card{max-width:420px!important}
-}
-@media(max-width:550px){
- body.atelier-cohesive .header .brand span{font-size:17px!important}
- body.atelier-cohesive .header .brand img{width:47px!important;height:39px!important}
- body.atelier-cohesive .welcome-flourish{width:160px;margin-bottom:22px}
- body.atelier-cohesive .photo-story .photos{gap:8px!important}
- body.atelier-cohesive .photo-story figure{padding:4px!important}
- body.atelier-cohesive .photo-story img{aspect-ratio:3/4}
- body.atelier-cohesive .services.needlepoint-services .service-grid{grid-template-columns:1fr!important;max-width:420px!important;gap:12px!important}
- body.atelier-cohesive .services.needlepoint-services .service{min-height:0!important;display:grid!important;grid-template-columns:36px minmax(0,1fr)!important;gap:14px!important;padding:23px 22px!important}
- body.atelier-cohesive .service-index{margin:3px 0 0}
- body.atelier-cohesive .services.needlepoint-services .service-copy{padding:0 14px 0 0!important}
- body.atelier-cohesive .services.needlepoint-services .service-title{font-size:28px!important}
- body.atelier-cohesive .services.needlepoint-services .service-description{font-size:18px!important}
- body.atelier-cohesive .service-arrow{bottom:25px;right:17px}
- body.atelier-cohesive .lessons .coastal-invitation{grid-template-columns:1fr!important;text-align:center!important;padding:25px 22px!important;gap:21px!important}
- body.atelier-cohesive .coastal-invitation-art{width:132px!important;min-height:148px!important;margin:auto!important}
- body.atelier-cohesive .coastal-invitation-copy h3{font-size:33px!important}
- body.atelier-cohesive .popups-kit-board{padding:28px}
- body.atelier-cohesive .popups-kit-board h3{font-size:34px}
- body.atelier-cohesive .kit-collection li{padding-right:75px;font-size:22px}
- body.atelier-cohesive .popups-kit-board img{right:23px;bottom:32px;width:65px;height:79px}
- body.atelier-cohesive .custom-sampler{max-width:330px;padding:27px 24px 21px}
- body.atelier-cohesive .gallery .gallery-grid{gap:10px!important}
- body.atelier-cohesive .gallery figure{padding:5px!important}
- body.atelier-cohesive .contact.refined-inquiry .simple-inquiry-panel{padding:24px 20px!important}
- body.atelier-cohesive .welcome.refined-welcome .signoff,
- body.atelier-cohesive .contact.refined-inquiry .simple-contact-signoff,
- body.atelier-cohesive footer .signature{font-size:20px!important}
- body.atelier-cohesive footer .name{font-size:21px!important}
-}
-@media(prefers-reduced-motion:reduce){
- body.atelier-cohesive .services .service,
- body.atelier-cohesive main>section:not(#top) .button{transition:none!important}
-}
-
-/* Dusty blush stationery palette: warm rose threads, ivory, and quiet stripes. */
-body.atelier-cohesive{
- --dusty-stripes:repeating-linear-gradient(90deg,#faf6f2 0 34px,#e9d9d7 34px 56px);
- background:#faf7f2;
-}
-body.atelier-cohesive .hero.minimal-hero.needlepoint-asset-hero{
- background:var(--dusty-stripes)!important;
- padding-top:clamp(82px,12vw,190px)!important;
- padding-bottom:clamp(84px,12vw,190px)!important;
-}
-body.atelier-cohesive .hero.minimal-hero.needlepoint-asset-hero .minimal-hero-logo{filter:none!important}
-body.atelier-cohesive .hero.minimal-hero.needlepoint-asset-hero .hero-needlepoint-lace{
- filter:none!important;opacity:.68;aspect-ratio:auto;object-fit:contain;
-}
-body.atelier-cohesive .services.needlepoint-services,
-body.atelier-cohesive .popups-section,
-body.atelier-cohesive .contact.refined-inquiry,
-body.atelier-cohesive footer{background:var(--dusty-stripes)!important}
-body.atelier-cohesive .coastal-invitation-art,
-body.atelier-cohesive .popups-kit-board,
-body.atelier-cohesive .custom-sampler{background:var(--dusty-stripes)!important}
-body.atelier-cohesive .welcome-flourish,
-body.atelier-cohesive .coastal-invitation-art img,
-body.atelier-cohesive .popups-kit-board img,
-body.atelier-cohesive .custom .custom-visual img,
-body.atelier-cohesive .header .brand img,
-body.atelier-cohesive footer>img{filter:none!important;opacity:.82}
-body.atelier-cohesive .custom{
- grid-template-columns:minmax(180px,300px) minmax(0,580px)!important;
- justify-content:center!important;align-items:center!important;gap:48px!important;
- padding:72px 24px!important;background:#faf7f2!important;
-}
-body.atelier-cohesive .custom .custom-visual{
- padding:0!important;background:none!important;width:100%;min-width:0;
-}
-body.atelier-cohesive .custom .custom-copy{
- padding:0!important;min-width:0;align-items:flex-start!important;
-}
-body.atelier-cohesive .custom-sampler{width:100%;max-width:300px}
-body.atelier-cohesive .custom .custom-copy h2{margin-left:0!important}
-@media(max-width:800px){
- body.atelier-cohesive .custom{
-  grid-template-columns:minmax(0,580px)!important;gap:30px!important;padding:56px 20px!important;
- }
- body.atelier-cohesive .custom .custom-visual{max-width:260px;margin:0 auto}
- body.atelier-cohesive .custom .custom-copy{align-items:center!important;text-align:center!important}
- body.atelier-cohesive .custom .custom-copy h2{margin-left:auto!important}
-}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.service{transition:none}}
