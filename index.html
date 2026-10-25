@@ -1195,29 +1195,72 @@ footer .signature{font-size:clamp(17px,1.75vw,21px)!important;line-height:1.5!im
 .illustrated-hero-cta:hover{background:rgba(255,255,255,.07)}
 .illustrated-hero-cta:focus-visible{outline:3px solid #8e6174;outline-offset:3px}
 @media(max-width:640px){.illustrated-hero-cta{left:32.5%;top:79.8%;width:35%;height:10.3%}}
-</style><link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-</head><body>
+
+/* Approved needlepoint wordmark without side bows, framed by matching lace. */
+.hero.minimal-hero.needlepoint-asset-hero{
+ display:block!important;min-height:0!important;
+ padding:clamp(96px,20vw,315px) 24px!important;
+ overflow:hidden!important;
+}
+.hero.minimal-hero.needlepoint-asset-hero .simple-hero-center{
+ width:min(900px,100%)!important;max-width:900px!important;
+}
+.hero.minimal-hero.needlepoint-asset-hero .minimal-hero-logo{
+ width:min(760px,100%)!important;max-width:100%!important;
+ height:auto!important;max-height:none!important;
+ margin:0 auto 15px!important;filter:none!important;opacity:1!important;
+}
+.hero.minimal-hero.needlepoint-asset-hero .hero-design-line{
+ margin:0 auto 12px;line-height:1.35;
+}
+.hero.minimal-hero.needlepoint-asset-hero .simple-hero-deck{
+ margin:0 auto!important;max-width:none!important;
+}
+.hero.minimal-hero.needlepoint-asset-hero .hero-needlepoint-lace{
+ position:absolute;display:block;left:0;width:100%;height:auto;
+ max-width:none;max-height:none;object-fit:contain;pointer-events:none;
+ filter:none;opacity:1;z-index:1;
+}
+.hero.minimal-hero.needlepoint-asset-hero .hero-needlepoint-lace-top{top:0}
+.hero.minimal-hero.needlepoint-asset-hero .hero-needlepoint-lace-bottom{
+ bottom:0;transform:scaleY(-1);
+}
+@media(max-width:800px){
+ .hero.minimal-hero.needlepoint-asset-hero{padding-inline:16px!important}
+}
+@media(max-width:550px){
+ .hero.minimal-hero.needlepoint-asset-hero{
+  padding-top:clamp(88px,23vw,125px)!important;
+  padding-bottom:clamp(90px,23vw,127px)!important;
+ }
+ .hero.minimal-hero.needlepoint-asset-hero .minimal-hero-logo{margin-bottom:12px!important}
+ .hero.minimal-hero.needlepoint-asset-hero .simple-hero-deck{font-size:21px!important}
+}
+</style>
+<link rel="stylesheet" href="assets/atelier-refinement.css"><link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head><body class="atelier-cohesive">
 <a class="skip" href="#main">Skip to content</a>
-<nav class="header" aria-label="Main navigation"><a class="brand" href="#top"><img src="assets/rosemary-nav-monogram.svg" alt=""><span>ROSEMARY LANE<small>DESIGN</small></span></a><button class="menu" id="menu" aria-controls="navlinks" aria-expanded="false">MENU +</button><div class="nav-links" id="navlinks"><a href="#services">SERVICES</a><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div></nav>
+<nav class="header" aria-label="Main navigation"><a class="brand" href="#top"><img src="assets/curated/oval-crest.webp" alt=""><span>ROSEMARY LANE<small>DESIGN</small></span></a><button class="menu" id="menu" aria-controls="navlinks" aria-expanded="false">MENU +</button><div class="nav-links" id="navlinks"><a href="#services">SERVICES</a><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div></nav>
 <main id="main">
-<section class="hero simple-textile-hero photographic-hero minimal-hero" id="top" aria-labelledby="hero-brand-title">
-  <img class="textile-lace textile-lace-top natural-lace" src="lace-top.svg" alt="" aria-hidden="true">
+<section class="hero simple-textile-hero photographic-hero minimal-hero needlepoint-asset-hero" id="top" aria-labelledby="hero-brand-title">
+  <img class="hero-needlepoint-lace hero-needlepoint-lace-top" src="assets/hero-needlepoint/rosemary-lane-lace-1920.webp" srcset="assets/hero-needlepoint/rosemary-lane-lace-960.webp 960w, assets/hero-needlepoint/rosemary-lane-lace-1920.webp 1920w, assets/hero-needlepoint/rosemary-lane-lace-3840.webp 3840w" sizes="(min-width: 1600px) 1600px, 100vw" width="3840" height="699" alt="" aria-hidden="true" decoding="async">
   <div class="simple-hero-center">
     <h1 class="visually-hidden" id="hero-brand-title">Rosemary Lane Design</h1>
-    <img class="minimal-hero-logo" src="rosemary-lane-new-needlepoint-logo.png" alt="Rosemary Lane Design full embroidered wordmark on a striped needlepoint patch" width="900" height="360" fetchpriority="high">
-    <span class="hero-design-line">DESIGN</span><p class="simple-hero-deck">A place to stitch, create &amp; gather</p>
+    <img class="minimal-hero-logo" src="assets/hero-needlepoint/rosemary-lane-wordmark-1920.webp" srcset="assets/hero-needlepoint/rosemary-lane-wordmark-960.webp 960w, assets/hero-needlepoint/rosemary-lane-wordmark-1920.webp 1920w, assets/hero-needlepoint/rosemary-lane-wordmark-3840.webp 3840w" sizes="(max-width: 800px) calc(100vw - 32px), 760px" alt="Rosemary Lane needlepoint wordmark with a pink top bow and rose, on an ivory and blush plaque" width="3840" height="1792" fetchpriority="high" decoding="async">
+    <span class="hero-design-line">DESIGN</span>
+    <p class="simple-hero-deck">A place to stitch, create &amp; gather</p>
   </div>
-  <img class="textile-lace textile-lace-bottom natural-lace" src="lace-bottom.svg" alt="" aria-hidden="true">
+  <img class="hero-needlepoint-lace hero-needlepoint-lace-bottom" src="assets/hero-needlepoint/rosemary-lane-lace-1920.webp" srcset="assets/hero-needlepoint/rosemary-lane-lace-960.webp 960w, assets/hero-needlepoint/rosemary-lane-lace-1920.webp 1920w, assets/hero-needlepoint/rosemary-lane-lace-3840.webp 3840w" sizes="(min-width: 1600px) 1600px, 100vw" width="3840" height="699" alt="" aria-hidden="true" decoding="async">
 </section>
-<section class="welcome refined-welcome" id="introduction"><img class="welcome-seashell" src="assets/curated/rose-patch.webp" alt="" aria-hidden="true" loading="lazy"><img class="welcome-thread" src="assets/curated/rose-garland.webp" alt="" aria-hidden="true" loading="lazy"><span class="eyebrow">WELCOME TO ROSEMARY LANE</span><h2>A little beauty<br>in every stitch.</h2><p class="intro">Beautiful things are even lovelier when they're made together. Come learn, create, and find a little joy in needlepoint.</p><p class="signoff">With love, Rosemary Lane <span class="stitched-signoff" role="img" aria-label="Embroidered rose and sewing needle"><img src="assets/curated/rose-patch.webp" alt="" loading="lazy"><svg viewBox="0 0 64 24" aria-hidden="true"><path d="M4 21C20 10 34 15 54 3" fill="none" stroke="#a77e85" stroke-width="1.8" stroke-linecap="round"/><ellipse cx="55" cy="3" rx="3.2" ry="1.5" transform="rotate(-29 55 3)" fill="none" stroke="#a77e85" stroke-width="1.2"/><path d="M8 19Q18 1 30 17" fill="none" stroke="#cf9caa" stroke-width="1.5" stroke-linecap="round"/></svg></span></p></section>
+<section class="welcome refined-welcome" id="introduction"><img class="welcome-flourish" src="assets/curated/rose-garland.webp" alt="" aria-hidden="true" loading="lazy" width="900" height="270"><span class="eyebrow">WELCOME TO ROSEMARY LANE</span><h2>A little beauty<br>in every stitch.</h2><p class="intro">Beautiful things are even lovelier when they're made together. Come learn, create, and find a little joy in needlepoint.</p><p class="signoff">With love, Rosemary Lane <span class="stitched-signoff" role="img" aria-label="Embroidered rose and sewing needle"><img src="assets/curated/rose-patch.webp" alt="" loading="lazy"><svg viewBox="0 0 64 24" aria-hidden="true"><path d="M4 21C20 10 34 15 54 3" fill="none" stroke="#a77e85" stroke-width="1.8" stroke-linecap="round"/><ellipse cx="55" cy="3" rx="3.2" ry="1.5" transform="rotate(-29 55 3)" fill="none" stroke="#a77e85" stroke-width="1.2"/><path d="M8 19Q18 1 30 17" fill="none" stroke="#cf9caa" stroke-width="1.5" stroke-linecap="round"/></svg></span></p></section>
 <div class="photo-story"><div class="photos"><figure><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=950&q=85" alt="Floral needlepoint canvas" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=950&q=85" alt="Needlepoint stitching in progress" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1466027449668-27f96b692ba4?auto=format&fit=crop&w=950&q=85" alt="Textured embroidered floral work" loading="lazy"></figure></div></div>
 <section class="services refreshed-services needlepoint-services" id="services">
 <span class="eyebrow">A LITTLE SOMETHING FOR EVERY OCCASION</span><h2>Something lovely for everyone.</h2>
 <div class="service-grid">
-<a class="service" href="#lessons" aria-label="Explore private needlepoint lessons"><span class="service-image"><img src="assets/curated/rose-patch.webp" alt="" loading="lazy"></span><span class="service-copy"><span class="service-title">Private<br>Lessons</span><span class="service-description">Just for you</span></span></a>
-<a class="service" href="#gatherings" aria-label="Explore private parties and Cape Cod venue lessons"><span class="service-image"><img src="assets/curated/oval-crest.webp" alt="" loading="lazy"></span><span class="service-copy"><span class="service-title">Parties &amp;<br>Gatherings</span><span class="service-description">Stitch together</span></span></a>
-<a class="service" href="#popups" aria-label="Explore coastal pop-up shops"><span class="service-image"><img src="assets/curated/rose-medallion.webp" alt="" loading="lazy"></span><span class="service-copy"><span class="service-title">Coastal<br>Pop-Ups</span><span class="service-description">Find us around the Cape</span></span></a>
-<a class="service" href="#custom" aria-label="Explore custom needlepoint designs"><span class="service-image"><img src="assets/curated/rose-garland.webp" alt="" loading="lazy"></span><span class="service-copy"><span class="service-title">Custom<br>Needlepoint</span><span class="service-description">Made just for you</span></span></a>
+<a class="service" href="#lessons" aria-label="Explore private needlepoint lessons"><span class="service-index" aria-hidden="true">01</span><span class="service-copy"><span class="service-title">Private<br>Lessons</span><span class="service-description">Just for you</span></span><span class="service-arrow" aria-hidden="true">↗</span></a>
+<a class="service" href="#gatherings" aria-label="Explore private parties and Cape Cod venue lessons"><span class="service-index" aria-hidden="true">02</span><span class="service-copy"><span class="service-title">Parties &amp;<br>Gatherings</span><span class="service-description">Stitch together</span></span><span class="service-arrow" aria-hidden="true">↗</span></a>
+<a class="service" href="#popups" aria-label="Explore coastal pop-up shops"><span class="service-index" aria-hidden="true">03</span><span class="service-copy"><span class="service-title">Coastal<br>Pop-Ups</span><span class="service-description">Find us around the Cape</span></span><span class="service-arrow" aria-hidden="true">↗</span></a>
+<a class="service" href="#custom" aria-label="Explore custom needlepoint designs"><span class="service-index" aria-hidden="true">04</span><span class="service-copy"><span class="service-title">Custom<br>Needlepoint</span><span class="service-description">Made just for you</span></span><span class="service-arrow" aria-hidden="true">↗</span></a>
 </div></section>
 <section class="lessons" id="lessons"><span class="eyebrow">LESSONS &amp; OCCASIONS</span><h2>Needlepoint, your way.</h2><p class="intro">From a quiet one-on-one lesson to a special gathering with friends, there's always room for a little stitching.</p>
 <div class="lesson-grid">
@@ -1226,25 +1269,25 @@ footer .signature{font-size:clamp(17px,1.75vw,21px)!important;line-height:1.5!im
 
 </div>
 <aside class="class-note coastal-invitation" aria-labelledby="coastal-class-heading">
-<div class="coastal-invitation-art"><img src="assets/curated/rose-patch.webp" alt="Rose needlepoint embroidery" loading="lazy"></div><div class="coastal-invitation-copy">
+<div class="coastal-invitation-art"><img src="assets/curated/rose-medallion.webp" alt="Rose needlepoint motif" loading="lazy"></div><div class="coastal-invitation-copy">
 <span class="eyebrow">A LITTLE PROJECT TO TAKE HOME</span><h3 id="coastal-class-heading">Make your own <em>bag charm.</em></h3>
 <p>Learn basketweave, brick stitch, and French knots. Choose your initials or a coastal motif, with guided instruction and a take-home project bag.</p>
 <a class="coastal-class-link" href="mailto:Shoshana@rosemarylanedesigns.com?subject=Needlepoint%20class%20inquiry">ASK ABOUT THE CLASS</a>
 </div></aside></section>
 <section class="popups-section" id="popups" aria-labelledby="popups-title"><div class="popups-inner">
-<div class="popups-art popups-photo-pair">
-<figure><img src="assets/popups/rosemary-lane-popup.jpg" alt="Rosemary Lane needlepoint kits and finishing accessories displayed at a pop-up shop" loading="lazy" onerror="this.onerror=null;this.src='assets/curated/rose-garland.webp'"><figcaption>Find us around the Cape</figcaption></figure>
-<figure><img src="assets/popups/rosemary-lane-key-fob-kit.jpg" alt="DIY key fob needlepoint kit with stitched canvas, floss, scissors, and accessories" loading="lazy" onerror="this.onerror=null;this.src='assets/curated/rose-patch.webp'"><figcaption>A little kit to make your own</figcaption></figure>
-</div>
+<aside class="popups-kit-board" aria-labelledby="kit-board-title">
+  <span class="eyebrow">AT OUR POP-UPS</span>
+  <h3 id="kit-board-title">A little kit to<br>make your own.</h3>
+  <ul class="kit-collection"><li>Key fob kits</li><li>Bag charm kits</li><li>Ornament kits</li><li>Clutch kits</li></ul>
+  <img src="assets/curated/rose-patch.webp" alt="" aria-hidden="true" loading="lazy">
+</aside>
 <div class="popups-copy"><span class="eyebrow">ROSEMARY LANE ON THE ROAD</span><h2 id="popups-title">A little shop, <em>where we gather.</em></h2>
 <p>Find us at neighborhood gatherings, seasonal events, and pop-ups around Cape Cod. We bring a lovely assortment of DIY needlepoint kits for you to take home and make your own.</p>
-<p class="popups-products"><strong>At our pop-ups:</strong> key fob kits, bag charm kits, ornament kits, and clutch kits.</p>
+
 <p class="popups-note">See what we're bringing and where to find us next.</p><a href="https://www.instagram.com/rosemarylanedesign/" target="_blank" rel="noopener noreferrer" class="popups-link">FOLLOW OUR POP-UPS</a></div></div></section>
-<section class="custom" id="custom"><div class="custom-visual"><img src="assets/curated/oval-crest.webp" alt="Custom embroidered monogram" loading="lazy"></div><div class="custom-copy"><span class="eyebrow">THE PERSONAL TOUCH</span><h2>Made for you,<br><em>and only you.</em></h2><p>Custom canvases and keepsakes designed around you—from signs, ornaments, and belts to personalized straps for Nantucket baskets and other favorite bags.</p><a class="button" href="mailto:Shoshana@rosemarylanedesigns.com?subject=Custom%20needlework%20inquiry">ASK ABOUT CUSTOM WORK</a></div></section>
+<section class="custom" id="custom"><div class="custom-visual"><figure class="custom-sampler"><img src="assets/curated/oval-crest.webp" alt="Rosemary Lane embroidered monogram in rose and sage" loading="lazy"><figcaption>Custom needlework</figcaption></figure></div><div class="custom-copy"><span class="eyebrow">THE PERSONAL TOUCH</span><h2>Made for you,<br><em>and only you.</em></h2><p>Custom canvases and keepsakes designed around you—from signs, ornaments, and belts to personalized straps for Nantucket baskets and other favorite bags.</p><a class="button" href="mailto:Shoshana@rosemarylanedesigns.com?subject=Custom%20needlework%20inquiry">ASK ABOUT CUSTOM WORK</a></div></section>
 <section class="gallery" id="gallery"><span class="eyebrow">FROM THE STUDIO</span><h2>Little things, lovingly made.</h2><p class="intro">Stitched inspiration and beautiful details.</p><div class="gallery-grid"><figure><img src="https://images.unsplash.com/photo-1768943367311-99a8df344b97?auto=format&fit=crop&w=800&q=85" alt="Needlepoint flowers" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1768943366929-bf4f3d2840a1?auto=format&fit=crop&w=800&q=85" alt="Needlepoint work in progress" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1466027449668-27f96b692ba4?auto=format&fit=crop&w=800&q=85" alt="Delicate embroidered fabric" loading="lazy"></figure><figure><img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=800&q=85" alt="Creative stitching supplies" loading="lazy"></figure></div></section>
 <section class="contact simple-textile-contact photographic-contact refined-inquiry" id="contact" aria-labelledby="simple-contact-title">
-<img class="textile-lace textile-lace-top natural-lace" src="lace-top.svg" alt="" aria-hidden="true">
-
 <div class="simple-contact-wrap">
 <p class="eyebrow">WE'D LOVE TO HEAR FROM YOU</p>
 <h2 id="simple-contact-title">Do say hello.</h2>
@@ -1257,10 +1300,9 @@ footer .signature{font-size:clamp(17px,1.75vw,21px)!important;line-height:1.5!im
 <input type="hidden" name="subject" value="Inquiry"><button type="submit">SEND YOUR NOTE</button>
 </form></div></div>
 <p class="simple-contact-signoff">With love, Rosemary Lane <span class="stitched-signoff" role="img" aria-label="Embroidered rose and sewing needle"><img src="assets/curated/rose-patch.webp" alt="" loading="lazy"><svg viewBox="0 0 64 24" aria-hidden="true"><path d="M4 21C20 10 34 15 54 3" fill="none" stroke="#a77e85" stroke-width="1.8" stroke-linecap="round"/><ellipse cx="55" cy="3" rx="3.2" ry="1.5" transform="rotate(-29 55 3)" fill="none" stroke="#a77e85" stroke-width="1.2"/><path d="M8 19Q18 1 30 17" fill="none" stroke="#cf9caa" stroke-width="1.5" stroke-linecap="round"/></svg></span></p></div>
-<img class="textile-lace textile-lace-bottom natural-lace" src="lace-bottom.svg" alt="" aria-hidden="true">
 </section>
 <section class="instagram" id="instagram"><span class="eyebrow">FOLLOW ALONG</span><h2>A glimpse of the lane.</h2><p class="intro">A few moments from our needlepoint world.</p><div class="instagram-grid" id="instagram-grid"></div><p class="instagram-status" id="instagram-status">See the latest posts on Instagram.</p><a class="button" href="https://www.instagram.com/rosemarylanedesign/" target="_blank" rel="noopener noreferrer">FOLLOW @ROSEMARYLANEDESIGN</a></section>
-</main><footer><img src="assets/rosemary-nav-monogram.svg" alt=""><div class="name">ROSEMARY LANE DESIGN</div><p class="signature">With love, Rosemary Lane <span class="stitched-signoff" role="img" aria-label="Embroidered rose and sewing needle"><img src="assets/curated/rose-patch.webp" alt="" loading="lazy"><svg viewBox="0 0 64 24" aria-hidden="true"><path d="M4 21C20 10 34 15 54 3" fill="none" stroke="#a77e85" stroke-width="1.8" stroke-linecap="round"/><ellipse cx="55" cy="3" rx="3.2" ry="1.5" transform="rotate(-29 55 3)" fill="none" stroke="#a77e85" stroke-width="1.2"/><path d="M8 19Q18 1 30 17" fill="none" stroke="#cf9caa" stroke-width="1.5" stroke-linecap="round"/></svg></span></p><div class="links"><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div><small>© <span id="year"></span> ROSEMARY LANE DESIGN</small></footer>
+</main><footer><img src="assets/curated/oval-crest.webp" alt=""><div class="name">ROSEMARY LANE DESIGN</div><p class="signature">With love, Rosemary Lane <span class="stitched-signoff" role="img" aria-label="Embroidered rose and sewing needle"><img src="assets/curated/rose-patch.webp" alt="" loading="lazy"><svg viewBox="0 0 64 24" aria-hidden="true"><path d="M4 21C20 10 34 15 54 3" fill="none" stroke="#a77e85" stroke-width="1.8" stroke-linecap="round"/><ellipse cx="55" cy="3" rx="3.2" ry="1.5" transform="rotate(-29 55 3)" fill="none" stroke="#a77e85" stroke-width="1.2"/><path d="M8 19Q18 1 30 17" fill="none" stroke="#cf9caa" stroke-width="1.5" stroke-linecap="round"/></svg></span></p><div class="links"><a href="#lessons">LESSONS</a><a href="#custom">CUSTOM</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a><a href="#instagram">INSTAGRAM</a></div><small>© <span id="year"></span> ROSEMARY LANE DESIGN</small></footer>
 <script>
 const menu=document.getElementById('menu'),links=document.getElementById('navlinks');menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'CLOSE −':'MENU +'});links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='MENU +'}));document.getElementById('year').textContent=new Date().getFullYear();
 document.getElementById('contact-form').addEventListener('submit',function(event){event.preventDefault();const f=new FormData(this);const body='Name: '+f.get('name')+'\nEmail: '+f.get('email')+'\n\n'+f.get('message');location.href='mailto:Shoshana@rosemarylanedesigns.com?subject='+encodeURIComponent('Rosemary Lane — '+f.get('subject'))+'&body='+encodeURIComponent(body)});
