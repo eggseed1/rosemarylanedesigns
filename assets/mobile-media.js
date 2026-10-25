@@ -56,9 +56,10 @@
     video.muted = true;
     video.defaultMuted = true;
     video.setAttribute("muted", "");
+    video.playsInline = true;
     video.setAttribute("playsinline", "");
     video.setAttribute("webkit-playsinline", "");
-    video.preload = "metadata";
+    video.preload = "auto";
 
     if (video.classList.contains("flipbook-slide")) {
       if (video.poster) {
@@ -80,6 +81,8 @@
       image.alt = video.getAttribute("aria-label") || "Needlepoint video preview";
       image.decoding = "async";
       image.loading = "eager";
+      if (video.width) image.width = video.width;
+      if (video.height) image.height = video.height;
       image.style.objectPosition = video.style.objectPosition || "center";
       frame.appendChild(image);
     }
