@@ -21,6 +21,30 @@ jobs:
         uses: actions/checkout@v4
       - name: Configure Pages
         uses: actions/configure-pages@v5
+      - name: Validate referenced media
+        run: node scripts/check-media.mjs
+      - name: Normalize short clips for mobile Safari
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v ffprobe >/dev/null || ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq ffmpeg
+          fi
+          for video in photos/*.mp4; do
+            [ -f "$video" ] || continue
+            codec="$(ffprobe -v error -select_streams v:0 -show_entries stream=codec_name -of default=noprint_wrappers=1:nokey=1 "$video")"
+            pixels="$(ffprobe -v error -select_streams v:0 -show_entries stream=pix_fmt -of default=noprint_wrappers=1:nokey=1 "$video")"
+            output="$(dirname "$video")/$(basename "$video" .mp4).mobile-ready.mp4"
+            if [ "$codec" = "h264" ] && [ "$pixels" = "yuv420p" ]; then
+              ffmpeg -hide_banner -loglevel error -nostdin -y -i "$video" -map 0:v:0 -an -c:v copy -movflags +faststart "$output"
+            else
+              ffmpeg -hide_banner -loglevel error -nostdin -y -i "$video" -map 0:v:0 -an -c:v libx264 -preset veryfast -crf 22 -pix_fmt yuv420p -movflags +faststart "$output"
+            fi
+            test -s "$output"
+            mv "$output" "$video"
+            echo "Mobile-ready: $video ($codec/$pixels)"
+          done
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
