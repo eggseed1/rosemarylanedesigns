@@ -117,7 +117,6 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
 .instagram-grid{display:flex;align-items:start;justify-content:center;flex-wrap:wrap;gap:22px}
 .instagram-card{flex:1 1 280px;min-width:0;max-width:350px;overflow:hidden;border:1px solid var(--line);background:#fff}
 .instagram-card .instagram-media,.instagram-card iframe{box-sizing:border-box!important;width:100%!important;max-width:100%!important;min-width:0!important;margin:0!important}
-.instagram-status{font-size:12px;line-height:1.6;color:var(--muted);margin-top:16px;text-align:center}
 @media(max-width:1000px){
  .hero-copy{padding:30px}
  .hero h1{font-size:54px}
