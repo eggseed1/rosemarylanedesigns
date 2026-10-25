@@ -270,3 +270,23 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
  .footer-inner nav a{font-size:9px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.service{transition:none}}
+
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.restored-hero{position:relative;text-align:center;padding:58px 24px 54px;background:var(--stripes)}
+.restored-wordmark{width:min(560px,90%);height:auto;object-fit:contain;margin:0 auto 9px}
+.restored-hero .hero-deck{font-size:25px;margin:12px auto 0}
+.restored-lace{position:absolute;top:0;left:0;right:0;height:30px;background:url("hero-needlepoint/dusty-lace-1920.webp") center/auto 30px repeat-x;opacity:.65}
+.restored-lace.bottom{top:auto;bottom:0;transform:scaleY(-1)}
+.offering-section{padding:34px 0;border-top:1px solid var(--line)}
+.offering-section .lesson-card{display:grid;grid-template-columns:1fr 1fr;column-gap:40px;align-items:start;margin:0}
+.offering-section .lesson-card figure{grid-row:1/5}
+.offering-section .lesson-card img{height:280px}
+.offering-section .lesson-card h3{margin-top:18px}
+.offering-section .lesson-card .text-link{justify-self:start}
+.offering-photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;width:100%;max-width:1120px;margin:25px auto 0}
+.offering-photos img{width:100%;height:210px;object-fit:cover}
+.custom{grid-template-columns:minmax(0,350px) minmax(0,1fr)}
+.custom>.offering-photos{grid-column:1/-1}
+.popups>.offering-photos{padding-inline:0}
+@media(max-width:760px){.restored-hero{padding:45px 16px}.restored-wordmark{width:min(480px,100%)}.restored-lace{height:22px;background-size:auto 22px}.offering-section .lesson-card{display:block}.offering-photos{gap:10px}.offering-photos img{height:150px}}
+@media(max-width:540px){.offering-photos{grid-template-columns:1fr 1fr}.offering-photos figure:first-child{grid-column:1/-1}.offering-photos figure:first-child img{height:200px}.offering-photos img{height:150px}.custom{grid-template-columns:1fr}.restored-hero .hero-deck{font-size:22px}}
