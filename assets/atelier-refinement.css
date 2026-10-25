@@ -31,7 +31,7 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
 .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
 .brand>img{width:38px;height:38px;object-fit:contain}
 .brand>span{font:500 25px/.95 "Cormorant Garamond",Georgia,serif;letter-spacing:.015em;color:var(--rose)}
-.brand small{display:block;text-align:center;font:500 8px/1.2 "DM Sans",sans-serif;letter-spacing:.28em;margin-top:6px}
+.brand small{display:block;text-align:left;font:500 8px/1.2 "DM Sans",sans-serif;letter-spacing:.28em;margin-top:6px}
 .hero{padding:30px 24px 0;background:var(--stripes)}
 .hero-paper{display:grid;grid-template-columns:1.02fr 1fr;max-width:1160px;margin:auto;background:var(--paper);border:1px solid #e3d8cf}
 .hero-photo{position:relative;min-height:355px;overflow:hidden}
