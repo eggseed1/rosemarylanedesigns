@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/atelier-refinement.css?v=welcome-video-1">
+<link rel="stylesheet" href="assets/atelier-refinement.css?v=lesson-flipbook-1">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -68,9 +68,13 @@
  <article><h3>Planning your lesson</h3><p>Send your experience level, the project you'd like to work on, and your preferred dates. Ask about availability, lesson length, location, materials, and pricing before booking.</p></article>
 </div>
   <div class="offering-gallery" role="group" aria-label="Private Lessons photos">
-   <figure><img data-photo-slot="lessons-photo-1" src="photos/lesson-letter.jpg" alt="A stitched letter S beside an alphabet, from a needlepoint lesson" width="1080" height="1440" loading="lazy" decoding="async" style="object-position:center 48%"></figure>
-   <figure><img data-photo-slot="lessons-photo-2" src="photos/stitching-letters.jpg" alt="A hand stitching letters on needlepoint canvas" width="1080" height="1920" loading="lazy" decoding="async" style="object-position:center 42%"></figure>
-   <figure><img data-photo-slot="lessons-photo-3" src="photos/key-fob.jpg" alt="A finished floral needlepoint key fob" width="1080" height="1920" loading="lazy" decoding="async" style="object-position:center 62%"></figure>
+   <figure class="flipbook" data-photo-slot="lessons-photo-1" aria-label="Needlepoint belt, shown as a short flipbook">
+    <img class="flipbook-slide is-on" src="photos/lesson-belt-close.jpg" alt="French-knot flower, shell, and basket on a needlepoint belt" width="768" height="1024" style="object-position:center 48%">
+    <img class="flipbook-slide" src="photos/lesson-belt.jpg" alt="A needlepoint belt with baskets, shells, and flowers" width="768" height="1024" style="object-position:center 42%">
+    <video class="flipbook-slide" src="photos/lesson-belt.mp4" poster="photos/lesson-belt-poster.jpg" width="960" height="1706" muted playsinline style="object-position:center 45%" aria-label="Stitching the needlepoint belt"></video>
+   </figure>
+   <figure><img data-photo-slot="lessons-photo-2" src="photos/lessons-student.jpg" alt="A student's first needlepoint, a whale stitched and framed" width="1080" height="1440" loading="lazy" decoding="async" style="object-position:center 62%"></figure>
+   <figure><img data-photo-slot="lessons-photo-3" src="photos/lessons-hydrangea.jpg" alt="A finished hydrangea basket canvas arranged with summer jewelry" width="1080" height="1182" loading="lazy" decoding="async" style="object-position:center"></figure>
   </div>
   <aside class="class-note" aria-labelledby="coastal-class-heading"><div><span class="eyebrow">A LITTLE PROJECT TO TAKE HOME</span><h3 id="coastal-class-heading">Make your own <em>bag charm.</em></h3></div><p>Learn basketweave, brick stitch, and French knots. Choose your initials or a coastal motif, with guided instruction and a take-home project bag.</p><a class="text-link" href="mailto:Shoshana@rosemarylanedesigns.com?subject=Needlepoint%20class%20inquiry">Ask about the class <span aria-hidden="true">↗</span></a></aside>
  </div>
@@ -206,6 +210,7 @@ window.matchMedia('(min-width: 1121px)').addEventListener('change',event=>{if(ev
 document.getElementById('year').textContent=new Date().getFullYear();
 const welcomeVideo=document.querySelector('.welcome-detail video');
 if(welcomeVideo&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){welcomeVideo.removeAttribute('autoplay');welcomeVideo.pause();}
+(()=>{const book=document.querySelector('.flipbook');if(!book)return;const slides=[...book.querySelectorAll('.flipbook-slide')];if(slides.length<2)return;if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;let i=0;const show=n=>{slides.forEach((slide,index)=>{const on=index===n;slide.classList.toggle('is-on',on);if(slide.tagName==='VIDEO'){if(on){slide.currentTime=0;slide.play().catch(()=>{})}else slide.pause()}})};const advance=()=>{i=(i+1)%slides.length;show(i);wait()};const wait=()=>{const slide=slides[i];if(slide.tagName==='VIDEO'){slide.onended=()=>{slide.onended=null;advance()};window.setTimeout(()=>{if(slides[i]===slide&&slide.paused)advance()},12000)}else window.setTimeout(advance,3400)};show(0);wait()})();
 document.getElementById('contact-form').addEventListener('submit',function(event){event.preventDefault();const f=new FormData(this);const body='Name: '+f.get('name')+'\nEmail: '+f.get('email')+'\n\n'+f.get('message');location.href='mailto:Shoshana@rosemarylanedesigns.com?subject='+encodeURIComponent('Rosemary Lane — '+f.get('subject'))+'&body='+encodeURIComponent(body)});
 (async()=>{const target=document.getElementById('instagram-grid'),status=document.getElementById('instagram-status');try{const r=await fetch('instagram-posts.json',{cache:'no-store'});if(!r.ok)throw new Error('feed unavailable');const data=await r.json();const posts=(Array.isArray(data)?data:[]).filter(p=>p&&typeof p.url==='string'&&/^https:\/\/(www\.)?instagram\.com\/(p|reel)\/[A-Za-z0-9_-]+\/?/.test(p.url)).slice(0,3);for(const post of posts){const card=document.createElement('div');card.className='instagram-card';const block=document.createElement('blockquote');block.className='instagram-media';block.dataset.instgrmPermalink=post.url;block.dataset.instgrmVersion='14';const a=document.createElement('a');a.href=post.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent='View on Instagram';block.appendChild(a);card.appendChild(block);target.appendChild(card)}if(posts.length){status.textContent='More from the studio on Instagram.';const script=document.createElement('script');script.async=true;script.src='https://www.instagram.com/embed.js';script.onload=()=>window.instgrm?.Embeds?.process();document.body.appendChild(script)}}catch(e){status.textContent='See the latest posts directly on Instagram.'}})();
 </script></body></html>
