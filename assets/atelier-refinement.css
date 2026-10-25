@@ -422,7 +422,7 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
 .welcome .signature{margin-top:19px;font-size:22px}
 .welcome-detail{position:relative;isolation:isolate;min-width:0;padding:9px;margin:0 7px 7px 0;background:var(--paper);border:1px solid #d7c5c0}
 .welcome-detail::before{content:"";position:absolute;z-index:-1;inset:9px -9px -9px 9px;background:#e9d9d7;border:1px solid #dfceca}
-.welcome-detail img,.welcome-detail video{display:block;width:100%;height:auto;object-fit:contain;background:var(--paper)}
+.welcome-detail img,.welcome-detail video{display:block;width:100%;height:auto;aspect-ratio:9/8;object-fit:cover;object-position:center 40%;background:var(--paper)}
 @media(max-width:1000px){
  .welcome-paper{gap:30px;padding:28px}
  .welcome-detail img,.welcome-detail video{height:auto}
