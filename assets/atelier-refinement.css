@@ -375,6 +375,8 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
 .upcoming-heading{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:25px}
 .upcoming-heading h2{font-size:40px}
 .upcoming-heading>p{max-width:430px;font-size:13px;line-height:1.8;color:var(--muted)}
+.upcoming-flyer{margin:2px 0 8px}
+.upcoming-flyer img{display:block;width:100%;height:auto;object-fit:contain}
 .event-row{display:grid;grid-template-columns:150px minmax(0,1fr) auto;gap:28px;align-items:center;padding:23px 0;border-top:1px solid var(--line)}
 .event-status{font-size:9px;line-height:1.7;letter-spacing:.13em;color:var(--rose)}
 .event-row h3{font-size:28px;margin-bottom:8px}
