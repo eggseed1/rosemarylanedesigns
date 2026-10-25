@@ -271,22 +271,79 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.service{transition:none}}
 
-.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
-.restored-hero{position:relative;text-align:center;padding:58px 24px 54px;background:var(--stripes)}
-.restored-wordmark{width:min(560px,90%);height:auto;object-fit:contain;margin:0 auto 9px}
-.restored-hero .hero-deck{font-size:25px;margin:12px auto 0}
-.restored-lace{position:absolute;top:0;left:0;right:0;height:30px;background:url("hero-needlepoint/dusty-lace-1920.webp") center/auto 30px repeat-x;opacity:.65}
-.restored-lace.bottom{top:auto;bottom:0;transform:scaleY(-1)}
-.offering-section{padding:34px 0;border-top:1px solid var(--line)}
-.offering-section .lesson-card{display:grid;grid-template-columns:1fr 1fr;column-gap:40px;align-items:start;margin:0}
-.offering-section .lesson-card figure{grid-row:1/5}
-.offering-section .lesson-card img{height:280px}
-.offering-section .lesson-card h3{margin-top:18px}
-.offering-section .lesson-card .text-link{justify-self:start}
-.offering-photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;width:100%;max-width:1120px;margin:25px auto 0}
-.offering-photos img{width:100%;height:210px;object-fit:cover}
-.custom{grid-template-columns:minmax(0,350px) minmax(0,1fr)}
-.custom>.offering-photos{grid-column:1/-1}
-.popups>.offering-photos{padding-inline:0}
-@media(max-width:760px){.restored-hero{padding:45px 16px}.restored-wordmark{width:min(480px,100%)}.restored-lace{height:22px;background-size:auto 22px}.offering-section .lesson-card{display:block}.offering-photos{gap:10px}.offering-photos img{height:150px}}
-@media(max-width:540px){.offering-photos{grid-template-columns:1fr 1fr}.offering-photos figure:first-child{grid-column:1/-1}.offering-photos figure:first-child img{height:200px}.offering-photos img{height:150px}.custom{grid-template-columns:1fr}.restored-hero .hero-deck{font-size:22px}}
+/* Restore the original needlepoint hero; reduce its dimensions only. */
+.visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.hero.minimal-hero.needlepoint-asset-hero{
+ position:relative;isolation:isolate;display:block;width:100%;max-width:1200px;
+ margin:0 auto;padding:clamp(54px,12vw,144px) 20px clamp(56px,12vw,146px);
+ text-align:center;overflow:hidden;
+ background:repeating-linear-gradient(90deg,#faf6f2 0 34px,#e9d9d7 34px 56px);
+}
+.hero.minimal-hero.needlepoint-asset-hero .simple-hero-center{
+ position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;
+ width:100%;max-width:760px;margin:0 auto;
+}
+.hero.minimal-hero.needlepoint-asset-hero .minimal-hero-logo{
+ width:min(570px,100%);max-width:100%;height:auto;margin:0 auto 8px;object-fit:contain;filter:none;
+}
+.hero.minimal-hero.needlepoint-asset-hero .hero-design-line{
+ display:block;margin:0 auto 10px;font:500 clamp(10px,1.05vw,13.5px)/1.35 "Cormorant Garamond",Georgia,serif;
+ letter-spacing:.36em;color:#987e81;
+}
+.hero.minimal-hero.needlepoint-asset-hero .simple-hero-deck{
+ margin:0 auto;font:italic 400 clamp(20px,1.8vw,25px)/1.25 "Cormorant Garamond",Georgia,serif;
+ letter-spacing:.025em;color:#987e81;
+}
+.hero.minimal-hero.needlepoint-asset-hero .hero-needlepoint-lace{
+ position:absolute;display:block;left:0;width:100%;height:auto;
+ max-width:none;max-height:none;object-fit:contain;pointer-events:none;
+ filter:none;opacity:.68;z-index:1;
+}
+.hero.minimal-hero.needlepoint-asset-hero .hero-needlepoint-lace-top{top:0}
+.hero.minimal-hero.needlepoint-asset-hero .hero-needlepoint-lace-bottom{bottom:0;transform:scaleY(-1)}
+/* Each offering is a full section with its own six-photo gallery. */
+.offerings{border-top:1px solid var(--line);scroll-margin-top:20px}
+.offering-section{padding:42px 0 46px;scroll-margin-top:20px}
+.offering-section+.offering-section{border-top:1px solid var(--line)}
+.offering-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr) auto;align-items:center;gap:32px;margin-bottom:25px}
+.offering-title h2{font-size:40px;line-height:1.06;margin:8px 0}
+.offering-subtitle{font:italic 21px/1.4 "Cormorant Garamond",Georgia,serif;color:var(--rose)}
+.offering-description{min-width:0;color:var(--muted);font-size:14px;line-height:1.85}
+.offering-description .kit-list{margin:15px 0 0}
+.offering-heading>.button{justify-self:end}
+.offering-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.offering-gallery figure{min-width:0;overflow:hidden}
+.offering-gallery img{width:100%;height:200px;object-fit:cover}
+.offering-gallery figure:nth-child(5) img{object-position:35% center}
+.offering-gallery figure:nth-child(6) img{object-position:65% center}
+.offering-gatherings{background:#f3ede6}
+.offering-popups{background:var(--stripes)}
+.offering-popups .offering-shell{padding:28px;background:var(--paper);border:1px solid var(--line)}
+.offering-custom{background:var(--paper)}
+.offering-section .class-note{margin-top:25px;padding-bottom:0;border-bottom:0}
+@media(max-width:1000px){
+ .offering-heading{grid-template-columns:1fr 1.35fr;gap:18px 28px}
+ .offering-heading>.button{grid-column:2;justify-self:start}
+ .offering-gallery{gap:15px}
+ .offering-gallery img{height:185px}
+}
+@media(max-width:760px){
+ .hero.minimal-hero.needlepoint-asset-hero{padding-inline:16px}
+ .offering-section{padding-block:32px 36px}
+ .offering-heading{gap:15px 24px}
+ .offering-title h2{font-size:35px}
+ .offering-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+ .offering-gallery img{height:175px}
+ .offering-popups .offering-shell{padding:23px}
+}
+@media(max-width:540px){
+ .hero.minimal-hero.needlepoint-asset-hero{padding-top:clamp(54px,12vw,78px);padding-bottom:clamp(56px,12vw,80px)}
+ .hero.minimal-hero.needlepoint-asset-hero .simple-hero-deck{font-size:21px;letter-spacing:.01em}
+ .offering-heading{display:block;margin-bottom:22px}
+ .offering-title h2{font-size:36px}
+ .offering-description{margin-top:16px;font-size:13px}
+ .offering-heading>.button{margin-top:18px}
+ .offering-gallery{gap:11px}
+ .offering-gallery img{height:150px}
+ .offering-popups .offering-shell{padding:19px}
+}
