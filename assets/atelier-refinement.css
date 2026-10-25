@@ -318,8 +318,9 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
 .lesson-details p+p{margin-top:12px}
 .group-details{grid-template-columns:repeat(2,minmax(0,1fr))}
 .offering-kits{background:#f6f0e8}
-.kit-feature{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);align-items:start;gap:36px}
-.kit-feature>figure img{width:100%;height:auto;object-fit:cover}
+.kit-feature{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);align-items:stretch;gap:36px}
+.kit-feature>figure{position:relative;min-width:0}
+.kit-feature>figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .kit-project-copy>h3{font-size:30px;margin-bottom:13px}
 .diy-projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px 23px;margin:0}
 .diy-projects>div{padding-bottom:15px;border-bottom:1px solid var(--line);min-width:0}
@@ -346,7 +347,8 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
  .lesson-details{grid-template-columns:1fr 1fr}
  .lesson-details:not(.group-details)>article:last-child{grid-column:1/-1}
  .kit-feature{grid-template-columns:1fr;gap:25px}
- .kit-feature>figure img,.kit-photo-row img{height:auto}
+ .kit-feature>figure{aspect-ratio:3/4}
+ .kit-photo-row img{height:auto}
 }
 @media(max-width:540px){
  .about{display:flow-root;padding-block:34px}
@@ -361,7 +363,7 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
  .lesson-details h3{font-size:25px}
  .diy-projects{gap:14px 18px}
  .diy-projects dt{font-size:22px}
- .kit-feature>figure img,.kit-photo-row img{height:auto}
+ .kit-photo-row img{height:auto}
  .kit-photo-row{gap:12px}
 }
 
