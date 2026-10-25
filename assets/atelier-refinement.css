@@ -274,6 +274,7 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
 .offering-description .kit-list{margin:15px 0 0}
 .offering-heading>.button{justify-self:end}
 .offering-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.offering-gallery.two{grid-template-columns:repeat(2,minmax(0,1fr))}
 .offering-gallery figure{min-width:0;overflow:hidden}
 .offering-gallery img{width:100%;height:200px;object-fit:cover}
 .offering-gallery figure:nth-child(5) img{object-position:35% center}
