@@ -380,6 +380,16 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
 .event-row h3{font-size:28px;margin-bottom:8px}
 .event-row div>p{max-width:480px;font-size:13px;line-height:1.8;color:var(--muted)}
 .event-row>.text-link{justify-self:start;white-space:nowrap}
+.event-feature{align-items:start;padding:26px 0 28px}
+.event-feature h3{font-size:36px;margin:8px 0 6px}
+.event-feature .event-place{max-width:none;margin-bottom:12px;font:italic 20px/1.35 "Cormorant Garamond",Georgia,serif;color:var(--rose)}
+.event-feature div>p{max-width:58ch}
+.event-includes{display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;margin:16px 0 0;padding:0;list-style:none}
+.event-includes li{position:relative;padding-left:14px;font-size:13px;line-height:1.5;color:var(--ink)}
+.event-includes li:before{content:"";position:absolute;left:0;top:.55em;width:5px;height:5px;border-radius:50%;background:var(--rose)}
+.event-note{margin-top:14px}
+.event-aside{display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding-top:26px}
+.event-feature .event-price{font:500 34px/1 "Cormorant Garamond",Georgia,serif;color:var(--sage)}
 .offering-heading .upcoming-shortcut{grid-column:3;justify-self:end;margin-top:-18px}
 .faq{display:grid;grid-template-columns:.75fr 1.25fr;gap:65px;padding-block:28px 52px;scroll-margin-top:20px}
 .faq-heading h2{font-size:40px}
@@ -395,6 +405,8 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
 @media(max-width:1000px){
  .event-row{grid-template-columns:125px minmax(0,1fr);gap:15px 24px}
  .event-row>.text-link{grid-column:2}
+ .event-feature{grid-template-columns:108px minmax(0,1fr) auto;gap:18px 22px}
+ .event-includes{gap:8px 16px}
  .offering-heading .upcoming-shortcut{grid-column:2;justify-self:start;margin-top:0}
  .faq{gap:35px}
 }
@@ -411,6 +423,10 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
  .upcoming-heading{grid-template-columns:1fr;gap:16px}
  .event-row{grid-template-columns:1fr;gap:12px;padding-block:21px}
  .event-row>.text-link{grid-column:auto}
+ .event-feature{grid-template-columns:1fr}
+ .event-feature h3{font-size:32px}
+ .event-includes{grid-template-columns:1fr}
+ .event-aside{padding-top:4px}
  .offering-heading .upcoming-shortcut{display:table;margin-top:10px}
  .faq summary{font-size:22px}
 }
