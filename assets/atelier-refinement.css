@@ -262,16 +262,17 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
 .offering-description{min-width:0;color:var(--muted);font-size:14px;line-height:1.85}
 .offering-description .kit-list{margin:15px 0 0}
 .offering-heading>.button{justify-self:end}
-.offering-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start}
+.offering-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}
 .offering-gallery.two{grid-template-columns:repeat(2,minmax(0,1fr))}
-.offering-gallery figure{min-width:0}
-.offering-gallery img,.offering-gallery video{display:block;width:100%;height:auto;object-fit:contain;background:var(--paper)}
-.offering-gallery .flipbook{position:relative;height:auto;aspect-ratio:3/4;background:var(--paper)}
+.offering-gallery figure{position:relative;min-width:0;aspect-ratio:3/4;background:var(--paper)}
+.offering-gallery img,.offering-gallery video{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;background:var(--paper)}
+.offering-gallery .flipbook{height:auto;aspect-ratio:3/4}
 .offering-gallery .flipbook-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:var(--paper);opacity:0;transition:opacity .55s ease}
 .offering-gallery .flipbook-slide.is-on{opacity:1;z-index:1}
 .offering-gallery figure:nth-child(5) img{object-position:35% center}
 .offering-gallery figure:nth-child(6) img{object-position:65% center}
 .offering-gatherings{background:#f3ede6}
+.offering-gatherings .offering-gallery figure,.offering-gatherings .offering-gallery img,.offering-gatherings .offering-gallery video{background:#f3ede6}
 .offering-popups{background:var(--stripes)}
 .offering-popups .offering-shell{padding:28px;background:var(--paper);border:1px solid var(--line)}
 .offering-custom{background:var(--paper)}
