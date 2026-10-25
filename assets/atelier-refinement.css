@@ -296,7 +296,9 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
 }
 .hero.minimal-hero.needlepoint-asset-hero .hero-needlepoint-lace{
  position:absolute;display:block;left:0;width:100%;height:clamp(24px,5vw,80px);
- max-width:none;max-height:none;object-fit:fill;pointer-events:none;
+ max-width:none;max-height:none;pointer-events:none;
+ background-image:url("hero-needlepoint/dusty-lace-960.webp");
+ background-repeat:repeat-x;background-position:center top;background-size:auto 100%;
  filter:none;opacity:.68;z-index:1;
 }
 .hero.minimal-hero.needlepoint-asset-hero .hero-needlepoint-lace-top{top:0}
@@ -418,4 +420,51 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
  .kit-feature>figure img{height:225px}
  .kit-photo-row{gap:12px}
  .kit-photo-row img{height:135px}
+}
+
+/* Keep every lace motif at its natural aspect ratio, at any screen width. */
+.about{border-top:1px solid var(--line)}
+.upcoming{padding:36px 24px;margin-bottom:38px;scroll-margin-top:20px}
+.upcoming-paper{width:100%;padding:30px 34px;background:var(--paper);border:1px solid var(--line)}
+.upcoming-heading{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:25px}
+.upcoming-heading h2{font-size:40px}
+.upcoming-heading>p{max-width:430px;font-size:13px;line-height:1.8;color:var(--muted)}
+.event-row{display:grid;grid-template-columns:150px minmax(0,1fr) auto;gap:28px;align-items:center;padding:23px 0;border-top:1px solid var(--line)}
+.event-status{font-size:9px;line-height:1.7;letter-spacing:.13em;color:var(--rose)}
+.event-row h3{font-size:28px;margin-bottom:8px}
+.event-row div>p{max-width:480px;font-size:13px;line-height:1.8;color:var(--muted)}
+.event-row>.text-link{justify-self:start;white-space:nowrap}
+.offering-heading .upcoming-shortcut{grid-column:3;justify-self:end;margin-top:-18px}
+.faq{display:grid;grid-template-columns:.75fr 1.25fr;gap:65px;padding-block:28px 52px;scroll-margin-top:20px}
+.faq-heading h2{font-size:40px}
+.faq-heading>p{max-width:230px;font-size:13px;color:var(--muted);margin-top:20px}
+.faq-heading a,.faq-list a{text-underline-offset:3px;color:var(--rose)}
+.faq-list{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{position:relative;cursor:pointer;list-style:none;padding:18px 28px 18px 0;font:500 23px/1.25 "Cormorant Garamond",Georgia,serif;color:var(--sage)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:0;top:18px;color:var(--rose)}
+.faq details[open] summary::after{content:"−"}
+.faq details>p{font-size:13px;line-height:1.85;color:var(--muted);padding:0 24px 20px 0}
+@media(max-width:1000px){
+ .event-row{grid-template-columns:125px minmax(0,1fr);gap:15px 24px}
+ .event-row>.text-link{grid-column:2}
+ .offering-heading .upcoming-shortcut{grid-column:2;justify-self:start;margin-top:0}
+ .faq{gap:35px}
+}
+@media(max-width:760px){
+ .upcoming{padding:28px 20px;margin-bottom:25px}
+ .upcoming-paper{padding:24px}
+ .upcoming-heading{gap:22px}
+ .upcoming-heading h2,.faq-heading h2{font-size:35px}
+ .faq{grid-template-columns:1fr;gap:22px;padding-block:22px 36px}
+ .faq-heading>p{max-width:none;margin-top:14px}
+}
+@media(max-width:540px){
+ .upcoming-paper{padding:23px 19px}
+ .upcoming-heading{grid-template-columns:1fr;gap:16px}
+ .event-row{grid-template-columns:1fr;gap:12px;padding-block:21px}
+ .event-row>.text-link{grid-column:auto}
+ .offering-heading .upcoming-shortcut{display:table;margin-top:10px}
+ .faq summary{font-size:22px}
 }
