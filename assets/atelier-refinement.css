@@ -28,7 +28,7 @@ button{cursor:pointer}
 .text-link:hover{border-color:var(--rose)}
 figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:var(--rose);margin-top:9px}
 .signature{font:italic 22px/1.35 "Cormorant Garamond",Georgia,serif;color:var(--rose)}
-.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.brand{display:inline-flex;align-items:center;gap:0;text-decoration:none;flex-shrink:0}
 .brand>img{width:38px;height:38px;object-fit:contain}
 .brand>span{font:500 25px/.95 "Cormorant Garamond",Georgia,serif;letter-spacing:.015em;color:var(--rose)}
 .brand small{display:block;text-align:left;font:500 8px/1.2 "DM Sans",sans-serif;letter-spacing:.28em;margin-top:6px}
@@ -459,7 +459,7 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
 /* A sticky cream header and an organized, quiet footer. */
 .site-header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid #d9c8c0;box-shadow:0 3px 14px #795b6108}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:28px;width:calc(100% - 48px);max-width:1160px;min-height:var(--header-height);margin-inline:auto;padding-block:12px}
-.site-header .brand{gap:10px}
+.site-header .brand{gap:0}
 .site-header .brand>img{width:36px;height:36px}
 .site-header .brand>span{font-size:25px}
 .nav-links{display:flex;align-items:center;gap:21px}
@@ -526,7 +526,7 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
  .footer-bottom{gap:15px}
 }
 @media(max-width:540px){
- .site-header .brand{gap:8px}
+ .site-header .brand{gap:0}
  .site-header .brand>span{font-size:23px}
  .site-header .brand>img{width:30px;height:30px}
  .menu{gap:11px;padding-inline:10px}
