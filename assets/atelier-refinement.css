@@ -565,9 +565,8 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
  .about-photo img{width:100%;height:auto;object-fit:contain}
  .about-copy h2{margin-top:2px}
  .about-copy .about-follow{clear:none}
- .offering-gallery,.kit-photo-row{display:flex;grid-template-columns:none;gap:12px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:2px}
- .offering-gallery::-webkit-scrollbar,.kit-photo-row::-webkit-scrollbar{display:none}
- .offering-gallery figure,.kit-photo-row figure{flex:0 0 82%;width:82%;min-width:82%;height:auto;scroll-snap-align:start;aspect-ratio:3/4}
+ .offering-gallery,.kit-photo-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible}
+ .offering-gallery figure,.kit-photo-row figure{width:auto;min-width:0;height:auto;aspect-ratio:3/4}
  .instagram-grid{flex-wrap:nowrap;justify-content:flex-start;gap:14px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px}
  .instagram-grid::-webkit-scrollbar{display:none}
  .instagram-card{flex:0 0 min(340px,88%);max-width:none;scroll-snap-align:start}

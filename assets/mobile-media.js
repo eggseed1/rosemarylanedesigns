@@ -4,16 +4,13 @@
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const mobile = window.matchMedia("(max-width: 800px)").matches;
 
-  if (mobile && "IntersectionObserver" in window) {
-    const images = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.loading = "eager";
-        images.unobserve(entry.target);
-      });
-    }, { rootMargin: "600px 0px" });
-    document.querySelectorAll('img[loading="lazy"]').forEach(img => images.observe(img));
-  }
+  document.querySelectorAll("img[loading='lazy']").forEach(img => {
+    img.loading = "eager";
+    if (!img.complete) {
+      const source = img.getAttribute("src");
+      if (source) img.src = source;
+    }
+  });
 
   document.querySelectorAll("img[src]").forEach(img => {
     img.addEventListener("error", () => {
@@ -88,9 +85,11 @@
     }
 
     frame.appendChild(video);
-    video.removeAttribute("autoplay");
-    video.autoplay = false;
     video.controls = false;
+    if (!reduced) {
+      video.autoplay = true;
+      video.setAttribute("autoplay", "");
+    }
 
     const button = document.createElement("button");
     button.className = "mobile-video-button";
