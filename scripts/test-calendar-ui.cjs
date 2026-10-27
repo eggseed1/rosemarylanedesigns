@@ -62,10 +62,26 @@ const fixture = {
     await page.setViewportSize({width:390,height:844});
     assert.equal(await page.locator('.rl-calendar__month').isVisible(), false);
     assert.equal(await page.locator('.rl-calendar__event').count(), 3);
-    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+    const layout = await page.evaluate(() => {
+      const root = document.querySelector('#popup-calendar');
+      const bounds = root.getBoundingClientRect();
+      return {width:innerWidth, documentWidth:document.documentElement.scrollWidth,
+        calendarWidth:bounds.width, calendarRight:bounds.right,
+        overflow:[...root.querySelectorAll('*')].filter(e => {
+          const r = e.getBoundingClientRect();
+          return r.width > 0 && (r.right > bounds.right + 1 || r.left < bounds.left - 1);
+        }).map(e => ({tag:e.tagName, className:e.className, width:e.getBoundingClientRect().width}))};
+    });
+    console.log('Calendar layout', layout);
+    await page.locator('#popup-calendar').screenshot({path:`calendar-review/width-${layout.width}.png`});
+    assert.equal(layout.calendarRight <= layout.width, true);
+    assert.deepEqual(layout.overflow, []);
     await page.locator('#popup-calendar').screenshot({path:'calendar-review/mobile-fixture.png'});
     await page.setViewportSize({width:320,height:700});
-    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+    const narrow = await page.locator('#popup-calendar').evaluate(root => ({right:root.getBoundingClientRect().right, width:root.clientWidth, scroll:root.scrollWidth}));
+    await page.locator('#popup-calendar').screenshot({path:'calendar-review/width-320.png'});
+    console.log('320px calendar layout', narrow);
+    assert.equal(narrow.right <= 320 && narrow.scroll <= narrow.width + 1, true);
     await page.route('**/data/calendar.json', route => route.fulfill({status:500,body:'unavailable'}));
     await page.reload({waitUntil:'domcontentloaded'});
     await page.locator('#popup-calendar').scrollIntoViewIfNeeded();
