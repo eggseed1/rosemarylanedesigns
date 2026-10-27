@@ -26,6 +26,16 @@
     node.textContent = value;
     return node;
   };
+  const arrowIcon = () => {
+    const ns = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(ns, 'svg');
+    const attrs = {class: 'arrow-icon', width: '14', height: '14', viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'aria-hidden': 'true', focusable: 'false'};
+    for (const [name, value] of Object.entries(attrs)) svg.setAttribute(name, value);
+    const path = document.createElementNS(ns, 'path');
+    path.setAttribute('d', 'M5 19 19 5M5 5h14v14');
+    svg.append(path);
+    return svg;
+  };
   const external = (label, href, className) => {
     const node = text('a', className, label);
     node.href = href;
@@ -78,7 +88,9 @@
         details.append(text('summary', '', 'Event details'), text('p', 'rl-calendar__description', event.description));
         item.append(details);
       }
-      item.append(external('Save event ↗', saveLink(event), 'rl-calendar__save'));
+      const save = external('Save event', saveLink(event), 'rl-calendar__save');
+      save.append(document.createTextNode(' '), arrowIcon());
+      item.append(save);
       elements.events.append(item);
     }
   }

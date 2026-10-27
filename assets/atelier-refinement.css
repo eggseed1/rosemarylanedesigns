@@ -586,3 +586,7 @@ figcaption{font:italic 400 16px/1.35 "Cormorant Garamond",Georgia,serif;color:va
  .service p{grid-area:note;margin:0;padding:0;font-size:16px}
  .service-arrow{position:static;grid-area:arrow;align-self:center}
 }
+
+
+/* SVG arrows keep the same monochrome shape on iOS, without emoji fonts. */
+.arrow-icon{display:inline-block;vertical-align:-.15em;flex-shrink:0;pointer-events:none}
