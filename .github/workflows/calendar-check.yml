@@ -1,0 +1,41 @@
+name: Check public calendar integration
+on:
+  push:
+    branches: [calendar/google-events]
+  pull_request:
+    paths:
+      - 'assets/calendar.*'
+      - 'scripts/*calendar*'
+      - '.github/workflows/calendar-check.yml'
+permissions:
+  contents: read
+jobs:
+  calendar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r scripts/calendar-requirements.txt
+      - run: python scripts/test-calendar.py
+      - run: node --check assets/calendar.js
+      - name: Verify the public calendar feed
+        run: python scripts/sync-calendar.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser checks
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Check desktop and phone calendar
+        run: node scripts/test-calendar-ui.cjs
+      - name: Keep the display snapshot for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-calendar-preview
+          path: |
+            data/calendar.json
+            calendar-review/

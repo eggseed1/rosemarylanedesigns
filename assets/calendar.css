@@ -1,0 +1,61 @@
+/* Public events, dressed in the site's existing stationery palette. */
+.rl-calendar{margin:28px 0 30px;padding:28px 0 0;border-top:1px solid var(--line);color:var(--ink)}
+.rl-calendar [hidden]{display:none!important}
+.rl-calendar__intro{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:25px}
+.rl-calendar__intro h3{font-size:clamp(32px,3.4vw,40px);margin-top:6px;line-height:1.1}
+.rl-calendar__intro p{font-size:12px;color:var(--muted);margin-top:9px}
+.rl-calendar__links{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.rl-calendar__links a{font-size:11px;color:var(--rose);text-underline-offset:5px}
+.rl-calendar__toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;border:1px solid var(--line);background:#f4eee7}
+.rl-calendar__toolbar h4{margin:0;color:var(--sage);font:500 28px/1.1 "Cormorant Garamond",Georgia,serif}
+.rl-calendar__nav{display:flex;align-items:center;gap:6px}
+.rl-calendar__nav button,.rl-calendar__reset{border:1px solid transparent;background:transparent;color:var(--rose);min-width:42px;min-height:42px;border-radius:2px;padding:6px 10px;font-size:12px}
+.rl-calendar__nav .rl-calendar__arrow{font-size:23px;line-height:1}
+.rl-calendar__nav button:hover,.rl-calendar__reset:hover{background:#eaded6;border-color:#cbb9ae}
+.rl-calendar__nav button:disabled{opacity:.3;cursor:default;background:transparent;border-color:transparent}
+.rl-calendar__body{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(270px,1fr);border:1px solid var(--line);border-top:0;background:#fffcf7}
+.rl-calendar__month{padding:18px;border-right:1px solid var(--line)}
+.rl-calendar__weekdays,.rl-calendar__days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
+.rl-calendar__weekdays{margin-bottom:8px}
+.rl-calendar__weekdays abbr{text-align:center;text-decoration:none;color:var(--muted);font-size:10px;letter-spacing:.08em;padding:8px 0}
+.rl-calendar__day{position:relative;display:flex;align-items:center;justify-content:center;min-height:54px;border:1px solid transparent;border-radius:2px;font-size:12px;background:transparent;color:var(--ink);padding:6px}
+button.rl-calendar__day{color:var(--rose);font-weight:600;background:#f4e7e2;margin:3px;min-height:48px}
+button.rl-calendar__day:after{content:"";position:absolute;width:4px;height:4px;border-radius:50%;background:currentColor;bottom:6px;left:calc(50% - 2px)}
+button.rl-calendar__day:hover,button.rl-calendar__day[aria-pressed="true"]{background:var(--rose);color:#fffdf7}
+.rl-calendar__day[aria-current="date"]{outline:1px solid var(--sage);outline-offset:-5px}
+.rl-calendar__legend{display:flex;gap:8px;align-items:center;margin:15px 0 0;font-size:10px;color:var(--muted)}
+.rl-calendar__legend:before{content:"";width:7px;height:7px;display:inline-block;background:var(--rose);border-radius:50%}
+.rl-calendar__agenda{padding:22px;min-width:0;max-height:445px;overflow:auto;scrollbar-width:thin;scrollbar-color:#cbb9ae transparent}
+.rl-calendar__agenda-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:16px}
+.rl-calendar__agenda h4{margin:0;font:500 10px/1.5 "DM Sans",sans-serif;letter-spacing:.13em;text-transform:uppercase;color:var(--rose)}
+.rl-calendar__reset{font-size:10px;min-height:32px;padding:3px 7px;white-space:nowrap}
+.rl-calendar__events{list-style:none;padding:0;margin:0}
+.rl-calendar__event{padding:15px 0;border-top:1px solid var(--line)}
+.rl-calendar__event:first-child{padding-top:0;border-top:0}
+.rl-calendar__event-date{font-size:10px;letter-spacing:.06em;color:var(--rose);text-transform:uppercase}
+.rl-calendar__event h5{margin:6px 0;color:var(--sage);font:500 26px/1.12 "Cormorant Garamond",Georgia,serif;overflow-wrap:anywhere}
+.rl-calendar__event-time,.rl-calendar__location{font-size:12px;line-height:1.7;color:var(--muted);overflow-wrap:anywhere}
+.rl-calendar__location{display:block;text-decoration-thickness:1px;text-underline-offset:3px;margin-top:4px}
+.rl-calendar__event details{font-size:12px;margin-top:9px}
+.rl-calendar__event summary{color:var(--rose);cursor:pointer;text-underline-offset:3px}
+.rl-calendar__description{white-space:pre-wrap;overflow-wrap:anywhere;margin-top:8px!important;line-height:1.7}
+.rl-calendar__save{display:inline-block;margin-top:10px;font-size:10px;color:var(--rose);text-underline-offset:4px}
+.rl-calendar__empty{padding:28px 0;color:var(--muted);font-size:13px;line-height:1.8}
+.rl-calendar__empty strong{display:block;color:var(--sage);font:500 27px/1.2 "Cormorant Garamond",Georgia,serif;margin-bottom:10px}
+.rl-calendar__note{font-size:10px;color:var(--muted);margin-top:10px;line-height:1.7}
+.rl-calendar__status{font-size:12px;color:var(--muted);padding:14px 0}
+.rl-calendar__fallback{width:100%;height:500px;border:1px solid var(--line);background:var(--paper)}
+@media(max-width:900px){
+ .rl-calendar__intro{display:block}.rl-calendar__links{margin-top:16px}
+ .rl-calendar__body{grid-template-columns:minmax(0,1.1fr) minmax(240px,1fr)}
+ .rl-calendar__month{padding:12px}.rl-calendar__agenda{padding:18px}.rl-calendar__day{min-height:48px}button.rl-calendar__day{min-height:42px;margin:2px}
+}
+@media(max-width:620px){
+ .rl-calendar{padding-top:22px;margin-top:24px;margin-bottom:26px}
+ .rl-calendar__intro{margin-bottom:20px}.rl-calendar__intro h3{font-size:34px}
+ .rl-calendar__toolbar{padding:11px 12px}.rl-calendar__toolbar h4{font-size:26px}
+ .rl-calendar__nav{gap:0}.rl-calendar__nav button{padding:4px 7px;min-width:38px}
+ .rl-calendar__body{display:block}.rl-calendar__month{display:none}.rl-calendar__agenda{max-height:none;overflow:visible;padding:20px 16px}
+ .rl-calendar__event{padding:20px 0}.rl-calendar__event h5{font-size:28px}
+ .rl-calendar__links{gap:16px}.rl-calendar__fallback{height:480px}
+}

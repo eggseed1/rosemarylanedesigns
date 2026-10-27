@@ -2,6 +2,8 @@ name: Deploy Rosemary Lane to GitHub Pages
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: '17,47 * * * *'
   workflow_dispatch:
 permissions:
   contents: read
@@ -21,6 +23,18 @@ jobs:
         uses: actions/checkout@v4
       - name: Configure Pages
         uses: actions/configure-pages@v5
+      - name: Set up calendar sync
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: scripts/calendar-requirements.txt
+      - name: Install calendar parser
+        run: python -m pip install -r scripts/calendar-requirements.txt
+      - name: Check calendar dates and recurring events
+        run: python scripts/test-calendar.py
+      - name: Sync public Google Calendar
+        run: python scripts/sync-calendar.py
       - name: Validate referenced media
         run: node scripts/check-media.mjs
       - name: Normalize short clips for mobile Safari
@@ -52,3 +66,4 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+

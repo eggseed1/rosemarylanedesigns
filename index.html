@@ -14,6 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/atelier-refinement.css?v=mobile-polish-1">
 <link rel="stylesheet" href="assets/mobile-media.css?v=4">
+<link rel="stylesheet" href="assets/calendar.css?v=1">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -135,6 +136,28 @@
    <div class="offering-description"><p>Find us at neighborhood gatherings, seasonal events, and pop-ups around Cape Cod. We bring a lovely assortment of DIY needlepoint kits for you to take home and make your own.</p><ul class="kit-list"><li>Key fob kits</li><li>Bag charm kits</li><li>Ornament kits</li><li>Clutch kits</li></ul></div>
    <a class="button" href="https://www.instagram.com/rosemarylanedesign/" target="_blank" rel="noopener noreferrer">Follow our pop-ups</a>
   </header>
+  <section class="rl-calendar" id="popup-calendar" aria-labelledby="popup-calendar-title">
+   <header class="rl-calendar__intro">
+    <div><span class="eyebrow">STITCH WITH US</span><h3 id="popup-calendar-title">On the <em>calendar.</em></h3><p>Classes, pop-ups &amp; little reasons to gather.</p></div>
+    <div class="rl-calendar__links"><a href="https://calendar.google.com/calendar/embed?src=lovemsg69%40gmail.com&amp;ctz=America%2FNew_York" target="_blank" rel="noopener noreferrer">Open Google Calendar ↗</a><a href="https://calendar.google.com/calendar/ical/lovemsg69%40gmail.com/public/basic.ics">Subscribe via iCal</a></div>
+   </header>
+   <div class="rl-calendar__status" data-calendar="status" role="status"><p>Loading upcoming gatherings…</p></div>
+   <noscript><p>View our dates on <a href="https://calendar.google.com/calendar/embed?src=lovemsg69%40gmail.com&amp;ctz=America%2FNew_York">Google Calendar</a>.</p><style>#popup-calendar [data-calendar="status"]{display:none}</style></noscript>
+   <div data-calendar="content" hidden>
+    <div class="rl-calendar__toolbar">
+     <h4 data-calendar="month" aria-live="polite" aria-atomic="true"></h4>
+     <div class="rl-calendar__nav" aria-label="Calendar navigation"><button type="button" class="rl-calendar__arrow" data-calendar="previous" aria-label="Previous month">‹</button><button type="button" data-calendar="today">Today</button><button type="button" class="rl-calendar__arrow" data-calendar="next" aria-label="Next month">›</button></div>
+    </div>
+    <div class="rl-calendar__body">
+     <div class="rl-calendar__month">
+      <div class="rl-calendar__weekdays" aria-hidden="true"><abbr title="Sunday">S</abbr><abbr title="Monday">M</abbr><abbr title="Tuesday">T</abbr><abbr title="Wednesday">W</abbr><abbr title="Thursday">T</abbr><abbr title="Friday">F</abbr><abbr title="Saturday">S</abbr></div>
+      <div class="rl-calendar__days" data-calendar="days" role="group"></div><p class="rl-calendar__legend">A day to gather · select a date for details</p>
+     </div>
+     <div class="rl-calendar__agenda"><div class="rl-calendar__agenda-head"><h4 data-calendar="agenda-title">This month’s gatherings</h4><button type="button" class="rl-calendar__reset" data-calendar="reset" hidden>All this month</button></div><ul class="rl-calendar__events" data-calendar="events" aria-live="polite"></ul></div>
+    </div>
+    <p class="rl-calendar__note" data-calendar="note">All times Eastern.</p>
+   </div>
+  </section>
   <div class="offering-gallery" role="group" aria-label="Coastal Pop-Ups photos">
    <figure><video data-photo-slot="popups-photo-1" src="photos/popup-table.mp4" poster="photos/popup-table-poster.jpg" width="720" height="1280" autoplay muted loop playsinline style="object-position:center 32%" aria-label="Needlepoint kits, baskets, and canvases set out at a pop-up"></video></figure>
    <figure><video data-photo-slot="popups-photo-2" src="photos/popup-perks.mp4" poster="photos/popup-perks-poster.jpg" width="540" height="960" autoplay muted loop playsinline style="object-position:center 48%" aria-label="Monogram canvases and project bags at a Cape Cod pop-up"></video></figure>
@@ -227,6 +250,7 @@
  </div>
 </footer>
 <script src="assets/mobile-media.js?v=3"></script>
+<script src="assets/calendar.js?v=1" defer></script>
 <script>
 const menu=document.getElementById('menu'),links=document.getElementById('navlinks'),header=document.getElementById('site-header');
 const closeMenu=(restoreFocus=false)=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation');menu.textContent='Menu';if(restoreFocus)menu.focus()};
@@ -241,3 +265,4 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.query
 document.getElementById('contact-form').addEventListener('submit',function(event){event.preventDefault();const f=new FormData(this);const body='Name: '+f.get('name')+'\nEmail: '+f.get('email')+'\n\n'+f.get('message');location.href='mailto:shoshana@rosemarylanedesigns.com?subject='+encodeURIComponent('Rosemary Lane — '+f.get('subject'))+'&body='+encodeURIComponent(body)});
 (async()=>{const target=document.getElementById('instagram-grid');try{const r=await fetch('instagram-posts.json',{cache:'no-store'});if(!r.ok)throw new Error('feed unavailable');const data=await r.json();const posts=(Array.isArray(data)?data:[]).filter(p=>p&&typeof p.url==='string'&&/^https:\/\/(www\.)?instagram\.com\/(p|reel)\/[A-Za-z0-9_-]+\/?/.test(p.url)).slice(0,3);for(const post of posts){const card=document.createElement('div');card.className='instagram-card';const block=document.createElement('blockquote');block.className='instagram-media';block.dataset.instgrmPermalink=post.url;block.dataset.instgrmVersion='14';const a=document.createElement('a');a.href=post.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent='View on Instagram';block.appendChild(a);card.appendChild(block);target.appendChild(card)}if(posts.length){const script=document.createElement('script');script.async=true;script.src='https://www.instagram.com/embed.js';script.onload=()=>window.instgrm?.Embeds?.process();document.body.appendChild(script)}}catch(e){}})();
 </script></body></html>
+
