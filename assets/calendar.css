@@ -62,41 +62,21 @@ button.rl-calendar__day:hover,button.rl-calendar__day[aria-pressed="true"]{backg
  .rl-calendar__event{grid-template-columns:36px minmax(0,1fr);gap:11px;padding:15px 12px}
  .rl-calendar__event h5{font-size:22px}
 }
-/* One quiet disclosure keeps secondary event information within reach. */
-.rl-calendar__event-details summary{display:flex;align-items:center;gap:7px;min-height:44px;list-style:none;font-size:11px}
-.rl-calendar__event-details summary::-webkit-details-marker{display:none}
-.rl-calendar__event-details summary .arrow-icon{width:12px;height:12px;transform:rotate(45deg)}
-.rl-calendar__event-details[open] summary .arrow-icon{transform:rotate(-45deg)}
 @media(max-width:620px){
- /* Use the same 20px page gutter as the header and other sections. */
- .offering-popups .offering-shell{width:100%;max-width:none;padding-inline:20px;border-inline:0}
-
  .rl-calendar{padding-top:26px;margin-top:28px;margin-bottom:30px}
- .rl-calendar__intro{margin-bottom:22px}.rl-calendar__intro h3{font-size:34px}
- .rl-calendar__intro p{font-size:12px;line-height:1.7;max-width:26ch}
- .rl-calendar__links{gap:18px;margin-top:12px}
- .rl-calendar__links a{padding:0;min-height:44px;border:0;border-radius:0;background:transparent;font-size:11px}
- .rl-calendar [data-calendar="content"]{border:0;border-radius:0;box-shadow:none;background:transparent;overflow:visible}
- .rl-calendar [data-calendar="content"]:before{display:none}
- .rl-calendar__toolbar{padding:16px 0;gap:8px;border-top:1px solid #e6dcd2}
- .rl-calendar__toolbar h4{font-size:26px;flex:1 1 140px}
- .rl-calendar__nav{gap:0;flex:0 0 auto}
- .rl-calendar__nav button{min-width:44px;min-height:44px;border:0;padding:8px}
- .rl-calendar__nav [data-calendar="today"]{padding-inline:4px;font-size:10px}
+ .rl-calendar__intro{margin-bottom:22px}.rl-calendar__intro h3{font-size:37px}
+ .rl-calendar__intro p{font-size:11px;line-height:1.7}
+ .rl-calendar__toolbar{padding:19px 17px;gap:14px}
+ .rl-calendar__toolbar h4{font-size:30px;flex:1 0 100%}
+ .rl-calendar__nav{width:100%;justify-content:space-between;gap:8px}
+ .rl-calendar__nav button{min-width:40px;min-height:40px}
  .rl-calendar__body{display:block}.rl-calendar__month{display:none}
- .rl-calendar__agenda{max-height:none;overflow:visible;padding:0;border:0;background:transparent}
- .rl-calendar__agenda-head{margin:18px 0 0}
- .rl-calendar__events{gap:0}
- .rl-calendar__event{grid-template-columns:34px minmax(0,1fr);gap:16px;padding:24px 0 18px;border:0;border-bottom:1px solid #e6dcd2;border-radius:0;background:transparent}
- .rl-calendar__event:last-child{border-bottom:0}
- .rl-calendar__badge{border:0;padding-top:1px}
- .rl-calendar__badge strong{font-size:30px}
- .rl-calendar__event h5{font-size:23px;line-height:1.22;margin:6px 0 10px}
- .rl-calendar__event-time{font-size:12px;line-height:1.6}
- .rl-calendar__event details{margin-top:4px}
- .rl-calendar__location,.rl-calendar__description{font-size:12px;line-height:1.7}
- .rl-calendar__save{min-height:44px;font-size:11px}
- .rl-calendar__note{padding:16px 0;font-size:10px;text-align:left;background:transparent}
+ .rl-calendar__agenda{max-height:none;overflow:visible;padding:21px 14px;border-left:0}
+ .rl-calendar__agenda-head{margin-bottom:15px}
+ .rl-calendar__events{gap:11px}.rl-calendar__event{grid-template-columns:35px minmax(0,1fr);gap:12px;padding:17px 12px}
+ .rl-calendar__event h5{font-size:23px;line-height:1.17}.rl-calendar__badge strong{font-size:29px}
+ .rl-calendar__note{padding:12px 16px;font-size:9px}.rl-calendar__links{gap:7px}
+ .rl-calendar__links a{font-size:10px;padding:7px 10px;min-height:38px}
  .rl-calendar__fallback{height:480px}
 }
 @media(prefers-reduced-motion:reduce){.rl-calendar *{transition:none!important}}
