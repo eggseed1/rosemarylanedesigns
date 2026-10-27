@@ -62,6 +62,12 @@ const fixture = {
     await page.setViewportSize({width:390,height:844});
     assert.equal(await page.locator('.rl-calendar__month').isVisible(), false);
     assert.equal(await page.locator('.rl-calendar__event').count(), 3);
+    const disclosure = page.locator('.rl-calendar__event-details').first();
+    assert.equal(await page.locator('.rl-calendar__location').first().isVisible(), false);
+    await disclosure.locator('summary').click();
+    assert.equal(await page.locator('.rl-calendar__location').first().isVisible(), true);
+    assert.equal(await page.locator('.rl-calendar__save').first().isVisible(), true);
+    await disclosure.locator('summary').click();
     const layout = await page.evaluate(() => {
       const root = document.querySelector('#popup-calendar');
       const bounds = root.getBoundingClientRect();
