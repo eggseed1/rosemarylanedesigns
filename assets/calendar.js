@@ -81,16 +81,22 @@
     for (const event of events) {
       const item = document.createElement('li');
       item.className = 'rl-calendar__event';
-      item.append(text('p', 'rl-calendar__event-date', eventDates(event)), text('h5', '', event.title), text('p', 'rl-calendar__event-time', eventTime(event)));
-      if (event.location) item.append(external(event.location, `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location)}`, 'rl-calendar__location'));
+      const badge = text('div', 'rl-calendar__badge', '');
+      badge.setAttribute('aria-hidden', 'true');
+      badge.append(text('span', '', formatter({month: 'short'}).format(calendarDate(event.startDate))), text('strong', '', String(Number(event.startDate.slice(-2)))));
+      const copy = text('div', 'rl-calendar__event-copy', '');
+      copy.append(text('p', 'rl-calendar__event-date', event.startDate === event.lastDate ? formatter({weekday: 'long'}).format(calendarDate(event.startDate)) : eventDates(event)), text('h5', '', event.title), text('p', 'rl-calendar__event-time', eventTime(event)));
+      item.setAttribute('aria-label', eventDates(event));
+      item.append(badge, copy);
+      if (event.location) copy.append(external(event.location, `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location)}`, 'rl-calendar__location'));
       if (event.description) {
         const details = document.createElement('details');
         details.append(text('summary', '', 'Event details'), text('p', 'rl-calendar__description', event.description));
-        item.append(details);
+        copy.append(details);
       }
       const save = external('Save event', saveLink(event), 'rl-calendar__save');
       save.append(document.createTextNode(' '), arrowIcon());
-      item.append(save);
+      copy.append(save);
       elements.events.append(item);
     }
   }
