@@ -68,6 +68,9 @@ button.rl-calendar__day:hover,button.rl-calendar__day[aria-pressed="true"]{backg
 .rl-calendar__event-details summary .arrow-icon{width:12px;height:12px;transform:rotate(45deg)}
 .rl-calendar__event-details[open] summary .arrow-icon{transform:rotate(-45deg)}
 @media(max-width:620px){
+ /* Use the same 20px page gutter as the header and other sections. */
+ .offering-popups .offering-shell{width:100%;max-width:none;padding-inline:20px;border-inline:0}
+
  .rl-calendar{padding-top:26px;margin-top:28px;margin-bottom:30px}
  .rl-calendar__intro{margin-bottom:22px}.rl-calendar__intro h3{font-size:34px}
  .rl-calendar__intro p{font-size:12px;line-height:1.7;max-width:26ch}
